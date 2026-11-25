@@ -217,4 +217,21 @@ final class UnitTest: XCTestCase {
         }
     }
 
+    func testDayEntriesAndProjectSummaryFillTheirContainer() throws {
+        let dayEntries = AXDayEntriesListViewController()
+        dayEntries.date = Date()
+        dayEntries.entries = []
+        let controllers: [UIViewController] = [dayEntries, AXProjectsSummaryViewController()]
+        for controller in controllers {
+            controller.loadViewIfNeeded()
+            let table = try XCTUnwrap(controller.view.subviews.first { $0 is UITableView })
+            for size in [CGSize(width: 390, height: 700), CGSize(width: 700, height: 390)] {
+                controller.view.frame = CGRect(origin: .zero, size: size)
+                controller.view.setNeedsLayout()
+                controller.view.layoutIfNeeded()
+                XCTAssertEqual(table.frame, controller.view.bounds)
+            }
+        }
+    }
+
 }

@@ -12,7 +12,6 @@
 
 #import "SKSTableViewCellMulti.h"
 #import "SKSTableViewCell.h"
-#import <PureLayout/PureLayout.h>
 
 @interface AXLeftMenuViewController ()
 
@@ -46,7 +45,13 @@
         tableView;
     });
     [self.view addSubview:self.tableView];
-    [self.tableView autoPinEdgesToSuperviewEdges];
+    self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint activateConstraints:@[
+        [self.tableView.topAnchor constraintEqualToAnchor:self.view.topAnchor],
+        [self.tableView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
+        [self.tableView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
+        [self.tableView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor]
+    ]];
     
     UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([SKSTableViewCellMulti class])
                                     bundle:nil];

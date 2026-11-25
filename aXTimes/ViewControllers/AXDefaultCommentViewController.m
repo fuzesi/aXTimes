@@ -8,7 +8,6 @@
 
 #import "AXDefaultCommentViewController.h"
 #import "NSString+AXNSStringCategory.h"
-#import "PureLayout.h"
 
 @interface AXDefaultCommentViewController ()
 
@@ -29,10 +28,13 @@
     [self.textView setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]];
     
     [self.view addSubview:self.textView];
-    [self.textView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:0];
-    [self.textView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
-    [self.textView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:0];
-    [self.textView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
+    self.textView.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint activateConstraints:@[
+        [self.textView.topAnchor constraintEqualToAnchor:self.view.topAnchor],
+        [self.textView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
+        [self.textView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
+        [self.textView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor]
+    ]];
     
 	UIBarButtonItem *clearButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"eraser"]
                                                                     style:UIBarButtonItemStylePlain

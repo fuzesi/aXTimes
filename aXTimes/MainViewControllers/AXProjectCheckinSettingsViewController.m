@@ -11,7 +11,6 @@
 #import "SKSTableViewCell.h"
 #import "UITableView+Helper.h"
 
-#import "PureLayout.h"
 
 static NSString *ColorCellString = @"ColorSimpleProjectListTableViewCell";
 
@@ -42,10 +41,13 @@ static NSString *ColorCellString = @"ColorSimpleProjectListTableViewCell";
         tableView;
     });
     [self.view addSubview:self.tableView];
-    [self.tableView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:0];
-    [self.tableView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
-    [self.tableView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:0];
-    [self.tableView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
+    self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint activateConstraints:@[
+        [self.tableView.topAnchor constraintEqualToAnchor:self.view.topAnchor],
+        [self.tableView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
+        [self.tableView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
+        [self.tableView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor]
+    ]];
     
     if (self.isShowCancelAndDone) {
         UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:self.doneButtonTitle

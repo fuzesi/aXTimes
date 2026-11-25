@@ -7,7 +7,6 @@
 //
 
 #import "AXProjectsSummaryViewController.h"
-#import "PureLayout.h"
 #import "NSNumber+AXNSNumberCategory.h"
 #import "NSString+AXNSStringCategory.h"
 
@@ -28,10 +27,13 @@ static NSString *projectSummarySubCellString = @"ProjectSummarySubTableViewCell"
                                                    style:UITableViewStyleGrouped];
 
     [self.view addSubview:self.tableView];
-    [self.tableView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:0];
-    [self.tableView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
-    [self.tableView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:0];
-    [self.tableView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
+    self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint activateConstraints:@[
+        [self.tableView.topAnchor constraintEqualToAnchor:self.view.topAnchor],
+        [self.tableView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
+        [self.tableView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
+        [self.tableView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor]
+    ]];
     self.tableView.SKSTableViewDelegate = self;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 44.0;
