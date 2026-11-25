@@ -109,6 +109,50 @@ final class UnitTest: XCTestCase {
         XCTAssertEqual(try context.count(for: NSFetchRequest<NSFetchRequestResult>(entityName: "Project")), 2)
     }
 
+    func testRejectedBackupDoesNotAlterExistingStore() throws {
+        #if !targetEnvironment(simulator)
+        throw XCTSkip("Backup restore tests run only in the dedicated simulator")
+        #else
+        let store = try XCTUnwrap(AXDataStore.sharedInstance())
+        let context = try XCTUnwrap(store.managedObjectContext)
+        let entityNames = ["Pause", "DayEntry", "Project", "Customer", "DefaultPauseSetting", "WorkingWeekSetting", "DayType", "Comment"]
+        func identifiers() throws -> [String: Set<NSManagedObjectID>] {
+            var result: [String: Set<NSManagedObjectID>] = [:]
+            for entity in entityNames {
+                let request = NSFetchRequest<NSManagedObject>(entityName: entity)
+                result[entity] = Set(try context.fetch(request).map { $0.objectID })
+            }
+            return result
+        }
+        let before = try identifiers()
+        let hadChanges = context.hasChanges
+        let settings = SettingsManager()
+        let previousHours = settings.hoursPerDay
+        var basic = project()
+        basic["basicProject"] = true
+        basic["name"] = GlobalConstants.basicGlobalProjectName
+        var badEntry = entry()
+        badEntry["checkInTime"] = "not-a-date"
+        let info = try XCTUnwrap(Bundle.main.infoDictionary)
+        let payload: [String: Any] = ["settings": ["settings_hoursperday": 1],
+            "dayEntries": [badEntry], "projects": [basic], "pauses": [], "customers": [],
+            "defaultPauseSettings": [], "workingWeekSettings": [], "dayTypes": []]
+        let document: [String: Any] = [
+            "kAXSourceApplicationNameKey": try XCTUnwrap(info["CFBundleDisplayName"] as? String),
+            "kAXSourceApplicationIdentifierKey": try XCTUnwrap(info["CFBundleIdentifier"] as? String),
+            "kAXPayloadKey": payload]
+        let url = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString + ".json")
+        try JSONSerialization.data(withJSONObject: document).write(to: url)
+        defer { try? FileManager.default.removeItem(at: url) }
+        XCTAssertThrowsError(try DataSharingController(settingsManager: settings).restoreFromBackup(withBackupFileURL: url)) { error in
+            XCTAssertTrue(error is CodecError, "The invalid date must be rejected during import")
+        }
+        XCTAssertEqual(try identifiers(), before)
+        XCTAssertEqual(context.hasChanges, hadChanges)
+        XCTAssertEqual(settings.hoursPerDay, previousHours)
+        #endif
+    }
+
     func testLegacyHexColorsPreserveRGBAndAlpha() {
         XCTAssertEqual("#123456".color.hex, "#123456")
         XCTAssertEqual("#12345680".color.hex, "#123456")
