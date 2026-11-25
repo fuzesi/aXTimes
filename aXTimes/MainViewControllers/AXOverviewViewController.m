@@ -9,7 +9,6 @@
 #import <os/log.h>
 
 #import "AXOverviewViewController.h"
-#import "PureLayout.h"
 #import "UIViewController+Container.h"
 #import "AXDayEntriesListViewController.h"
 #import "AXTimeLineViewController.h"
@@ -149,26 +148,30 @@
     self.calendarMenuView = [JTCalendarMenuView new];
     self.calendarContentView = [JTHorizontalCalendarView new];
     self.calendarContentView.delegate = self;
-    self.containerView = [UIView newAutoLayoutView];
+    self.containerView = [UIView new];
     
     [self.view addSubview:_calendarMenuView];
     [self.view addSubview:self.calendarContentView];
     [self.view addSubview:self.containerView];
     
-    [self.calendarMenuView autoPinToTopLayoutGuideOfViewController:self withInset:0];
-    [self.calendarMenuView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
-    [self.calendarMenuView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:0];
-    [self.calendarMenuView autoSetDimension:ALDimensionHeight toSize:50];
-    
-    [self.calendarContentView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.calendarMenuView withOffset:0];
-    [self.calendarContentView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
-    [self.calendarContentView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:0];
-    self.calendarContentViewHeightConstraint = [self.calendarContentView autoSetDimension:ALDimensionHeight toSize:300];
-
-    [self.containerView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.calendarContentView withOffset:0];
-    [self.containerView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
-    [self.containerView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:0];
-    [self.containerView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
+    self.calendarMenuView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.calendarContentView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.containerView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.calendarContentViewHeightConstraint = [self.calendarContentView.heightAnchor constraintEqualToConstant:300];
+    [NSLayoutConstraint activateConstraints:@[
+        [self.calendarMenuView.topAnchor constraintEqualToAnchor:self.topLayoutGuide.bottomAnchor],
+        [self.calendarMenuView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
+        [self.calendarMenuView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
+        [self.calendarMenuView.heightAnchor constraintEqualToConstant:50],
+        [self.calendarContentView.topAnchor constraintEqualToAnchor:self.calendarMenuView.bottomAnchor],
+        [self.calendarContentView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
+        [self.calendarContentView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
+        self.calendarContentViewHeightConstraint,
+        [self.containerView.topAnchor constraintEqualToAnchor:self.calendarContentView.bottomAnchor],
+        [self.containerView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
+        [self.containerView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
+        [self.containerView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor]
+    ]];
 }
 
 - (void)setupCalendManager {

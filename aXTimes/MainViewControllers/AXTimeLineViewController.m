@@ -7,7 +7,6 @@
 //
 
 #import "AXTimeLineViewController.h"
-#import "PureLayout.h"
 #import "NSDate+DDCalendar.h"
 #import "DDCalendarEvent.h"
 #import "EventView.h"
@@ -39,7 +38,13 @@
     [self refresh];
 
     [self.view addSubview:self.dDCalendarView];
-    [self.dDCalendarView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    self.dDCalendarView.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint activateConstraints:@[
+        [self.dDCalendarView.topAnchor constraintEqualToAnchor:self.view.topAnchor],
+        [self.dDCalendarView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
+        [self.dDCalendarView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
+        [self.dDCalendarView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor]
+    ]];
 }
 
 #pragma mark - private methods

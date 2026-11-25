@@ -12,7 +12,6 @@
 #import "DDCalendarEvent.h"
 #import "DDCalendarDaysScrollView.h"
 #import "DDCalendarViewConstants.h"
-#import "PureLayout.h"
 
 @interface DDCalendarView () <UIScrollViewDelegate>
 @property(nonatomic, strong) IBInspectable NSString * _Nonnull dateString;
@@ -61,7 +60,13 @@
     pagingView.scrollEnabled = NO;
     [self addSubview:pagingView];
     self.pagingView = pagingView;
-    [self.pagingView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+    self.pagingView.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint activateConstraints:@[
+        [self.pagingView.topAnchor constraintEqualToAnchor:self.topAnchor],
+        [self.pagingView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor],
+        [self.pagingView.trailingAnchor constraintEqualToAnchor:self.trailingAnchor],
+        [self.pagingView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor]
+    ]];
     
     DDCalendarDaysScrollView *leftScrollView = [[DDCalendarDaysScrollView alloc] initWithFrame:self.bounds];
     leftScrollView.delegate = self;

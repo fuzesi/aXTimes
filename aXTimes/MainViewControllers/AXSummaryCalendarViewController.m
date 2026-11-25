@@ -27,7 +27,6 @@
 #import "NSNumber+AXNSNumberCategory.h"
 #import "NSString+AXNSStringCategory.h"
 #import "AXProjectsSummaryViewController.h"
-#import "PureLayout.h"
 
 typedef NS_ENUM (NSUInteger, SegmentType) {
     SegmentTypeWeek = 0,
@@ -525,12 +524,14 @@ static NSString *dayTypesSummaryCellString = @"DayTypesSummaryTableViewCell";
         self.fetchedResultsController = nil;
         self.aXProjectsSummaryViewController.fetchedResultsController = self.fetchedResultsController;            
         [self.view addSubview:self.aXProjectsSummaryViewController.view];
-        [self.aXProjectsSummaryViewController.view autoPinEdge:ALEdgeTop
-                              toEdge:ALEdgeBottom
-                              ofView:self.dateHeaderView];
-        [self.aXProjectsSummaryViewController.view autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
-        [self.aXProjectsSummaryViewController.view autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:0];
-        [self.aXProjectsSummaryViewController.view autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
+        UIView *projectView = self.aXProjectsSummaryViewController.view;
+        projectView.translatesAutoresizingMaskIntoConstraints = NO;
+        [NSLayoutConstraint activateConstraints:@[
+            [projectView.topAnchor constraintEqualToAnchor:self.dateHeaderView.bottomAnchor],
+            [projectView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
+            [projectView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
+            [projectView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor]
+        ]];
         self.dateHeaderViewHeight.constant = 0;
         self.nextButton.hidden = YES;
         self.previousButton.hidden = YES;

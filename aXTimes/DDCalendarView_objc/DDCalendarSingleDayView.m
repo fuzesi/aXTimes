@@ -16,7 +16,6 @@
 #import "DDCalendarViewConstants.h"
 #import "OBDragDrop.h"
 
-#import "PureLayout.h"
 
 @interface DDCalendarSingleDayView () <OBOvumSource, OBDropZone>
 @property(nonatomic,weak) DDCalendarHourLinesView *bg;
@@ -44,10 +43,14 @@
         [hourLines sizeToFit];
         [self addSubview:hourLines];
         self.bg = hourLines;
-        [self.bg autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:0];
-        [self.bg autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
-        [self.bg autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:0];
-        self.hourLinesViewHeightConstraint = [self.bg autoSetDimension:ALDimensionHeight toSize:hourLines.totalHeight];
+        self.bg.translatesAutoresizingMaskIntoConstraints = NO;
+        self.hourLinesViewHeightConstraint = [self.bg.heightAnchor constraintEqualToConstant:hourLines.totalHeight];
+        [NSLayoutConstraint activateConstraints:@[
+            [self.bg.topAnchor constraintEqualToAnchor:self.topAnchor],
+            [self.bg.leadingAnchor constraintEqualToAnchor:self.leadingAnchor],
+            [self.bg.trailingAnchor constraintEqualToAnchor:self.trailingAnchor],
+            self.hourLinesViewHeightConstraint
+        ]];
         
         //add a container for the events
         UIView *container = [UIView new];
@@ -55,12 +58,16 @@
         container.opaque = NO;
         [self.bg addSubview:container];
         self.container = container;
-        [self.container autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:HEIGHT_CELL_MIN/2];
-        [self.container autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:TIME_LABEL_WIDTH + 5];
-        NSLayoutConstraint *constraint = [self.container autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:5];
-        [self.container autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:HEIGHT_CELL_MIN/2];
-        //weird contraint warning made this necessary
+        self.container.translatesAutoresizingMaskIntoConstraints = NO;
+        NSLayoutConstraint *constraint = [self.container.trailingAnchor constraintEqualToAnchor:self.bg.trailingAnchor constant:-5];
+        // Keep the existing low priority used to avoid conflicts with event widths.
         constraint.priority = 1;
+        [NSLayoutConstraint activateConstraints:@[
+            [self.container.topAnchor constraintEqualToAnchor:self.bg.topAnchor constant:HEIGHT_CELL_MIN/2],
+            [self.container.leadingAnchor constraintEqualToAnchor:self.bg.leadingAnchor constant:TIME_LABEL_WIDTH + 5],
+            constraint,
+            [self.container.bottomAnchor constraintEqualToAnchor:self.bg.bottomAnchor constant:-HEIGHT_CELL_MIN/2]
+        ]];
         
         _showsTimeLabels = YES;
         [self setShowsDayHeader:NO];
@@ -118,10 +125,13 @@
             eventView.backgroundColor = [UIColor blueColor];
             
             [self.container addSubview:eventView];
-            [eventView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
-            [eventView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:0];
-            [eventView autoSetDimension:ALDimensionHeight toSize:frame.size.height];
-            [eventView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:frame.origin.y];
+            eventView.translatesAutoresizingMaskIntoConstraints = NO;
+            [NSLayoutConstraint activateConstraints:@[
+                [eventView.leadingAnchor constraintEqualToAnchor:self.container.leadingAnchor],
+                [eventView.trailingAnchor constraintEqualToAnchor:self.container.trailingAnchor],
+                [eventView.heightAnchor constraintEqualToConstant:frame.size.height],
+                [eventView.topAnchor constraintEqualToAnchor:self.container.topAnchor constant:frame.origin.y]
+            ]];
 
             [newEventViews addObject:eventView];
 

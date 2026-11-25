@@ -234,4 +234,29 @@ final class UnitTest: XCTestCase {
         }
     }
 
+    func testOverviewCalendarKeepsItsLayoutAndAdjustableHeight() throws {
+        let overview = AXOverviewViewController()
+        overview.selectedDateViewModel = SelectedDateViewModel(date: Date())
+        overview.loadViewIfNeeded()
+        let menu = try XCTUnwrap(overview.value(forKey: "calendarMenuView") as? UIView)
+        let calendar = try XCTUnwrap(overview.value(forKey: "calendarContentView") as? UIView)
+        let container = try XCTUnwrap(overview.value(forKey: "containerView") as? UIView)
+        let height = try XCTUnwrap(overview.value(forKey: "calendarContentViewHeightConstraint") as? NSLayoutConstraint)
+        for size in [CGSize(width: 390, height: 800), CGSize(width: 700, height: 500)] {
+            overview.view.frame = CGRect(origin: .zero, size: size)
+            for calendarHeight in [240.0, 300.0] {
+                height.constant = calendarHeight
+                overview.view.setNeedsLayout()
+                overview.view.layoutIfNeeded()
+                XCTAssertEqual(menu.frame.height, 50, accuracy: 0.5)
+                XCTAssertEqual(calendar.frame.height, calendarHeight, accuracy: 0.5)
+                XCTAssertEqual(calendar.frame.minY, menu.frame.maxY, accuracy: 0.5)
+                XCTAssertEqual(container.frame.minY, calendar.frame.maxY, accuracy: 0.5)
+                XCTAssertEqual(container.frame.maxY, size.height, accuracy: 0.5)
+                XCTAssertEqual(menu.frame.width, size.width, accuracy: 0.5)
+                XCTAssertEqual(calendar.frame.width, size.width, accuracy: 0.5)
+            }
+        }
+    }
+
 }

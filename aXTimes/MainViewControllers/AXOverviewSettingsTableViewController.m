@@ -14,7 +14,6 @@
 #import "AXProjectSettingsTableViewController.h"
 #import "AXClientSettingsTableViewController.h"
 
-#import <PureLayout/PureLayout.h>
 
 @interface AXOverviewSettingsTableViewController ()
 
@@ -187,10 +186,13 @@
         label.numberOfLines = 0;
         label.lineBreakMode = NSLineBreakByWordWrapping;
         label.text = [NSString stringWithFormat:@"%@\n%@", APPLICATIONFULLVERSION, BOTTOM_INFOSCREEN];
-        [label autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:20];
-        [label autoPinEdgeToSuperviewEdge:ALEdgeBottom];
-        [label autoPinEdgeToSuperviewEdge:ALEdgeLeft];
-        [label autoPinEdgeToSuperviewEdge:ALEdgeRight];
+        label.translatesAutoresizingMaskIntoConstraints = NO;
+        [NSLayoutConstraint activateConstraints:@[
+            [label.topAnchor constraintEqualToAnchor:containerView.topAnchor constant:20],
+            [label.bottomAnchor constraintEqualToAnchor:containerView.bottomAnchor],
+            [label.leftAnchor constraintEqualToAnchor:containerView.leftAnchor],
+            [label.rightAnchor constraintEqualToAnchor:containerView.rightAnchor]
+        ]];
         return containerView;
     }
     return nil;
