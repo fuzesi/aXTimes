@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:StoreKitTests/PremiumTest.storekit">
+   </FileRef>
+   <FileRef
       location = "group:aXTimes.xcodeproj">
    </FileRef>
 </Workspace>

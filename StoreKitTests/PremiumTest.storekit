@@ -1,0 +1,27 @@
+{
+  "identifier" : "12F0BC6F-422A-4776-9321-0CA0FFCFB6A1",
+  "nonRenewingSubscriptions" : [],
+  "products" : [
+    {
+      "displayPrice" : "1.99",
+      "familyShareable" : false,
+      "internalID" : "03D94047-3B57-46FB-949D-850C146DA456",
+      "localizations" : [
+        { "description" : "Lokales Testprodukt", "displayName" : "Testfreischaltung", "locale" : "de_DE" },
+        { "description" : "Local test product", "displayName" : "Test unlock", "locale" : "en_US" }
+      ],
+      "productID" : "com.aximilate.axtimespro.test.projects",
+      "referenceName" : "Test Projects",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "123456789",
+    "_developerTeamID" : "",
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA"
+  },
+  "subscriptionGroups" : [],
+  "version" : { "major" : 3, "minor" : 0 }
+}

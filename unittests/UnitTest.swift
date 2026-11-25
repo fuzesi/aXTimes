@@ -411,3 +411,51 @@ final class UnitTest: XCTestCase {
     }
 
 }
+
+#if targetEnvironment(simulator)
+import StoreKitTest
+import StoreKit
+
+final class StoreKitIntegrationTest: XCTestCase {
+    func testLegacyPurchaseIsVisibleToModernStoreKit() async throws {
+        guard ProcessInfo.processInfo.environment["AXTIMES_STOREKIT_TESTS"] == "1" else {
+            throw XCTSkip("Use the dedicated StoreKit test scheme and an isolated simulator")
+        }
+        let source = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
+        let session = try SKTestSession(contentsOf: source.appendingPathComponent("StoreKitTests/PremiumTest.storekit"))
+        session.disableDialogs = true
+        session.clearTransactions()
+        defer { session.clearTransactions() }
+        let suite = "axtimes.tests.storekit." + UUID().uuidString
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suite))
+        defer { defaults.removePersistentDomain(forName: suite) }
+        let center = NotificationCenter()
+        let id = "com.aximilate.axtimespro.test.projects"
+        let helper = IAPHelper(productIds: [id], defaults: defaults, notificationCenter: center)
+        defer { SKPaymentQueue.default().remove(helper) }
+        let purchased = expectation(description: "Legacy purchase delivered")
+        purchased.assertForOverFulfill = false
+        let token = center.addObserver(forName: NSNotification.Name(rawValue: IAPHelper.IAPHelperPurchaseNotification), object: nil, queue: nil) { note in
+            if note.object as? String == id { purchased.fulfill() }
+        }
+        defer { center.removeObserver(token) }
+        let loaded = expectation(description: "Legacy product loaded")
+        var storeProduct: SKProduct?
+        helper.requestProducts { success, products in
+            XCTAssertTrue(success)
+            storeProduct = products?.first
+            loaded.fulfill()
+        }
+        await fulfillment(of: [loaded], timeout: 15)
+        helper.buyProduct(try XCTUnwrap(storeProduct))
+        await fulfillment(of: [purchased], timeout: 15)
+        XCTAssertTrue(helper.isProductPurchased(id))
+        try await AppStore.sync()
+        var found = false
+        for await result in Transaction.currentEntitlements {
+            if case .verified(let transaction) = result, transaction.productID == id { found = true }
+        }
+        XCTAssertTrue(found, "A purchase made with the legacy API must be available to the modern API")
+    }
+}
+#endif
