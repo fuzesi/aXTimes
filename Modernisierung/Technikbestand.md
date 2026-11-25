@@ -9,7 +9,7 @@ Stand: 25. November 2026. Grundlage ist der App-Quellcode und ein Simulator-Buil
 - **RESideMenu**: Navigation und Seitenmenü; die Navigation zwischen allen Hauptansichten vor einem Austausch prüfen.
 - **SKSTableView**: aufklappbare Tabellen für Projekte und Navigation; Hierarchien und Auswahlverhalten vor einem Austausch prüfen.
 - **UAAppReviewManager**: Aus dem App-Build entfernt. In den Einstellungen bleiben der vorhandene Support-Link und ein direkter App-Store-Bewertungslink verfügbar. Der ursprüngliche Quellcode liegt noch im Repository. Es wird keine automatische Bewertungsaufforderung ausgelöst; der Bewertungslink öffnet den App Store auf Wunsch der Nutzerin oder des Nutzers.
-- **IAPHelper / ursprüngliche StoreKit-API**: In-App-Käufe und Wiederherstellung. Eine Umstellung auf Apples aktuelle API benötigt Tests für bestehende Käufe und Wiederherstellung im StoreKit-Test beziehungsweise mit Sandbox-Konto.
+- **IAPHelper / ursprüngliche StoreKit-API**: In-App-Käufe und Wiederherstellung. Die bestehende Projektfreischaltung nutzt die Kennung `com.aximilate.axtimespro.projects` und einen lokal gespeicherten Status. Isolierte Tests prüfen dessen Erhalt, das Speichern und die Benachrichtigung. Dies simuliert keine echte StoreKit-Transaktion und beweist keine Wiederherstellung aus dem App Store. Vor der Umstellung auf die aktuelle API müssen Kauf und Wiederherstellung zusätzlich mit StoreKit-Test beziehungsweise Sandbox-Konto geprüft werden.
 
 Diese Quelltextkopien haben keine im Projekt zuverlässig ausgewiesene Paketversion. Es darf daher nicht angenommen werden, dass sie dem aktuellen Stand ihres jeweiligen Ursprungsprojekts entsprechen.
 

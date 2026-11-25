@@ -374,4 +374,40 @@ final class UnitTest: XCTestCase {
         XCTAssertNotNil(restored.checkOutTime)
     }
 
+    func testExistingPremiumUnlockRemainsAvailable() throws {
+        let suite = "axtimes.tests.purchases." + UUID().uuidString
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suite))
+        defer { defaults.removePersistentDomain(forName: suite) }
+        let product = IAPProducts.projects
+        defaults.set(true, forKey: product)
+        let helper = IAPHelper(productIds: [product], defaults: defaults, observePaymentQueue: false)
+        XCTAssertEqual(product, "com.aximilate.axtimespro.projects")
+        XCTAssertTrue(helper.isProductPurchased(product))
+        XCTAssertFalse(helper.isProductPurchased("unrelated.product"))
+    }
+
+    func testPurchaseDeliveryPersistsAndNotifies() throws {
+        let suite = "axtimes.tests.purchases." + UUID().uuidString
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suite))
+        defer { defaults.removePersistentDomain(forName: suite) }
+        let center = NotificationCenter()
+        let product = IAPProducts.projects
+        let helper = IAPHelper(productIds: [product], defaults: defaults,
+                               notificationCenter: center, observePaymentQueue: false)
+        let notified = expectation(description: "Purchase notification")
+        let token = center.addObserver(forName: NSNotification.Name(rawValue: IAPHelper.IAPHelperPurchaseNotification),
+                                       object: nil, queue: nil) { note in
+            XCTAssertEqual(note.object as? String, product)
+            notified.fulfill()
+        }
+        defer { center.removeObserver(token) }
+        XCTAssertFalse(helper.isProductPurchased(product))
+        helper.deliverPurchaseNotificationFor(identifier: product)
+        XCTAssertTrue(helper.isProductPurchased(product))
+        XCTAssertTrue(defaults.bool(forKey: product))
+        wait(for: [notified], timeout: 1)
+        let reloaded = IAPHelper(productIds: [product], defaults: defaults, observePaymentQueue: false)
+        XCTAssertTrue(reloaded.isProductPurchased(product))
+    }
+
 }

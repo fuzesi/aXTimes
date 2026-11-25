@@ -28,14 +28,19 @@ public typealias ProductsRequestCompletionHandler = (_ success: Bool, _ products
 final class IAPHelper: NSObject {
     static let IAPHelperPurchaseNotification = "IAPHelperPurchaseNotification"
     fileprivate let productIdentifiers: Set<ProductIdentifier>
+    private let defaults: UserDefaults
+    private let notificationCenter: NotificationCenter
     fileprivate var purchasedProductIdentifiers = Set<ProductIdentifier>()
     fileprivate var productsRequest: SKProductsRequest?
     fileprivate var productsRequestCompletionHandler: ProductsRequestCompletionHandler?
 
-    public init(productIds: Set<ProductIdentifier>) {
+    public init(productIds: Set<ProductIdentifier>, defaults: UserDefaults = .standard,
+                notificationCenter: NotificationCenter = .default, observePaymentQueue: Bool = true) {
         productIdentifiers = productIds
+        self.defaults = defaults
+        self.notificationCenter = notificationCenter
         for productIdentifier in productIds {
-            let purchased = UserDefaults.standard.bool(forKey: productIdentifier)
+            let purchased = defaults.bool(forKey: productIdentifier)
             if purchased {
                 purchasedProductIdentifiers.insert(productIdentifier)
                 print("Previously purchased: \(productIdentifier)")
@@ -44,7 +49,9 @@ final class IAPHelper: NSObject {
             }
         }
         super.init()
-        SKPaymentQueue.default().add(self)
+        if observePaymentQueue {
+            SKPaymentQueue.default().add(self)
+        }
     }
 }
 
@@ -158,13 +165,13 @@ extension IAPHelper: SKPaymentTransactionObserver {
         SKPaymentQueue.default().finishTransaction(transaction)
     }
 
-    private func deliverPurchaseNotificationFor(identifier: String?) {
+    func deliverPurchaseNotificationFor(identifier: String?) {
         guard let identifier = identifier else { return }
 
         purchasedProductIdentifiers.insert(identifier)
-        UserDefaults.standard.set(true, forKey: identifier)
-        UserDefaults.standard.synchronize()
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: IAPHelper.IAPHelperPurchaseNotification), object: identifier)
+        defaults.set(true, forKey: identifier)
+        defaults.synchronize()
+        notificationCenter.post(name: NSNotification.Name(rawValue: IAPHelper.IAPHelperPurchaseNotification), object: identifier)
     }
 }
 
