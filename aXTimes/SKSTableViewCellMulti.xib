@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SKSTableViewCellMulti" id="9zc-2D-7z3" customClass="SKSTableViewCellMulti">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9zc-2D-7z3" id="N4d-CC-OiW">
+                <frame key="frameInset" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkB-1r-akv">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="33" id="1hh-ma-WNo"/>
+                            <constraint firstAttribute="height" constant="33" id="QxW-fU-tcf"/>
+                        </constraints>
+                        <state key="normal" image="expandableImage.png"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mf6-mD-2A6">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jk8-zd-sbi">
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="5na-zD-Osb"/>
+                            <constraint firstAttribute="height" constant="24" id="6vh-oM-xTq"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="fkB-1r-akv" firstAttribute="centerY" secondItem="N4d-CC-OiW" secondAttribute="centerY" id="97V-T2-kJ2"/>
+                    <constraint firstItem="mf6-mD-2A6" firstAttribute="centerY" secondItem="N4d-CC-OiW" secondAttribute="centerY" id="AuU-Zy-uj7"/>
+                    <constraint firstItem="mf6-mD-2A6" firstAttribute="leading" secondItem="jk8-zd-sbi" secondAttribute="trailing" constant="5" id="NBN-8g-hQr"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="mf6-mD-2A6" secondAttribute="trailing" id="ide-3R-RVe"/>
+                    <constraint firstItem="jk8-zd-sbi" firstAttribute="centerY" secondItem="N4d-CC-OiW" secondAttribute="centerY" id="mSq-E2-i0S"/>
+                    <constraint firstItem="jk8-zd-sbi" firstAttribute="leading" secondItem="fkB-1r-akv" secondAttribute="trailing" constant="5" id="oYf-Wm-mmh"/>
+                    <constraint firstItem="fkB-1r-akv" firstAttribute="leading" secondItem="N4d-CC-OiW" secondAttribute="leading" constant="3" id="otY-Or-2UP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="colorView" destination="jk8-zd-sbi" id="38x-6e-Tdi"/>
+                <outlet property="customTextLabel" destination="mf6-mD-2A6" id="O3V-wj-pjY"/>
+                <outlet property="expandButton" destination="fkB-1r-akv" id="EzQ-Sm-UYE"/>
+                <outlet property="expandButtonWidthContraint" destination="1hh-ma-WNo" id="b8w-uu-Q88"/>
+            </connections>
+            <point key="canvasLocation" x="484" y="225"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="expandableImage.png" width="8" height="5"/>
+    </resources>
+</document>

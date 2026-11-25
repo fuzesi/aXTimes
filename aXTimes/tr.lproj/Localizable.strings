@@ -1,0 +1,402 @@
+/*
+ Localizable.strings
+ aXTimes
+ 
+ Created by fuesec on 6/1/13.
+ Copyright (c) 2013 aXimilate. All rights reserved.
+ */
+
+/* You cannot create a new entry since the current day is in the future.' The previous sentence will shown in a popup. */
+"You cannot create a new entry since the current day is in the future." = "İleri tarih için kayıt yapılamaz.";
+
+/* Translate the term 'Add entry'. It will be shown as a label on a button in the options menu. */
+"Add entry" = "Kayıt ekle";
+
+/* Table cell button: Add Pause */
+"Add Pause" = "Mola ekle";
+
+/* Translate the term 'Average time per day' which will be displayed in a label e.g. in the summary view. */
+"Average time per day" = "Günlük ortalama mesai saatleri";
+
+/* Translate the word 'Cancel'. E.g. shown as a label on a button. */
+"Cancel" = "Vazgeç";
+
+/* Table cell label: Check-In */
+"Check-In" = "Giriş";
+
+/* Translate 'Check-In date' */
+"Check-In date" = "Giriş tarihi";
+
+/* Translate 'Check-In time' */
+"Check-In time" = "Giriş saati";
+
+/* Translate 'Check-In timestamp' */
+"Check-In timestamp" = "Giriş damgası";
+
+/* Translate 'Check-In timezone' */
+"Check-In timezone" = "Giriş zaman dilimi";
+
+/* Table cell label: Check-Out */
+"Check-Out" = "Çıkış";
+
+/* Translate 'Check-Out date' */
+"Check-Out date" = "Çıkış tarihi";
+
+/* Translate 'Check-Out time' */
+"Check-Out time" = "Çıkış saati";
+
+/* Translate 'Check-Out timestamp' */
+"Check-Out timestamp" = "Çıkış damgası";
+
+/* Translate 'Check-Out timezone' */
+"Check-Out timezone" = "Çıkış zaman dilimi";
+
+/* Small label on main screen for displaying the check-in time. Translate the prefix: Checked in at */
+"Checked in at:" = "Giriş:";
+
+/* Label on main screen for displaying the check-out time. Translate the prefix: Checked out at */
+"Checked out at:" = "Çıkış:";
+
+/* Clear button title in note view */
+"Clear" = "Sil";
+
+/* Translate the word 'Comment' which is diplayed as header in the settings for the 'default comment view' */
+"Comment" = "Yorum";
+
+/* Translate the term 'Copy entry'. It will be shown as a label on a button in the options menu. */
+"Copy entry" = "Kaydı kopyala";
+
+/* Small label on main screen for displaying the total money earned for last/current entry. Translate the prefix: Currently earned money */
+"Currently earned money" = "Aktüel kazanç";
+
+/* Translate the word 'date' as in calendar date. In german: 'Datum' */
+"Date" = "Tarih";
+
+/* Segemented GUI Control segment title: Day */
+"Day" = "Gün";
+
+/* Translate the term 'Day off/weekend' displayed in the info page which shows information about certain icons. E.g. Day off/weekend  ....  Arbeitsfrei/Wochenende */
+"Day off/weekend" = "İzin günü/hafta sonu";
+
+/* Translate the term 'days' used e.g. in the report tab. E.g. 3 days */
+"days" = "gün";
+
+/* Translate the term 'Days off' displayed in the report tab. E.g. days off/Arbeitsfreie Tage as label in the report tab */
+"Days off" = "İzin günleri";
+
+/* Translate the tern 'Decimal separator' which is diplayed as a label in the settings. */
+"Decimal Separator" = "Ondalık ayracı";
+
+/* Just translate the word 'default' */
+"Default" = "Varsayılan";
+
+/* Translate the term 'Default comment' which is diplayed as a label in the settings. */
+"Default Comment" = "Varsayılan yorum";
+
+/* Translate the term 'Delete day'. It will be shown as a label on a button in the options menu. */
+"Delete day" = "Günü sil";
+
+/* Translate the term 'Delete entry'. It will be shown as a label on a button in the options menu. */
+"Delete entry" = "Kaydı sil";
+
+/* Translate the word 'Description'. E.g. project description */
+"Description" = "Tanıtım";
+
+/* Detail tab at the bottom of the screen. Translate the word 'Detail' */
+"Detail" = "Ayrıntılar";
+
+/* Translate the term 'Details' as in project details. */
+"Details" = "Ayrıntıları";
+
+/* Translate 'Do you know our website?' */
+"Do you know our website?" = "Bizim web sitemizi tanıyor musun?";
+
+/* Clear dayentry alert view content: Do you wish to clear the whole day? */
+"Do you wish to clear the whole day?" = "Bütün günü silmek istiyor musun?";
+
+/* 'Do you wish to delete all entries of this day?' This question will be displayed in a popup. */
+"Do you wish to delete all entries of this day?" = "Bu günün bütün kayıtlarını silmek istiyor musun?";
+
+/* 'Do you wish to delete this entry?'. This question will be displayed in a popup. */
+"Do you wish to delete this entry?" = "Bu kaydı silmek istiyor musun?";
+
+/* Overwrite dayentry alert view content: Do you wish to overwrite an existing day entry? */
+"Do you wish to overwrite an existing day entry?" = "Mevcut kaydı silip yerine yeni kaydı yapmak istiyor musun?";
+
+/* 'Take over changes' alert view content: Do you wish to take over the changes for the current day? */
+"Do you wish to take over the changes for the current day?" = "Yapmış olduğun değişiklikleri kaydetmek istiyor musun?";
+
+/* 'Take over changes' alert view content: Do you wish to take over the changes for the currently active entry? */
+"Do you wish to take over the changes for the currently active entry?" = "Aktif kayıt için değişiklikleri kaydetmek istiyor musun?";
+
+/* 'Take over changes' alert view content. Translate 'Do you wish to take over the changes for the entire calendar or only starting from today?' */
+"Do you wish to take over the changes for the entire calendar or only starting from today?" = "Yapmış olduğun değişiklikler tüm takvim için mi yoksa bugünden itibaren mi geçerli olsun?";
+
+/* Translate the word 'E-mail' */
+"E-Mail" = "E-mail";
+
+/* Table cell label: End */
+"End" = "Son";
+
+/* Alert view option answer. Translate 'Entire calendar' */
+"Entire calendar" = "Bütün takvim";
+
+/* Translate 'Entries' as in DayEntries (TagesEinträge) */
+"Entries" = "Kayıtlar";
+
+/* Translate 'Entry' as in 'Entry 3 of 4' or in german: 'Eintrag 3 von 4' */
+"Entry" = "Kayıt";
+
+/* Translate the word 'Export' which is displayed e.g in the settings view as a section headder. */
+"Export" = "Export";
+
+/* Translate 'For possible bugs, issues or suggestions go to' */
+"For possible bugs, issues or suggestions go to" = "Her hangi bir hata, problem olduğunda yada önerin için bize ulaşabilirsin:";
+
+/* Alert view option answer. Translate 'From today' */
+"From today" = "Bugünden itibaren";
+
+/* 'General' section header in settings view */
+"General" = "Genel";
+
+/* Translate the term 'Public holidays' displayed in the report tab. E.g. holiday wie in Public holidays/Feiertage */
+"Holiday" = "Milli bayram";
+
+/* Translate the term 'Holiday day'  displayed in the info page which shows information about certain icons. E.g. holiday wie in Feiertag/Public holiday */
+"Holiday day" = "Tatil günü";
+
+/* Translate the term 'Hourly wage' which is diplayed as a label e.g. in the settings. */
+"Hourly wage" = "Saat ücreti";
+
+/* Translate the term 'Hours per day' which is diplayed as a label in the settings. */
+"Hours per day" = "Günlük çalışma süreci";
+
+/* Translate the term 'Hours to distribute' */
+"Hours to distribute" = "Bölüncek saatleri";
+
+/* Translate the term 'Hours worked' */
+"Hours worked" = "Çalışılmış saatler";
+
+/* Nothing to do here ;-) http://axtimes.com/ */
+"http://axtimes.com/" = "http://axtimes.com/";
+
+/* Translate the term 'Icons'. E.g. Icons */
+"Icons" = "İkonlar";
+
+/* Translate the term 'Incl. timezone' which is diplayed as a label in the settings. */
+"Incl. timezone" = "Zaman dilimi içerikli";
+
+/* Translate word 'Information' */
+"Information" = "Bilgi";
+
+/* The name of the rounding method mercantile aka: kaufmännisch */
+"Kaufmännisch" = "Ticari hesap";
+
+/* Translate the word 'Language' */
+"Language" = "Dil";
+
+/* Live tab at the bottom of the screen. Translate the word 'Live' */
+"Live" = "Canlı";
+
+/* Translate the term 'Live' as in live salary */
+"Live_entry_value" = "Canlı";
+
+/* Translate the word 'Mail'. It should be the same name as in the Apple sharing functionality. */
+"Mail" = "Mail";
+
+/* Translate the word 'Message'. It should be the same name as in the Apple sharing functionality. */
+"Message" = "Mesaj";
+
+/* Translate this term 'Money earned this month' */
+"Money earned this month" = "Aylık kazanç";
+
+/* Translate this term 'Money earned this year' */
+"Money earned this year" = "Yıllık kazanç";
+
+/* Segmented GUI Control segment title: Month */
+"Month" = "Ay";
+
+/* Translate the word 'Name'. E.g. project name */
+"Name" = "İsim";
+
+/* Alert view deny answer: No. */
+"No" = "Hayır";
+
+/* Small label on main screen which is displayed if the user has not worked on that particular day. Translate: Not yet worked today */
+"Not yet worked today" = "Bugün henüz çalışılmamış";
+
+/* Translate the word 'of' as in '1 of 3 Entries' or in german: 'Eintrag 3 von 4' */
+"of" = "öğeden";
+
+/* Alert view button title confirmation: Ok. Translate 'Ok' in german e.g. 'Ok' */
+"OK" = "Tamam";
+
+/* Translate the word 'Options'. */
+"Options" = "Ayarlar";
+
+/* Translate the term 'Overtime' which will be displayed in a label e.g. in the report view. */
+"Overtime" = "Fazla mesai";
+
+/* Label: Pause */
+"Pause" = "Mola";
+
+/* Translate the term 'Pause time'. In german: 'Pausenzeit' */
+"Pause time" = "Mola süreci";
+
+/* Label on the main screen under the ticker. Translate 'Working on' */
+"Planned working time" = "Öngörülen mesai saatleri";
+
+/* Translate word 'Project' */
+"Project" = "Proje";
+
+/* Translate the term 'Hours per day' which is diplayed as a label in the settings. */
+"Projects" = "Projeler";
+
+/* Alert view title: Question. The user will be asked whether he wants to take over the changes for an exiting dayentry or not. */
+"Question" = "Soru";
+
+/* Tranlate the term 'Report' which will be used for the file name in the export. */
+"Report" = "Rapor";
+
+/* Translate the term 'Report' as in report salary */
+"Report_entry_value" = "Rapor";
+
+/* Translate the tern 'Report' which is diplayed e.g. as a label section header in the settings view for settings like 'Time unit' and 'Rounding'. */
+"Report_settings_section_title" = "Rapor";
+
+/* Report tab at the bottom of the screen. Translate the word 'Report' */
+"Report_tab_title" = "Rapor";
+
+/* Translate abrunden/Round down */
+"Round down" = "Aşağı yuvarlamak ";
+
+/* Translate aufrunden/Round up */
+"Round up" = "Yukarı yuvarlamak ";
+
+/* Translate the word 'Rounding' which is diplayed as a label in the settings. */
+"Rounding" = "Yuvarlama";
+
+/* Translate the term 'Salary' which will be displayed in a label e.g. in the summary view. In german: 'Einkommen' */
+"Salary" = "Maaş";
+
+/* Settings tab at the bottom of the screen. Translate the word 'Settings' */
+"Settings" = "Ayarlar";
+
+/* Translate the term 'Sickness' displayed in the report tab. E.g. sickness wie in Krankheitstage */
+"Sickness" = "Hastalık";
+
+/* Translate the term 'Sicknes day' displayed in the info page which shows information about certain icons. E.g. Sickness/Krankheitstag */
+"Sickness day" = "Raporlu günler";
+
+/* Table cell label: Start */
+"Start" = "Başlangıç";
+
+/* Translate the term 'Time unit' which is diplayed as a label in the settings. */
+"Time unit" = "Zaman birimi";
+
+/* Small label on main screen for displaying the time which the user has already worked. Translate the prefix: Time worked today */
+"Time worked today" = "Günlük gerçekleştirilen mesai saatleri";
+
+/* Translate word 'Today' */
+"Today" = "Bugün";
+
+/* Translate the word 'total' as in 'total result'. In german: 'Insgesamt' */
+"Total" = "Toplam";
+
+/* Translate the term 'Vacation' displayed in the report tab. E.g. vacation wie in Urlaubstage */
+"Vacation" = "İzin";
+
+/* Translate the term 'Vacation day'displayed in the info page which shows information about certain icons. E.g. Vacation/Urlaubstag */
+"Vacation day" = "İzin günü";
+
+/* Translate the term 'Wage currency' which is diplayed as a label in the settings. */
+"Wage currency" = "Maaş para birimi";
+
+/* 'Wage in' as in 'Wage in EUR' */
+"Wage in" = "Maaş";
+
+/* Alert view title 'Warning'. Tranlate 'Warning' */
+"Warning" = "Dikkat";
+
+/* Segemented GUI Control segment title: Week */
+"Week" = "Hafta";
+
+/* Translate 'Welcome' */
+"Welcome" = "Hoşgeldin";
+
+/* Translate 'Welcome to aXTimes! Please take a minute to configure aXTimes to your liking.' */
+"Welcome to aXTimes! Please take a minute to configure aXTimes to your liking." = "aXTimes a hoşgeldin! Ayarlarını istediğin gibi yapmak için kısa bi süreç gerekiyor.";
+
+/* Translate the term 'With wage' which is diplayed as a label in the settings. */
+"With wage" = "Maaş ile";
+
+/* Small label on main screen for displaying the working time above money counter. Translate the prefix: Working time */
+"Working time" = "Çalışma süreci";
+
+/* Translate the term 'Working week' which is diplayed as a label in the settings. */
+"Working week" = "Haftalık çalışma süreci";
+
+/* Translate the term 'Working time' (Arbeitszeit) which will be displayed in a label e.g. in the summary view. */
+"Working_time" = "Çalışma süreci";
+
+/* Segemented GUI Control segment title: Year */
+"Year" = "Yıl";
+
+/* Alert view accept answer: Yes. */
+"Yes" = "Evet";
+
+/* 'You cannot add a new entry as long as there is another incomplete entry for the same day or because you checked out on another date.' The previous sentence will shown in a popup. */
+"You cannot add a new entry as long as there is another incomplete entry for the same day or because you checked out on another date." = "Aktüel tamamlanmamış kaydıdan yada baska bir tarihte giriş yaptığından dolayı yeni kayıt yapamazsın.";
+
+/* 'You cannot copy an incomplete entry.' The previous sentence will shown in a popup. */
+"You cannot copy an incomplete entry." = "Tamamlanmamış kaydı kopyalayamzsın.";
+
+/* 'You cannot copy to the target date because the entry would be in the future.' The previous sentence will shown in a popup. */
+"You cannot copy to the target date because the entry would be in the future." = "Gelecekteki tarihlere kayıt kopyalayamazsın.";
+
+/* You cannot copy to the target date because there is already at least one entry occupying the targeted date. */
+"You cannot copy to the target date because there is already at least one entry occupying the targeted date." = "Bu tarihte kayıt olduğundan dolayi başka bir kayıt kopyalayamazsın.";
+
+/* 'You cannot create a new entry since there is already an entry with a Check-In time before this date and a Check-Out time after this date.' The previous sentence will shown in a popup. */
+"You cannot create a new entry since there is already an entry with a Check-In time before this date and a Check-Out time after this date." = "Buraya yeni kayıt yapamazsın çünkü daha önce yapmış olduğun kayıt, vermek istediğin saatleri içermektedir.";
+
+"Open in ..." = "Şurada Aç...";
+
+/* Translate the following sentence "Your %@ doesn't seem to have any other Apps installed that can open this document." Leave the %@ placeholder in their. It will later be substituted with iPhone */
+"Your %@ doesn't seem to have any other Apps installed that can open this document." =
+"Bu dokümanı açabilen App senin %@da yüklü değildir.";
+
+/* Please translate the sentence "No suitable Apps installed" */
+"No suitable Apps installed" = "Uygun App yüklü değil";
+
+/* Translate the term 'Current' as in 'Current comment' */
+"Current_segment" = "Aktif";
+
+/* Translate the term 'Frequent' as in 'Frequent comments' */
+"Frequent_segment" = "Düzenli";
+
+/* Translate the term 'All' as in 'All comments' */
+"All_segment" = "Tüm";
+
+"Hour_short" = "h";
+
+"Minute_short" = "min";
+
+"Open App" = "Uygulamayı aç";
+
+/* Translate the term 'Default pause' which is displayed as a label in the settings. */
+"Default pause" = "Standart mola";
+/* Translate the term 'On' as in something is turned on. */
+"On" = "Açık";
+/* Translate the term 'Off' as in something is turned off. */
+"Off" = "Kapalı";
+
+/* Translate the term 'Undo Checkout’ …auf deutsch Checkout widerrufen*/
+"Undo Checkout" = "Çıkışı geri al";
+
+/* Translate the term 'Undo’ …auf deutsch Widerrufen*/
+"Undo" = "Geri al";
+
+"Time format" = "Saat formatı";
+
+"CW" = "hafta";

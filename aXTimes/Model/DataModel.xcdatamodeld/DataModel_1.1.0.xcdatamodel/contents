@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DayEntry" representedClassName="DayEntry" syncable="YES">
+        <attribute name="checkInTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="checkInTimeZone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="checkOutTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="checkOutTimeZone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="currencyLocale" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="entryType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="hourlyWage" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <relationship name="pauses" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Pause" inverseName="dayentry" inverseEntity="Pause" syncable="YES"/>
+        <relationship name="projectEntries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ProjectEntry" inverseName="dayEntry" inverseEntity="ProjectEntry" syncable="YES"/>
+    </entity>
+    <entity name="DayType" representedClassName="DayType" syncable="YES">
+        <attribute name="calendarDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="calendarDateTimeZone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="calendarDay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="holiday" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="month" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="sickness" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="vacation" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="work" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="HourlyWage" representedClassName="HourlyWage" syncable="YES">
+        <attribute name="fromDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="fromDateTimeZone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hourlyWage" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="toDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="toDateTimeZone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="project" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="hourlyWages" inverseEntity="Project" syncable="YES"/>
+    </entity>
+    <entity name="Pause" representedClassName="Pause" syncable="YES">
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="endTimeZone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="startTimeZone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dayentry" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="DayEntry" inverseName="pauses" inverseEntity="DayEntry" syncable="YES"/>
+    </entity>
+    <entity name="Project" representedClassName="Project" syncable="YES">
+        <attribute name="active" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="currencyLocale" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="defaultProject" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="fromDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="fromDateTimeZone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="projectDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="toDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="toDateTimeZone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hourlyWages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="HourlyWage" inverseName="project" inverseEntity="HourlyWage" syncable="YES"/>
+        <relationship name="projectEntries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ProjectEntry" inverseName="project" inverseEntity="ProjectEntry" syncable="YES"/>
+    </entity>
+    <entity name="ProjectEntry" representedClassName="ProjectEntry" syncable="YES">
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <relationship name="dayEntry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DayEntry" inverseName="projectEntries" inverseEntity="DayEntry" syncable="YES"/>
+        <relationship name="project" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="projectEntries" inverseEntity="Project" syncable="YES"/>
+    </entity>
+    <entity name="WorkingWeekSetting" representedClassName="WorkingWeekSetting" syncable="YES">
+        <attribute name="day" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="month" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="validUntil" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="validUntilString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="validUntilTimeZone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="workingWeekArray" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DayEntry" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="DayType" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="HourlyWage" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Pause" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Project" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ProjectEntry" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="WorkingWeekSetting" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>

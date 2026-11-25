@@ -1,0 +1,41 @@
+# Local Xcode state and build products
+.DS_Store
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+DerivedData/
+build/
+.build/
+*.ipa
+*.dSYM
+*.dSYM.zip
+
+# Private data, backups and credentials
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.db
+*.p12
+*.p8
+*.mobileprovision
+.env
+.env.*
+backup*.json
+*backup*.json
+????????-????-????-????-????????????.json
+
+# Archived artwork and generated indexing data are kept in the old project.
+/Resources/
+/Index/
+/unused resources/
+
+# Removed legacy crash-reporting SDKs are not used by the app.
+/Pods/Fabric/
+/Pods/Crashlytics/
+
+# Local Fastlane output
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/

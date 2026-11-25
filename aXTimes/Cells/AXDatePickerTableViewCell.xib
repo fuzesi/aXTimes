@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AXDatePickerTableViewCell" rowHeight="162" id="1fl-1T-KZD" customClass="AXDatePickerTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="162"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1fl-1T-KZD" id="DW9-Os-dwx">
+                <frame key="frameInset" width="320" height="161.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xTz-NP-7Fk">
+                        <frame key="frameInset" minX="8" minY="-1" width="304" height="162"/>
+                        <date key="date" timeIntervalSinceReferenceDate="457440930.15355003">
+                            <!--2015-07-01 10:55:30 +0000-->
+                        </date>
+                    </datePicker>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xTz-NP-7Fk" firstAttribute="top" secondItem="DW9-Os-dwx" secondAttribute="topMargin" id="YxG-aS-WYB"/>
+                    <constraint firstItem="xTz-NP-7Fk" firstAttribute="leading" secondItem="DW9-Os-dwx" secondAttribute="leadingMargin" id="g5n-hB-rgq"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="xTz-NP-7Fk" secondAttribute="bottom" id="oje-rT-5VC"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="xTz-NP-7Fk" secondAttribute="trailing" id="w4S-EG-V21"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="datePicker" destination="xTz-NP-7Fk" id="jL4-iH-aIx"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

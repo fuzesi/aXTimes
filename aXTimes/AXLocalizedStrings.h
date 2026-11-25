@@ -1,0 +1,232 @@
+//
+//  AXLocalizedStrings.h
+//  aXTimes
+//
+//  Created by fuesec on 10/12/13.
+//  Copyright (c) 2013 aXimilate. All rights reserved.
+//
+
+// #ifndef AllTimes_AXLocalizedStrings_h
+// #define AllTimes_AXLocalizedStrings_h
+//
+//
+//
+// #endif
+
+// find . -name '*.m' -o -name '*.h' | xargs genstrings -o /Users/fuesec/Desktop/axtimes
+// echo ./AXConstants.h ./AXLocalizedStrings.h ./MainViewControllers/AXMainViewController.m ./MainViewControllers/AXSettingsViewController.m | xargs genstrings -o /Users/fuesec/Desktop/axtime
+
+#define NSLS_KAUFMANNROUNDING                 NSLocalizedString(@ "Kaufmännisch", "The name of the rounding method mercantile aka: kaufmännisch. Translate the term 'Kaufmännisch' as in e.g. 'Kaufmännisch runden'")
+#define NSLS_ROUNDDOWN                        NSLocalizedString(@ "Round down", "Translate abrunden/Round down")
+#define NSLS_ROUNDUP                          NSLocalizedString(@ "Round up", "Translate aufrunden/Round up")
+#define ROUNDINGBEHAVIOURNAMES                @[NSLS_KAUFMANNROUNDING, NSLS_ROUNDDOWN, NSLS_ROUNDUP]
+
+#define NSLS_SYSTEM                           NSLocalizedString(@ "System", "Just translate the word 'System'")
+
+
+#define NSLS_HOURLYWAGE                              NSLocalizedString(@ "Hourly wage", @ "Translate the term 'Hourly wage' which is diplayed as a label e.g. in the settings.")
+#define NSLS_COMMENT                                 NSLocalizedString(@ "Comment", @ "Translate the word 'Comment' which is diplayed as header in the settings for the 'default comment view'")
+#define NSLS_MONTH                                   NSLocalizedString(@ "Month", @ "Segmented GUI Control segment title: Month. Translate the term 'Month'.")
+#define NSLS_WAGEIN                                  NSLocalizedString(@ "Wage in", @ "'Wage in' as in 'Wage in EUR'")
+#define NSLS_TOTAL                                   NSLocalizedString(@ "Total", @ "Translate the word 'total' as in 'total result'. In german: 'Insgesamt'")
+#define NSLS_DATE                                    NSLocalizedString(@ "Date", @ "Translate the word 'date' as in calendar date. In german: 'Datum'")
+#define NSLS_PAUSETIME                               NSLocalizedString(@ "Pause time", @ "Translate the term 'Pause time'. In german: 'Pausenzeit'")
+#define NSLS_MONEYEARNEDYEAR                         NSLocalizedString(@ "Money earned this year", @ "Translate this term 'Money earned this year'")
+#define NSLS_MONEYEARNEDMONTH                        NSLocalizedString(@ "Money earned this month", @ "Translate this term 'Money earned this month'")
+#define NSLS_PAUSE                                   NSLocalizedString(@ "Pause", @ "Label: Pause")
+#define NSLS_TABMAIN                                 NSLocalizedString(@ "Live", @ "Live tab at the bottom of the screen. Translate the word 'Live'")
+#define NSLS_TABDETAIL                               NSLocalizedString(@ "Detail", @ "Detail tab at the bottom of the screen. Translate the word 'Detail'")
+#define NSLS_TABSUMMARY                              NSLocalizedString(@ "Report_tab_title", @ "Report tab at the bottom of the screen. Translate the word 'Report'")
+#define NSLS_TABSETTINGS                             NSLocalizedString(@ "Settings", @ "Settings tab at the bottom of the screen. Translate the word 'Settings'")
+#define NSLS_TODAY                                   NSLocalizedString(@ "Today", @ "Translate word 'Today'")
+#define NSLS_SALARY                                  NSLocalizedString(@ "Salary",  @ "Translate the term 'Salary' which will be displayed in a label e.g. in the summary view. In german: 'Einkommen'")
+#define NSLS_NET                                     NSLocalizedString(@ "Report_entry_value",  @ "Translate the term 'Report' as in report salary")
+#define NSLS_GROSS                                   NSLocalizedString(@ "Live_entry_value",  @ "Translate the term 'Live' as in live salary")
+#define NSLS_EMAIL                                   NSLocalizedString(@ "E-Mail", @ "Translate the word 'E-mail'")
+#define NSLS_MESSAGES                                NSLocalizedString(@ "Message", @ "Translate the word 'Message'. It should be the same name as in the Apple sharing functionality.")
+#define NSLS_MAILACTIVITY                            NSLocalizedString(@ "Mail", @ "Translate the word 'Mail'. It should be the same name as in the Apple sharing functionality.")
+#define NSLS_OPTIONS                                 NSLocalizedString(@ "Options", @ "Translate the word 'Options'.")
+#define NSLS_ENTRIES                                 NSLocalizedString(@ "Entries", @ "Translate 'Entries' as in DayEntries (TagesEinträge)")
+#define NSLS_ENTRY                                   NSLocalizedString(@ "Entry", @ "Translate 'Entry' as in 'Entry 3 of 4' or in german: 'Eintrag 3 von 4'")
+#define NSLS_COPYENTRY                               NSLocalizedString(@ "Copy entry", @ "Translate the term 'Copy entry'. It will be shown as a label on a button in the options menu.")
+#define NSLS_DELETEENTRY                             NSLocalizedString(@ "Delete entry", @ "Translate the term 'Delete entry'. It will be shown as a label on a button in the options menu.")
+#define NSLS_CANCEL                                  NSLocalizedString(@ "Cancel", @ "Translate the word 'Cancel'. E.g. shown as a label on a button.")
+#define NSLS_CANTCREATEENTRY                         NSLocalizedString(@ "You cannot create a new entry since there is already an entry with a Check-In time before this date and a Check-Out time after this date.", @ "'You cannot create a new entry since there is already an entry with a Check-In time before this date and a Check-Out time after this date.' The previous sentence will shown in a popup.")
+#define NSLS_FUTURERULE                              NSLocalizedString(@ "You cannot create a new entry since the current day is in the future.", @ "You cannot create a new entry since the current day is in the future.' The previous sentence will shown in a popup.")
+#define NSLS_DELETEENTRYQ                            NSLocalizedString(@ "Do you wish to delete this entry?", @ "'Do you wish to delete this entry?'. This question will be displayed in a popup.")
+#define NSLS_DELETEDAYQ                              NSLocalizedString(@ "Do you wish to delete all entries of this day?", @ "'Do you wish to delete all entries of this day?' This question will be displayed in a popup.")
+#define NSLS_OF                                      NSLocalizedString(@ "of", @ "Translate the word 'of' as in '1 of 3 Entries' or in german: 'Eintrag 3 von 4'")
+#define NSLS_CANTCOPY_OVERLAP                        NSLocalizedString(@ "You cannot copy to the target date because there is already at least one entry occupying the targeted date.", @ "You cannot copy to the target date because there is already at least one entry occupying the targeted date.")
+#define NSLS_CANTCOPY_INCOMPLETE                     NSLocalizedString(@ "You cannot copy an incomplete entry.", @ "'You cannot copy an incomplete entry.' The previous sentence will shown in a popup.")
+#define NSLS_CANTCOPY_FUTURE                         NSLocalizedString(@ "You cannot copy to the target date because the entry would be in the future.", @ "'You cannot copy to the target date because the entry would be in the future.' The previous sentence will shown in a popup.")
+#define NSLS_CHECKIN_DATE                            NSLocalizedString(@ "Check-In date", @ "Translate 'Check-In date'")
+#define NSLS_CHECKIN_TIME                            NSLocalizedString(@ "Check-In time", @ "Translate 'Check-In time'")
+#define NSLS_CHECKIN_TIMESTAMP                       NSLocalizedString(@ "Check-In timestamp", @ "Translate 'Check-In timestamp'")
+#define NSLS_CHECKIN_TIMEZONE                        NSLocalizedString(@ "Check-In timezone", @ "Translate 'Check-In timezone'")
+#define NSLS_CHECKOUT_DATE                           NSLocalizedString(@ "Check-Out date", @ "Translate 'Check-Out date'")
+#define NSLS_CHECKOUT_TIME                           NSLocalizedString(@ "Check-Out time", @ "Translate 'Check-Out time'")
+#define NSLS_CHECKOUT_TIMESTAMP                      NSLocalizedString(@ "Check-Out timestamp", @ "Translate 'Check-Out timestamp'")
+#define NSLS_CHECKOUT_TIMEZONE                       NSLocalizedString(@ "Check-Out timezone", @ "Translate 'Check-Out timezone'")
+#define NSLS_WELCOMEMESSAGE                          NSLocalizedString(@"Welcome to aXTimes Pro! Please take a minute to configure aXTimes Pro to your liking.", nil)
+#define NSLS_WELCOMETITLEALERT                       NSLocalizedString(@ "Welcome", @ "Translate 'Welcome'")
+#define NSLS_WARNINGPOPUP                            NSLocalizedString(@ "Warning", @ "Alert view title 'Warning'. Tranlate 'Warning'")
+#define NSLS_OKPOPUP                                 NSLocalizedString(@ "OK", @ "Alert view button title confirmation: Ok. Translate 'Ok' in german e.g. 'Ok'")
+#define NSLS_STANDARDCOMMENT                         NSLocalizedString(@ "Default Comment", @ "Translate the term 'Default comment' which is diplayed as a label in the settings.")
+#define NSLS_ADDENTRY                                NSLocalizedString(@ "Add entry",  @ "Translate the term 'Add entry'. It will be shown as a label on a button in the options menu.")
+#define NSLS_CANTADD_INCOMPLETE                      NSLocalizedString(@ "You cannot add a new entry as long as there is another incomplete entry for the same day or because you checked out on another date.", @ "'You cannot add a new entry as long as there is another incomplete entry for the same day or because you checked out on another date.' The previous sentence will shown in a popup.")
+#define NSLS_VACATION                                NSLocalizedString(@ "Vacation", @ "Translate the term 'Vacation' displayed in the report tab. E.g. vacation wie in Urlaubstage")
+#define NSLS_TARGETWORKINGDAYS                       NSLocalizedString(@ "Planned working time", @ "Translate 'Planned working time' as in Sollarbeitszeit")
+#define NSLS_INCL_TIMEZONE                           NSLocalizedString(@ "Incl. timezone", @ "Translate the term 'Incl. timezone' which is diplayed as a label in the settings.")
+#define NSLS_WORKINGWEEK                             NSLocalizedString(@ "Working week", @ "Translate the term 'Working week' which is diplayed as a label in the settings.")
+#define NSLS_WORKWEEK_POPUP_MESSAGE                  NSLocalizedString(@ "Do you wish to take over the changes for the entire calendar or only starting from today?", "'Take over changes' alert view content. Translate 'Do you wish to take over the changes for the entire calendar or only starting from today?'")
+#define NSLS_WORKWEEK_POPUP_MESSAGE_ANSWER_FROMTODAY NSLocalizedString(@ "From today", @ "Alert view option answer. Translate 'From today' as in 'ab heute' or as in 'from today on'")
+#define NSLS_WORKWEEK_POPUP_MESSAGE_ANSWER_ENTIRE    NSLocalizedString(@ "Entire calendar", @ "Alert view option answer. Translate 'Entire calendar'")
+#define NSLS_DAYS                                    NSLocalizedString(@ "days",  @ "Translate the term 'days' used e.g. in the report tab. E.g. 3 days")
+#define NSLS_SICKNESS                                NSLocalizedString(@ "Sickness day",  @ "Translate the term 'Sicknes day' displayed in the info page which shows information about certain icons. E.g. Sickness/Krankheitstag")
+#define NSLS_PUBLICHOLIDAY                           NSLocalizedString(@ "Public holiday",  @ "Translate the term 'Public holiday'  displayed in the info page which shows information about certain icons. E.g. holiday wie in (gesetzlicher) Feiertag/Public holiday")
+#define NSLS_HOLIDAY                                 NSLocalizedString(@ "Holiday",  @ "Translate the term 'Public holidays' displayed in the report tab. E.g. holiday wie in Public holidays/Feiertage")
+#define NSLS_DAYOFFSUMMARY                           NSLocalizedString(@ "Days off",  @ "Translate the term 'Days off' displayed in the report tab. E.g. days off/Arbeitsfreie Tage as label in the report tab")
+#define NSLS_OVERTIME                                NSLocalizedString(@ "Overtime",  @ "Translate the term 'Overtime' which will be displayed in a label e.g. in the report view.")
+#define NSLS_WORKINGTIME                             NSLocalizedString(@ "Working_time",  @ "Translate the term 'Working time' (Arbeitszeit) which will be displayed in a label e.g. in the summary view.")
+#define NSLS_NOTE_CURRENT_SEGMENT                    NSLocalizedString(@ "Current_segment",  @ "Translate the term 'Current' as in 'Current comment'")
+#define NSLS_NOTE_FREQUENT_SEGMENT                   NSLocalizedString(@ "Frequent_segment",  @ "Translate the term 'Frequent' as in 'Frequent comments'")
+#define NSLS_NOTE_All_SEGMENT                        NSLocalizedString(@ "All_segment",  @ "Translate the term 'Frequent' as in 'Frequent comments'")
+#define NSLS_ALL_Projects                            NSLocalizedString(@ "All_projects",  @ "Translate the term 'All' as in 'All comments'")
+#define NSLS_DAY                                     NSLocalizedString(@"Day", "Segemented GUI Control segment title: Day. Translate the word 'Day'")
+#define NSLS_START_PAUSE                             NSLocalizedString(@"Start", @"Table cell label. Translate 'Start' e.g. 'Start of pause'")
+#define NSLS_END_PAUSE                               NSLocalizedString(@"End", @"Table cell label. Translate 'End' e.g. 'End of pause'")
+#define NSLS_QUESTION_ALERTVIEW_TITLE                NSLocalizedString(@"Question", "Alert view title: Question. Translate the term 'Question'")
+#define NSLS_NO_ALERTVIEW_ANSWER                     NSLocalizedString(@"No", @"Alert view deny answer: No. Translate the word 'No'")
+#define NSLS_YES_ALERTVIEW_ANSWER                    NSLocalizedString(@"Yes", @"Alert view accept answer: Yes. Translate the word 'Yes'")
+#define NSLS_CHECKIN                                 NSLocalizedString(@"Check-In", "Table cell label. Translate 'Check-In'")
+#define NSLS_CHECKOUT                                NSLocalizedString(@"Check-Out", "Table cell label. Translate 'Check-Out'")
+#define NSLS_ADDPAUSE                                NSLocalizedString(@"Add Pause", "Table cell button: Add pause. Translate the term 'Add pause'")
+#define NSLS_AVERAGE_TIME_PER_DAY                    NSLocalizedString(@"Average time per day",  @"Translate the term 'Average time per day' which will be displayed in a label e.g. in the summary view.")
+#define NSLS_REPORT                                  NSLocalizedString(@"Report", @"Tranlate the term 'Report' which will be used for the file name in the export.")
+#define NSLS_WEEK                                    NSLocalizedString(@"Week", "Segemented GUI Control segment title: Week. Translate the term 'Week'.")
+#define NSLS_YEAR                                    NSLocalizedString(@"Year", "Segemented GUI Control segment title: Year. Translate the term 'Year'.")
+#define NSLS_CHECKED_IN_AT                           NSLocalizedString(@"Checked in at:", @"Small label on main screen for displaying the check-in time. Translate the prefix: Checked in at")
+#define NSLS_TIME_WORKED_TODAY                       NSLocalizedString(@"Time worked today", @"Small label on main screen for displaying the time which the user has already worked. Translate the prefix: Time worked today")
+#define NSLS_CHECKED_OUT_AT                          NSLocalizedString(@"Checked out at:", @"Label on main screen for displaying the check-out time. Translate the prefix: Checked out at")
+#define NSLS_INCL_WAGE                               NSLocalizedString(@"With wage", @"Translate the term 'Incl. income' which is displayed as a label in the settings.")
+#define NSLS_HOUR_SHORT                              NSLocalizedString(@"Hour_short", @"Translate the term 'h'. It should be the abbreviation for hour.")
+#define NSLS_MINUTE_SHORT                            NSLocalizedString(@"Minute_short", @"Translate the term 'min'. It should be the abbreviation for minute.")
+#define NSLS_CURRENCY                                NSLocalizedString(@"Currency", @"Translate the term 'Currency' which is displayed as a label in the settings.")
+#define NSLS_DEFAULTPAUSE_SETTINGS                   NSLocalizedString(@"Default pause", @"Translate the term 'Default pause' which is displayed as a label in the settings.")
+#define NSLS_ON                                      NSLocalizedString(@"On", @"Translate the term 'On' as in something is turned on.")
+#define NSLS_OFF                                     NSLocalizedString(@"Off", @"Translate the term 'Off' as in something is turned off.")
+
+#define NSLS_NOT_WORKED_TODAY                        NSLocalizedString(@"Not yet worked today", @"Small label on main screen which is displayed if the user has not worked on that particular day. Translate: Not yet worked today")
+#define NSLS_UNDOCHECKOUT                            NSLocalizedString(@"Undo Checkout", @"Translate the term 'Undo Checkout'")
+#define NSLS_UNDO                                    NSLocalizedString(@"Undo", @"Translate the term 'Undo'")
+#define NSLS_HOURS_PER_DAY                           NSLocalizedString(@"Hours per day", @"Translate the term 'Hours per day' which is diplayed as a label in the settings.")
+#define NSLS_TIME_UNIT                               NSLocalizedString(@"Time unit", @"Translate the term 'Time unit' which is diplayed as a label in the settings.")
+#define NSLS_ROUNDING                                NSLocalizedString(@"Rounding", @"Translate the word 'Rounding' which is diplayed as a label in the settings.")
+#define NSLS_GENERAL_SETTINGS                        NSLocalizedString(@"General", "'General' section header in settings view")
+#define NSLS_REPORT_SETTINGS                         NSLocalizedString(@"Report_settings_section_title", @"Translate the tern 'Report' which is diplayed e.g. as a label section header in the settings view for settings like 'Time unit' and 'Rounding'.")
+#define NSLS_EXPORT_SETTINGS                         NSLocalizedString(@"Export", @"Translate the word 'Export' which is displayed e.g in the settings view as a section headder.")
+#define NSLS_LANGUAGE_SETTINGS                       NSLocalizedString(@"Language", @"Translate the word 'Language'")
+#define NSLS_DECIMALSEPARATOR_SETTINGS               NSLocalizedString(@"Decimal Separator", @"Translate the tern 'Decimal separator' which is diplayed as a label in the settings.")
+
+
+//projects
+#define NSLS_PROJECTS                                NSLocalizedString(@"Projects", nil)
+#define NSLS_PROJECT                                 NSLocalizedString(@"Project", nil)
+#define NSLS_PROJECT_DETAILS                         NSLocalizedString(@"Project Details", nil)
+#define NSLS_SUBPROJECT_DETAILS                      NSLocalizedString(@"Subproject Details", nil)
+#define NSLS_NO_PROJECT                              NSLocalizedString(@"No Project assigned", nil)
+#define NSLS_SUBPROJECT                              NSLocalizedString(@"Subproject", nil)
+#define NSLS_SUBPROJECTS                             NSLocalizedString(@"Subprojects", nil)
+#define NSLS_DETAILS                                 NSLocalizedString(@"Details", nil)
+#define NSLS_NAME                                    NSLocalizedString(@"Name", @"Translate the word 'Name'. E.g. project name")
+#define NSLS_PROJECT_CODE                            NSLocalizedString(@"Code", nil)
+#define NSLS_COLOUR                                  NSLocalizedString(@"Colour", nil)
+#define NSLS_DESCRIPTION                             NSLocalizedString(@"Description", @"Translate the word 'Description'. E.g. project description")
+#define NSLS_PROJECT_BUDGET                          NSLocalizedString(@"Budget", nil)
+#define NSLS_PROJECT_BUDGET_IN_DAYS                  NSLocalizedString(@"Budget in days", nil)
+#define NSLS_EXCEPTIONS                              NSLocalizedString(@"Exceptions", nil)
+#define NSLS_NONE                                    NSLocalizedString(@"None", nil)
+#define NSLS_NONE_PAUSES                             NSLocalizedString(@"none_pauses", nil)
+#define NSLS_EXCEPTIONS_DESCRIPTION                  NSLocalizedString(@"exceptions_description", nil)
+#define NSLS_RESET                                   NSLocalizedString(@"Reset", nil)
+#define NSLS_REQUIRED                                NSLocalizedString(@"Required", nil)
+#define NSLS_NEW_PROJECT                             NSLocalizedString(@"New Project", nil)
+#define NSLS_EDIT_PROJECT                            NSLocalizedString(@"Edit Project", nil)
+#define NSLS_DELETE_SUBPROJECT                       NSLocalizedString(@"Delete Subproject", nil)
+#define NSLS_EDIT_SUBPROJECT                         NSLocalizedString(@"Edit Subproject", nil)
+#define NSLS_DELETE_PROJECT                          NSLocalizedString(@"Delete Project", nil)
+#define NSLS_ADD_SUBPROJECT                          NSLocalizedString(@"Add Subproject", nil)
+#define NSLS_DELETEPROJECT_Q                         NSLocalizedString(@"Do you wish to delete this project?", @ "Do you wish to delete this project?")
+#define NSLS_DELETESUBPROJECT_Q                      NSLocalizedString(@"Do you wish to delete this subproject?", @ "Do you wish to delete this subproject?")
+#define NSLS_CANTDELETEPROJECT                       NSLocalizedString(@"projectDeletionForbidden", @"You cannot delete this projects because you have already checked in on it.")
+
+#define NSLS_FILTER                                  NSLocalizedString(@"Filter", nil)
+
+#define NSLS_CLIENT                                  NSLocalizedString(@"Client", nil)
+#define NSLS_CLIENTS                                 NSLocalizedString(@"Clients", nil)
+#define NSLS_CLIENT_DETAILS                          NSLocalizedString(@"Client Details", nil)
+#define NSLS_DELETECLIENT_Q                          NSLocalizedString(@"Do you wish to delete this customer?", @ "Do you wish to delete this customer?")
+#define NSLS_NO_CLIENT                               NSLocalizedString(@"No Client", nil)
+#define NSLS_PHONE                                   NSLocalizedString(@"Phone", nil)
+#define NSLS_DELETE_CLIENT                           NSLocalizedString(@"Delete Client", nil)
+#define NSLS_NEW_CLIENT                              NSLocalizedString(@"New Client", nil)
+#define NSLS_EDIT_CLIENT                             NSLocalizedString(@"Edit Client", nil)
+
+#define NSLS_DELETE_PAUSE                            NSLocalizedString(@"Delete Pause", nil)
+#define NSLS_EDIT_PAUSE                              NSLocalizedString(@"Edit Pause", nil)
+
+#define NSLS_EDIT_ENTRY                              NSLocalizedString(@"Edit Entry", nil)
+
+#define NSLS_SHAKE_TO_UNDO                           NSLocalizedString(@"Shake to undo", nil)
+
+#define NSLS_WORKDAY                                 NSLocalizedString(@"Work day", nil)
+#define NSLS_DAYOFF                                  NSLocalizedString(@"Day off", nil)
+
+#define NSLS_REMAININGBUDGET                         NSLocalizedString(@"Remaining Budget", nil)
+
+#define NSLS_ACTIVE                                  NSLocalizedString(@"Active", nil)
+#define NSLS_INACTIVE                                NSLocalizedString(@"Inactive", nil)
+#define NSLS_FILTER_NONE                             NSLocalizedString(@"None", nil)
+
+#define NSLS_DELETE                                  NSLocalizedString(@"Delete", nil)
+
+#define NSLS_ACTIVE_FOOTER                           NSLocalizedString(@"Active_projects_description", nil)
+#define NSLS_INACTIVE_FOOTER                         NSLocalizedString(@"Inactive_projects_description", nil)
+
+#define NSLS_SETTINGS_GENERAL_SECTION_ONE_HEADER     NSLocalizedString(@"settingsGeneralSectionOneHeader", @"Work")
+#define NSLS_SETTINGS_GENERAL_SECTION_ONE_FOOTER     NSLocalizedString(@"settingsGeneralSectionOneFooter", @"Basis for all calculations. Hourly rate can be overwritten by projects.")
+#define NSLS_SETTINGS_GENERAL_SECTION_TWO_HEADER     NSLocalizedString(@"settingsGeneralSectionTwoHeader", @"Default values")
+#define NSLS_SETTINGS_GENERAL_SECTION_TWO_FOOTER     NSLocalizedString(@"settingsGeneralSectionTwoFooter", @"Used if you create new entry when you check-in and check-out.")
+#define NSLS_SETTINGS_GENERAL_SECTION_THREE_HEADER   NSLocalizedString(@"settingsGeneralSectionThreeHeader", @"Display")
+#define NSLS_SETTINGS_GENERAL_SECTION_THREE_FOOTER   NSLocalizedString(@"settingsGeneralSectionThreeFooter", @"Do not incluence calculations at all and are solely used for display.")
+#define NSLS_SETTINGS_GENERAL_SECTION_FOUR_HEADER    NSLocalizedString(@"settingsGeneralSectionFourHeader", @"Miscellaneous")
+#define NSLS_SETTINGS_GENERAL_SECTION_FOUR_FOOTER    NSLocalizedString(@"settingsGeneralSectionFourFooter", @"Allows you to shake the device in the Live view to undo your last check-out.")
+#define NSLS_SETTINGS_WORKINGWEEK_FOOTER             NSLocalizedString(@"settingsWorkingWeekFooter", @"Selected days are taken into account for the calculation of the planned working time.")
+#define NSLS_SETTINGS_DEFAULTPAUSE_FOOTER            NSLocalizedString(@"settingsDefaultPauseFooter", @"If activated the configured pause will be inserted upon check-out if conflict-free possible.")
+#define NSLS_SETTINGS_DEFAULTPROJECT                 NSLocalizedString(@"settingsDefaultProject", @"Default project")
+#define NSLS_SETTINGS_DEFAULTPROJECT_FOOTER          NSLocalizedString(@"settingsDefaultProjectFooter", @"If no project is chosen during check-in then these settings are used.")
+#define NSLS_SETTINGS_DEFAULTPROJECT_NOPROJECT       NSLocalizedString(@"No project", nil)
+#define NSLS_SETTINGS_DEFAULTPROJECT_LASTPROJECT     NSLocalizedString(@"Last project", nil)
+
+#define NSLS_BUDGET_BASED_ON                         NSLocalizedString(@"Budget based on", nil)
+
+#define NSLS_ERROR                                   NSLocalizedString(@"Error", nil)
+
+#define NSLS_DATA_MANAGEMENT                         NSLocalizedString(@"Data management", nil)
+#define NSLS_CONTACT_SUPPORT                         NSLocalizedString(@"Contact support", nil)
+#define NSLS_TELLAFRIEND_CELL                        NSLocalizedString(@"TellAFriendCell", nil)
+#define NSLS_TELLAFRIEND_TEXT                        NSLocalizedString(@"TellAFriendText%@%@", nil)
+#define NSLS_PREMIUMFEATURES                         NSLocalizedString(@"premiumFeatures", nil)
+#define NSLS_PURCHASE_PRODUCT                        NSLocalizedString(@"buy", nil)
+#define NSLS_PREMIUMFEATURES_INFO                    NSLocalizedString(@"premiumFeatureInfo", nil)
+
+#define NSLS_ADD_CLIENTS_HINT                        NSLocalizedString(@"AddClientsHint", nil)
+#define NSLS_ADD_PROJECTS_HINT                       NSLocalizedString(@"AddProjectsHint", nil)
+
+
+// just for the purpose for being generated and completeness
+#define NSLS_OPENIN                                  NSLocalizedString(@ "Open in ...", @ "Translate the term 'Open in ...'. It should be the same name as in the Apple sharing functionality.")
+#define NSLS_NOOTHERAPP_ALERT_BODY                   NSLocalizedString(@ "Your %@ doesn't seem to have any other Apps installed that can open this document.", @ "Translate 'Your %@ doesn't seem to have any other Apps installed that can open this document.' which will be displayed in an alert view. Leave the placeholder %@ in their. When the app is running the placeholder will be replacced by the device type e.g. iPhone." )
+#define NSLS_NOOTHERAPP_ALERT_TITLE                  NSLocalizedString(@ "No suitable Apps installed", @ "Translate 'No suitable Apps installed' which will be diplayed in a alert view." )
+
+#define NSLS_OPEN_APP                                NSLocalizedString(@ "Open App", @ "Translate 'Open App' which will be diplayed in the widget as a button title." )

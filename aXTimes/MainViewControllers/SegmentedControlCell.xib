@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SegmentedControlCell" customModule="aXTimes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="asdfasdf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqS-Hw-yDT">
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="27" id="MvS-Zg-PlL"/>
+                            <constraint firstAttribute="width" constant="155" id="OoH-9u-jbE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="100" verticalCompressionResistancePriority="100" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XcC-SQ-3ta">
+                        <segments>
+                            <segment title="First"/>
+                            <segment title="Second"/>
+                        </segments>
+                    </segmentedControl>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="ZqS-Hw-yDT" secondAttribute="bottom" id="8Pv-C2-IAd"/>
+                    <constraint firstItem="ZqS-Hw-yDT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="E4D-ar-ITb"/>
+                    <constraint firstItem="XcC-SQ-3ta" firstAttribute="leading" secondItem="ZqS-Hw-yDT" secondAttribute="trailing" constant="10" id="LNF-XA-g5w"/>
+                    <constraint firstItem="XcC-SQ-3ta" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="d9W-Q8-3q3"/>
+                    <constraint firstItem="XcC-SQ-3ta" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qcM-ZZ-brE"/>
+                    <constraint firstItem="ZqS-Hw-yDT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="yV9-vw-ugS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="customTextLabel" destination="ZqS-Hw-yDT" id="Dmg-jP-BCi"/>
+                <outlet property="segmentedControl" destination="XcC-SQ-3ta" id="gTV-Zl-Ca4"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

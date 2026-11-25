@@ -1,0 +1,400 @@
+/*
+ Localizable.strings
+ aXTimes
+ 
+ Created by fuesec on 6/1/13.
+ Copyright (c) 2013 aXimilate. All rights reserved.
+ */
+
+/* You cannot create a new entry since the current day is in the future.' The previous sentence will shown in a popup. */
+"You cannot create a new entry since the current day is in the future." = "No se puede crear la entrada debido a que la fecha está en el futuro.";
+
+/* Translate the term 'Add entry'. It will be shown as a label on a button in the options menu. */
+"Add entry" = "Añadir entrada";
+
+/* Table cell button. Translate 'Add Pause' */
+"Add Pause" = "Añadir pausa";
+
+/* Translate the term 'Average time per day' which will be displayed in a label e.g. in the summary view. */
+"Average time per day" = "Tiempo medio por día";
+
+/* Translate the word 'Cancel'. E.g. shown as a label on a button. */
+"Cancel" = "Cancelar";
+
+/* Table cell label. Translate 'Check-In' */
+"Check-In" = "Check-In";
+
+/* Translate 'Check-In date' */
+"Check-In date" = "Fecha de entrada";
+
+/* Translate 'Check-In time' */
+"Check-In time" = "Hora de entrada";
+
+/* Translate 'Check-In timestamp' */
+"Check-In timestamp" = "Fichaje de entrada";
+
+/* Translate 'Check-In timezone' */
+"Check-In timezone" = "Zona horaria de la entrada";
+
+/* Table cell label. Translate 'Check-Out' */
+"Check-Out" = "Salida";
+
+/* Translate 'Check-Out date' */
+"Check-Out date" = "Fecha de salida";
+
+/* Translate 'Check-Out time' */
+"Check-Out time" = "Hora de salida";
+
+/* Translate 'Check-Out timestamp' */
+"Check-Out timestamp" = "Fichaje de salida";
+
+/* Translate 'Check-Out timezone' */
+"Check-Out timezone" = "Zona horaria de salida";
+
+/* Small label on main screen for displaying the check-in time. Translate the prefix: Checked in at */
+"Checked in at:" = "Entrada a las:";
+
+/* Label on main screen for displaying the check-out time. Translate the prefix: Checked out at */
+"Checked out at:" = "Salida a las:";
+
+/* Clear button title in note view */
+"Clear" = "Borrar";
+
+/* Translate the word 'Comment' which is diplayed as header in the settings for the 'default comment view' */
+"Comment" = "Comentario";
+
+/* Translate the term 'Copy entry'. It will be shown as a label on a button in the options menu. */
+"Copy entry" = "Copiar entrada";
+
+/* Small label on main screen for displaying the total money earned for last/current entry. Translate the prefix: Currently earned money */
+"Currently earned money" = "Ganancias recientes";
+
+/* Translate the word 'date' as in calendar date. In german: 'Datum' */
+"Date" = "fecha";
+
+/* Segemented GUI Control segment title: Day */
+"Day" = "Día";
+
+/* Translate the term 'Day off/weekend' displayed in the info page which shows information about certain icons. E.g. Day off/weekend  ....  Arbeitsfrei/Wochenende */
+"Day off/weekend" = "Días libres/fin de semana";
+
+/* Translate the term 'days' used e.g. in the report tab. E.g. 3 days */
+"days" = "días";
+
+/* Translate the term 'Days off' displayed in the report tab. E.g. days off/Arbeitsfreie Tage as label in the report tab */
+"Days off" = "Días libres";
+
+/* Translate the tern 'Decimal separator' which is diplayed as a label in the settings. */
+"Decimal Separator" = "Separador de decimales";
+
+/* Just translate the word 'default' */
+"Default" = "Predeterminado";
+
+/* Translate the term 'Default comment' which is diplayed as a label in the settings. */
+"Default Comment" = "Comentario predeterminado";
+
+/* Translate the term 'Delete day'. It will be shown as a label on a button in the options menu. */
+"Delete day" = "Borrar día";
+
+/* Translate the term 'Delete entry'. It will be shown as a label on a button in the options menu. */
+"Delete entry" = "Borrar entrada";
+
+/* Translate the word 'Description'. E.g. project description */
+"Description" = "Descripción";
+
+/* Detail tab at the bottom of the screen. Translate the word 'Detail' */
+"Detail" = "Detalle";
+
+/* Translate the term 'Details' as in project details. */
+"Details" = "Detalles";
+
+/* Translate 'Do you know our website?' */
+"Do you know our website?" ="Conoces nuestra página web ?";
+
+/* Clear dayentry alert view content: Do you wish to clear the whole day? */
+"Do you wish to clear the whole day?" = "Deseas borrar todo el día?";
+
+/* 'Do you wish to delete all entries of this day?' This question will be displayed in a popup. */
+"Do you wish to delete all entries of this day?" = "Deseas borrar todas las entradas de este día?";
+
+/* 'Do you wish to delete this entry?'. This question will be displayed in a popup. */
+"Do you wish to delete this entry?" = "Deseas borrar esta entrada?";
+
+/* Overwrite dayentry alert view content: Do you wish to overwrite an existing day entry? */
+"Do you wish to overwrite an existing day entry?" = "Deseas sobrescribir una entrada existente?";
+
+/* 'Take over changes' alert view content: Do you wish to take over the changes for the current day? */
+"Do you wish to take over the changes for the current day?" = "Deseas guardar los cambios del día actual?";
+
+/* 'Take over changes' alert view content: Do you wish to take over the changes for the currently active entry? */
+"Do you wish to take over the changes for the currently active entry?" = "Deseas guardar los cambios de la entrada activa?";
+
+/* 'Take over changes' alert view content. Translate 'Do you wish to take over the changes for the entire calendar or only starting from today?' */
+"Do you wish to take over the changes for the entire calendar or only starting from today?" = "Deseas guardar los cambios hechos para todo el calendario o sólo a partir de hoy?";
+
+/* Translate the word 'E-mail' */
+"E-Mail" = "E-Mail";
+
+/* Table cell label. Translate 'End' */
+"End" = "Fin";
+
+/* Alert view option answer. Translate 'Entire calendar' */
+"Entire calendar" = "calendario completo";
+
+/* Translate 'Entries' as in DayEntries (TagesEinträge) */
+"Entries" = "Entradas";
+
+/* Translate 'Entry' as in 'Entry 3 of 4' or in german: 'Eintrag 3 von 4' */
+"Entry" = "Entrada";
+
+/* Translate the word 'Export' which is displayed e.g in the settings view as a section headder. */
+"Export" = "Exportar";
+
+/* Translate 'For possible bugs, issues or suggestions go to' */
+"For possible bugs, issues or suggestions go to" = "Por posibles errores, problemas o sugerencias ir a";
+
+/* Alert view option answer. Translate 'From today' */
+"From today" = "A partir de hoy";
+
+/* 'General' section header in settings view */
+"General" = "General";
+
+/* Translate the term 'Public holidays' displayed in the report tab. E.g. holiday wie in Public holidays/Feiertage */
+"Holiday" = "Día de fiesta";
+
+/* Translate the term 'Holiday day'  displayed in the info page which shows information about certain icons. E.g. holiday wie in Feiertag/Public holiday */
+"Holiday day" = "Día de fiesta";
+
+/* Translate the term 'Hourly wage' which is diplayed as a label e.g. in the settings. */
+"Hourly wage" = "Salario por hora";
+
+/* Translate the term 'Hours per day' which is diplayed as a label in the settings. */
+"Hours per day" = "Salario por día";
+
+/* Translate the term 'Hours to distribute' */
+"Hours to distribute" = "Horas para distribuir";
+
+/* Translate the term 'Hours worked' */
+"Hours worked" = "Horas trabajadas";
+
+/* Nothing to do here ;-) http://axtimes.com/ */
+"http://axtimes.com/" = "http://axtimes.com/";
+
+/* Translate the term 'Icons'. E.g. Icons */
+"Icons" = "Iconos";
+
+/* Translate the term 'Incl. timezone' which is diplayed as a label in the settings. */
+"Incl. timezone" = "Incluye zona horaria";
+
+/* Translate word 'Information' */
+"Information" = "Información";
+
+/* The name of the rounding method mercantile aka: kaufmännisch */
+"Kaufmännisch" = "Mercantil";
+
+/* Translate the word 'Language' */
+"Language" = "Idioma";
+
+/* Live tab at the bottom of the screen. Translate the word 'Live' */
+"Live" = "En vivo";
+
+/* Translate the term 'Live' as in live salary */
+"Live_entry_value" = "Live";
+
+/* Translate the word 'Mail'. It should be the same name as in the Apple sharing functionality. */
+"Mail" = "Mail";
+
+/* Translate the word 'Message'. It should be the same name as in the Apple sharing functionality. */
+"Message" = "Mensaje";
+
+/* Translate this term 'Money earned this month' */
+"Money earned this month" = "Ganancias del mes";
+
+/* Translate this term 'Money earned this year' */
+"Money earned this year" = "Ganancias del año";
+
+/* Segmented GUI Control segment title: Month */
+"Month" = "Mes";
+
+/* Translate the word 'Name'. E.g. project name */
+"Name" = "Nombre";
+
+/* Alert view deny answer: No. */
+"No" = "No";
+
+/* Small label on main screen which is displayed if the user has not worked on that particular day. Translate: Not yet worked today */
+"Not yet worked today" = "Todavía no he trabajado hoy";
+
+/* Translate the word 'of' as in '1 of 3 Entries' or in german: 'Eintrag 3 von 4' */
+"of" = "de";
+
+/* Alert view button title confirmation: Ok. Translate 'Ok' in german e.g. 'Ok' */
+"OK" = "OK";
+
+/* Translate the word 'Options'. */
+"Options" = "Opciones";
+
+/* Translate the term 'Overtime' which will be displayed in a label e.g. in the report view. */
+"Overtime" = "Horas extras";
+
+/* Label: Pause */
+"Pause" = "Pausa";
+
+/* Translate the term 'Pause time'. In german: 'Pausenzeit' */
+"Pause time" = "Duración de pausa";
+
+/* Label on the main screen under the ticker. Translate 'Working on' */
+"Planned working time" = "Horas de trabajo previstas";
+
+/* Translate word 'Project' */
+"Project" = "Proyecto";
+
+/* Translate the term 'Hours per day' which is diplayed as a label in the settings. */
+"Projects" = "Proyectos";
+
+/* Alert view title: Question. The user will be asked whether he wants to take over the changes for an exiting dayentry or not. */
+"Question" = "Pregunta";
+
+/* Tranlate the term 'Report' which will be used for the file name in the export. */
+"Report" = "Informe";
+
+/* Translate the term 'Report' as in report salary */
+"Report_entry_value" = "Informe";
+
+/* Translate the tern 'Report' which is diplayed e.g. as a label section header in the settings view for settings like 'Time unit' and 'Rounding'. */
+"Report_settings_section_title" = "Informe";
+
+/* Report tab at the bottom of the screen. Translate the word 'Report' */
+"Report_tab_title" = "Informe";
+
+/* Translate abrunden/Round down */
+"Round down" = "Redondeando hacia abajo";
+
+/* Translate aufrunden/Round up */
+"Round up" = "Redondeando hacia arriba";
+
+/* Translate the word 'Rounding' which is diplayed as a label in the settings. */
+"Rounding" = "Redondear";
+
+/* Translate the term 'Salary' which will be displayed in a label e.g. in the summary view. In german: 'Einkommen' */
+"Salary" = "Ganancias";
+
+/* Settings tab at the bottom of the screen. Translate the word 'Settings' */
+"Settings" = "Ajustes";
+
+/* Translate the term 'Sickness' displayed in the report tab. E.g. sickness wie in Krankheitstage */
+"Sickness" = "enfermedad";
+
+/* Translate the term 'Sicknes day' displayed in the info page which shows information about certain icons. E.g. Sickness/Krankheitstag */
+"Sickness day" = "Día de baja por enfermedad";
+
+/* Table cell label. Translate 'Start' */
+"Start" = "Inicio";
+
+/* Translate the term 'Time unit' which is diplayed as a label in the settings. */
+"Time unit" = "Unidad de tiempo";
+
+/* Small label on main screen for displaying the time which the user has already worked. Translate the prefix: Time worked today */
+"Time worked today" = "Horas trabajadas hoy";
+
+/* Translate word 'Today' */
+"Today" = "Hoy";
+
+/* Translate the word 'total' as in 'total result'. In german: 'Insgesamt' */
+"Total" = "En total";
+
+/* Translate the term 'Vacation' displayed in the report tab. E.g. vacation wie in Urlaubstage */
+"Vacation" = "Días de vacaciones";
+
+/* Translate the term 'Vacation day'displayed in the info page which shows information about certain icons. E.g. Vacation/Urlaubstag */
+"Vacation day" = "Día de vacaciones";
+
+/* Translate the term 'Wage currency' which is diplayed as a label in the settings. */
+"Wage currency" = "Moneda de salario";
+
+/* 'Wage in' as in 'Wage in EUR' */
+"Wage in" = "Salario en";
+
+/* Alert view title 'Warning'. Tranlate 'Warning' */
+"Warning" = "Alerta";
+
+/* Segemented GUI Control segment title: Week */
+"Week" = "Semana";
+
+/* Translate 'Welcome' */
+"Welcome" = "Bienvenido";
+
+/* Translate 'Welcome to aXTimes! Please take a minute to configure aXTimes to your liking.' */
+"Welcome to aXTimes! Please take a minute to configure aXTimes to your liking." = "¡Bienvenido a aXTimes!  Tomate por favor un minuto para configurar aXTimes a tu gusto.";
+/* Translate the term 'With wage' which is diplayed as a label in the settings. */
+"With wage" = "Con  salario";
+
+/* Small label on main screen for displaying the working time above money counter. Translate the prefix: Working time */
+"Working time" = "Horas de trabajo";
+
+/* Translate the term 'Working week' which is diplayed as a label in the settings. */
+"Working week" = "Semana de trabajo";
+
+/* Translate the term 'Working time' (Arbeitszeit) which will be displayed in a label e.g. in the summary view. */
+"Working_time" = "Horas de trabajo";
+
+/* Segemented GUI Control segment title: Year */
+"Year" = "Año";
+
+/* Alert view accept answer: Yes. */
+"Yes" = "Sí";
+
+/* 'You cannot add a new entry as long as there is another incomplete entry for the same day or because you checked out on another date.' The previous sentence will shown in a popup. */
+"You cannot add a new entry as long as there is another incomplete entry for the same day or because you checked out on another date." = "No se puede añadir una nueva entrada, por que hay otra entrada incompleta para el mismo día o porque saliste en otra fecha.";
+
+/* 'You cannot copy an incomplete entry.' The previous sentence will shown in a popup. */
+"You cannot copy an incomplete entry." = "No se puede copiar una entrada incompleta.";
+
+/* 'You cannot copy to the target date because the entry would be in the future.' The previous sentence will shown in a popup. */
+"You cannot copy to the target date because the entry would be in the future." = "No se puede copiar a la fecha prevista debido a que la entrada sería en el futuro.";
+
+/* You cannot copy to the target date because there is already at least one entry occupying the targeted date. */
+"You cannot copy to the target date because there is already at least one entry occupying the targeted date." = "No se puede copiar la fecha deseada porque ya hay al menos una entrada que ocupa esta fecha.";
+
+/* 'You cannot create a new entry since there is already an entry with a Check-In time before this date and a Check-Out time after this date.' The previous sentence will shown in a popup. */
+"You cannot create a new entry since there is already an entry with a Check-In time before this date and a Check-Out time after this date." = "No se puede crear una nueva entrada como ya existe una entrada con un tiempo de Check-in antes de esta fecha y una hora de salida después de esta fecha";
+
+/* Translate the term "Open in ..." */
+"Open in ..." = "Abrir con ...";
+
+/* Translate the following sentence "Your %@ doesn't seem to have any other Apps installed that can open this document." Leave the %@ placeholder in their. It will later be substituted with iPhone */
+"Your %@ doesn't seem to have any other Apps installed that can open this document." = "Parece que tu% @ no tenga ninguna otra aplicación instalada con la cual se pueda abrir este documento";
+
+/* Please translate the sentence "No suitable Apps installed" */
+"No suitable Apps installed" = "No hay aplicaciones adecuadas instaladas";
+
+/* Translate the term 'Current' as in 'Current comment' */
+"Current_segment" = "Actual";
+
+/* Translate the term 'Frequent' as in 'Frequent comments' */
+"Frequent_segment" = "Frequente";
+
+/* Translate the term 'All' as in 'All comments' */
+"All_segment" = "Todos los";
+
+"Hour_short" = "h";
+
+"Minute_short" = "min";
+
+"Open App" = "Abrir App";
+
+/* Translate the term 'Default pause' which is displayed as a label in the settings. */
+"Default pause" = "Pausa predeterminada";
+/* Translate the term 'On' as in something is turned on. */
+"On" = "An";
+/* Translate the term 'Off' as in something is turned off. */
+"Off" = "Aus";
+
+/* Translate the term 'Undo Checkout’ …auf deutsch Checkout widerrufen*/
+"Undo Checkout" = "Anular Checkout";
+/* Translate the term 'Undo’ …auf deutsch Widerrufen*/
+"Undo" = "Anular";
+
+"Time format" = "Formato horario";
+
+"CW" = "semana";

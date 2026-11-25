@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="AfL-Ff-guN">
+                            <items>
+                                <label alignment="left" text="Label" numberOfLines="2" id="4g2-zm-TSE"/>
+                                <label alignment="left" text="88:88:88" id="Spy-Z9-NoV">
+                                    <color key="textColor" red="0.20784313725490194" green="0.60784313725490191" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" weight="light" pointSize="34"/>
+                                </label>
+                                <label alignment="left" text="Label" id="EsZ-ZQ-3xB"/>
+                                <label alignment="left" text="asdf" id="0dP-Nt-4VB"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="firstBottomLabel" destination="EsZ-ZQ-3xB" id="GOO-IP-Bxp"/>
+                        <outlet property="secondBottomLabel" destination="0dP-Nt-4VB" id="HAU-rZ-h6E"/>
+                        <outlet property="tickerLabel" destination="Spy-Z9-NoV" id="bcS-ut-dJE"/>
+                        <outlet property="topLabel" destination="4g2-zm-TSE" id="iV0-xl-pyu"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="164" y="217"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,291 @@
+/* 
+  Localizable.strings
+  aXTimes
+
+  Created by fuesec on 6/1/13.
+  Copyright (c) 2013 aXimilate. All rights reserved.
+*/
+
+"Check-Out" = "Check-Out";
+"Checked in at:" = "Eingecheckt um";
+"Checked out at:" = "Ausgecheckt um";
+"Check-In" = "Check-In";
+"Finish break" = "Arbeit";
+"Begin break" = "Pause";
+"Hourly wage" = "Stundensatz";
+"Pause" = "Pause";
+"Days worked" = "Arbeitstage";
+"Average time per day" = "Durchschnittszeit pro Tag";
+"Overtime" = "Überstunden";
+"Salary"= "Einkommen";
+"Report" = "Report";
+"Hours per day" = "Stunden pro Tag";
+"Currency" = "Währung";
+"E-Mail" = "E-Mail";
+"Language" = "Sprache";
+"Export" = "Export";
+"Month" = "Monat";
+"Day" = "Tag";
+"Week" = "Woche";
+"Year" = "Jahr";
+"Default Comment" = "Standardkommentar";
+"Report_settings_section_title" = "Report";
+"Time unit" = "Zeiteinheit";
+"Rounding" = "Rundung";
+"Round up" = "Aufrunden";
+"Round down" = "Abrunden";
+"Date" = "Datum";
+"Working_time" = "Arbeitszeit";
+"Pause time" = "Pausenzeit";
+"Note" = "Notiz";
+"Wage in" = "Einkommen in";
+"Total" = "Insgesamt";
+"Warning" = "Warnung";
+"OK" = "Ok";
+"With wage" = "Inkl. Einkommen";
+"Decimal Separator" = "Dezimaltrennzeichen";
+"Time worked today" = "Heute gearbeitete Zeit";
+"Currently earned money" = "Aktuell verdientes Geld";
+"Kaufmännisch" = "Kaufmännisch";
+"Add Pause" = "Neue Pause";
+"Not yet worked today" = "Heute noch nicht gearbeitet";
+"No" = "Nein";
+"Yes" = "Ja";
+"Clear" = "Löschen";
+"Start" = "Start";
+"End" = "Ende";
+"Working time" = "Arbeitszeit";
+"General" = "Allgemein";
+"Question" = "Frage";
+"Do you wish to take over the changes for the currently active entry?" = "Sollen die Änderungen für den aktuellen Eintrag übernommen werden?";
+"Project" = "Projekt";
+"Projects" = "Projekte";
+"Name" = "Name";
+"Description" = "Beschreibung";
+"All hourly wages" = "Alle Stundenlöhne";
+"Details" = "Details";
+"Comment" = "Kommentar";
+"Hours to distribute" = "Zu verteilende Stunden";
+"Hours worked" = "Stunden gearbeitet";
+"Money earned this month" = "Diesen Monat verdientes Geld";
+"Money earned this year" = "Dieses Jahr verdientes Geld";
+"Live" = "Live";
+"Detail" = "Detail";
+"Report_tab_title" = "Report";
+"Settings" = "Einstellungen";
+"Today" = "Heute";
+"Report_entry_value" = "Report";
+"Live_entry_value" = "Live";
+"Message" = "Nachricht";
+"Open in ..." = "Öffnen mit ...";
+"Your %@ doesn't seem to have any other Apps installed that can open this document." = "Auf diesem %@ scheinen keine anderen Apps installiert zu sein, welche dieses Dokument öffnen können.";
+"No suitable Apps installed" = "Keine passenden Apps installiert";
+"Mail" = "Mail";
+"Options" = "Schnellauswahl";
+"Entries" ="Einträge";
+"Entry" = "Eintrag";
+"Copy entry" = "Eintrag kopieren";
+"Delete entry" = "Eintrag löschen";
+"Cancel" = "Abbrechen";
+"You cannot create a new entry since there is already an entry with a Check-In time before this date and a Check-Out time after this date." = "Es kann kein neuer Eintrag erstellt werden, da es bereits einen Eintrag mit einer Check-In Zeit vor diesem Tag und einer Check-Out Zeit nach diesem Tag gibt.";
+"You cannot create a new entry since the current day is in the future." ="Es kann kein neuer Eintrag erstellt werden, da der ausgewählte Tag in der Zukunft liegt.";
+"Do you wish to delete this entry?" = "Soll dieser Eintrag gelöscht werden?";
+"Do you wish to delete all entries of this day?" = "Sollen wirklich alle Einträge dieses Tages gelöscht werden?";
+"of" = "von";
+"You cannot copy to the target date because there is already at least one entry occupying the targeted date." = "Mit diesem Zieldatum kann nicht kopiert werden. Es überschneidet sich mindestens ein bestehender Eintrag.";
+"You cannot copy an incomplete entry." = "Unvollständige Einträge können nicht kopiert werden.";
+"Check-In date"= "Check-In Datum";
+"Check-In time"= "Check-In Zeit";
+"Check-In timestamp"="Check-In Zeitstempel";
+"Check-In timezone"= "Check-In Zeitzone";
+"Check-Out date"= "Check-Out Datum";
+"Check-Out time"="Check-Out Zeit";
+"Check-Out timestamp"="Check-Out Zeitstempel";
+"Check-Out timezone"= "Check-Out Zeitzone";
+"You cannot copy to the target date because the entry would be in the future." = "Mit diesem Zieldatum kann nicht kopiert werden, da es in der Zukunft liegt.";
+"Welcome to aXTimes! Please take a minute to configure aXTimes to your liking." = "Willkommen bei aXTimes! Bitte nimm Dir eine Minute Zeit und konfiguriere aXTimes.";
+"Welcome" = "Willkommen";
+
+"Add entry" = "Eintrag hinzufügen";
+"You cannot add a new entry as long as there is another incomplete entry for the same day or because you checked out on another date." = "Es kann kein neuer Eintrag hinzugefügt werden, solange es einen unvollständigen Eintrag am selben Tag gibt oder weil ein Eintrag ein Check-Out zu einem anderen Datum hat.";
+"Sickness day" = "Krankheitstag";
+"Vacation" = "Urlaub";
+"Planned working time" = "Sollarbeitszeit";
+"Incl. timezone" = "Inkl. Zeitzone";
+"Working week" = "Arbeitswoche";
+"Do you wish to take over the changes for the entire calendar or only starting from today?" = "Sollen die Änderungen für den ganzen Kalender übernommen werden oder nur ab heute gelten?";
+"From today" ="Ab heute";
+"Entire calendar" = "Ganzer Kalender";
+"days" = "Tage";
+"Holiday" = "Feiertage";
+"Public holiday" = "Feiertag";
+"Days off" = "Arbeitsfreie Tage";
+
+"Current_segment" = "Aktuell";
+"Frequent_segment" = "Häufig";
+"All_segment" = "Alle";
+"All_projects" = "Alle Projekte";
+"Hour_short" = "h";
+
+"Minute_short" = "min";
+
+"Open App" = "App öffnen";
+
+/* Translate the term 'Default pause' which is displayed as a label in the settings. */
+"Default pause" = "Standardpause";
+/* Translate the term 'On' as in something is turned on. */
+"On" = "An";
+/* Translate the term 'Off' as in something is turned off. */
+"Off" = "Aus";
+
+/* Translate the term 'Undo Checkout' */
+"Undo Checkout" = "Check-Out widerrufen";
+/* Translate the term 'Undo' */
+"Undo" = "Widerrufen";
+
+/* ----- */
+
+"Time Format" = "Zeitformat";
+
+"left" = "übrig";
+
+"System" = "System";
+
+"settingsGeneralSectionOneHeader" = "Arbeit";
+"settingsGeneralSectionOneFooter" = "Grundlagen für alle Berechnungen. Der Stundensatz kann durch Projekte überschrieben werden.";
+"settingsGeneralSectionTwoHeader" = "Standardwerte";
+"settingsGeneralSectionTwoFooter" = "Wird beim Erstellen eines neuen Eintrags beim Check-In und Check-Out verwendet.";
+"settingsGeneralSectionThreeHeader" = "Anzeige";
+"settingsGeneralSectionThreeFooter" = "Keine Auswirkung auf die Berechnungen sondern reine Anzeige.";
+"settingsGeneralSectionFourHeader" = "Verschiedenes";
+"settingsGeneralSectionFourFooter" = "Erlaubt dir deinen letzten Check-Out durch Schütteln des Geräts in der Live Ansicht wieder rückgängig zu machen.";
+
+"settingsWorkingWeekFooter" = "Die ausgewählten Tage fließen in die Berechnung der Sollarbeitszeit ein.";
+
+"settingsDefaultPauseFooter" = "Wenn aktiviert, dann wird beim Check-Out die eingestellte Pause eingefügt falls konfliktfrei möglich.";
+
+"settingsDefaultProjectFooter" = "Falls beim Check-In kein Projekt ausgewählt wird, dann werden diese Einstellungen verwendet.";
+
+"settingsDefaultProject" = "Standard Projekt";
+"No project" = "Kein Projekt";
+"Last project" = "Letztes Projekt";
+
+"createBackupTitle" = "Backup erstellen";
+"createBackupActionDescription" = "Deine Daten werden in einer Backup-Datei gespeichert. Diese kannst du zum Beispiel in iCloud Drive oder Dropbox ablegen.";
+"createBackupGenericError" = "Es ist ein Fehler während dem Erstellen des Backups aufgetreten.";
+"createBackupSuccess" = "Backup wurde erfolgreich erstellt. Bitte wähle einen Ort um die Backup-Datei abzuspeichern.";
+
+"Error" = "Fehler";
+"Success" = "Erfolg";
+"Continue" = "Weiter";
+
+"Data management" = "Datenmanagement";
+"Contact support" = "Support kontaktieren";
+"TellAFriendCell" = "Freunde informieren";
+"TellAFriendText%@%@" = "Probiere %@ für dein Smartphone aus. Lade es einfach hier %@ herunter";
+
+"AddClientsHint" = "Hier kannst Du Kunden hinzufügen. Nutze hierzu den Plus-Button rechts oben in der Ecke.";
+"AddProjectsHint" = "Hier kannst Du Projekte hinzufügen. Nutze hierzu den Plus-Button rechts oben in der Ecke.";
+
+"Remaining Budget" = "Restbudget";
+
+"Filter" = "Filter";
+"Client" = "Kunde";
+"Clients" = "Kunden";
+"Client Details" = "Kundendetails";
+"Do you wish to delete this customer?" = "Willst du diesen Kunden löschen?";
+"No Client" = "Kein Kunde";
+/* Telefonnummer */
+"Phone" = "Telefon";
+"Delete Client" = "Kunden löschen";
+"New Client" = "Neuer Kunde";
+"Edit Client" = "Kunden editieren";
+"Delete Pause" = "Pause löschen";
+"Edit Pause" = "Pause editieren";
+"Edit Entry" = "Eintrag editieren";
+"Shake to undo" = "Rückgängig machen durch Schütteln";
+"Work day" = "Arbeitstag";
+"Day off" = "Arbeitsfrei";
+"Active" = "Aktive Projekte";
+"Inactive" = "Inaktive Projekte";
+"None" = "Nichts";
+"Delete" = "Löschen";
+"Day type" = "Tagestyp";
+"Change day type for currently selected date" = "Ändern des Tagestyps für das aktuelle Datum";
+"Duration" = "Dauer";
+"Active_projects_description" = "Aktuell laufende Projekte und zukünftige Projekte.";
+"Inactive_projects_description" = "Vergangene Projekte.";
+
+"restoreBackupTitle" = "Backup wiederherstellen";
+"restoreBackupActionDescription" = "Deine Daten werden aus deinem vorher erstellten Backup wiederhergestellt. Alle existierenden Daten werden überschrieben. Du kannst die Wiederherstellung starten indem du auf den Button oben drückst oder indem du diese App aus einer anderen App heraus mit der Backup-Datei öffnest.";
+"restoreBackupPickertitle" = "Wähle eine Backup-Datei aus";
+// Willst du dein Backup wiederherstellen? Warnung! Alle bestehenden Daten werden dabei gelöscht.
+"restoreBackupStartMessage" = "Willst du dein Backup wiederherstellen? Warnung! Alle bestehenden Daten werden dabei gelöscht.";
+// Backup erfolgreich wiederhergestellt.
+"restoreBackupSuccess" = "Backup erfolgreich wiederhergestellt.";
+"restoreBackupGenericError" = "Es ist ein Fehler aufgetreten während dem Wiederherstellen deiner Daten.";
+
+"oldDataImportTitle" = "Daten-Import aus aXTimes 1.5";
+// Deine Daten werden aus aXTimes 1.5 importiert. Du kannst dabei einen Zeitraum auswählen oder die kompletten Daten übernehmen. Du kannst auch entscheiden welchem bereits angelegten aXTimes Pro-Projekt die Daten zugeordnet werden sollen. Bereits vorhandene Daten in aXTimes Pro werden überschrieben. Der Import kann mehrfach ausgeführt werden.
+"oldDataImportActionDescription" = "Deine Daten werden aus aXTimes 1.5 importiert. Du kannst dabei einen Zeitraum auswählen oder die kompletten Daten übernehmen. Du kannst auch entscheiden welchem bereits angelegten aXTimes Pro-Projekt die Daten zugeordnet werden sollen. Bereits vorhandene Daten in aXTimes Pro werden überschrieben. Der Import kann mehrfach ausgeführt werden.";
+// aXTimes 1.5 wird gestartet um die Daten zu importieren. Bitte bis zum nächsten Hinweis warten.
+"oldDataImportStartMessage" = "aXTimes 1.5 wird gestartet um die Daten zu importieren. Bitte bis zum nächsten Hinweis warten.";
+// Welchem Projekt möchtest du die Daten zuordnen?
+"oldDataImportProjectQuestion" = "Welchem Projekt möchtest du die Daten zuordnen?";
+"oldDataImportProjectHoulyWageMismatch" = "Einträge können diesem Projekt nicht zugewiesen werden, da der Stundensatz eines Eintrags oder mehrerer Einträge nicht mit dem Stundensatz des ausgewählten Projekts übereinstimmen.";
+"oldDataImportProjectDurationMismatch" = "Einträge können diesem Projekt nicht zugewiesen werden, da ein Eintrag oder mehrere Einträge nicht in den Zeitraum des ausgwählten Projekts fallen.";
+// Ab dem DD.MM.YYYY sind bereits Zeiten in aXTimes Pro erfasst. Diese Daten werden überschrieben.
+"oldDataImportOverwriteQuestion" = "Ab dem %@ sind bereits Zeiten in aXTimes Pro erfasst. Diese Daten werden überschrieben.";
+// Daten wurden erfolgreich importiert.
+"oldDataImportSuccess" = "Daten wurden erfolgreich importiert.";
+"oldDataImportProjectSelectionTitle" = "Projektauswahl";
+"oldDataImportGenericError" = "Es ist ein Fehler aufgetreten während dem Import deiner Daten aus aXTimes 1.5.";
+
+"Project Details" = "Projektdetails";
+"Subproject Details" = "Teilprojektdetails";
+"No Project assigned" = "Ohne Projekt";
+"Subproject" = "Teilprojekt";
+"Subprojects" = "Teilprojekte";
+"Code" = "Code";
+"Colour" = "Farbe";
+"Budget" = "Budget";
+"Budget in days" = "Budget in Tagen";
+"Budget based on" = "Budget basiert auf";
+"Exceptions" = "Ausnahmen";
+"exceptions_description" = "Hier können für einzelne Arbeitstage abweichende Pausenzeiten erfasst werden.";
+"none_pauses" = "Keine";
+"Reset" = "Zurücksetzen";
+"Required" = "Erforderlich";
+"New Project" = "Neues Projekt";
+"Edit Project" = "Projekt editieren";
+"Delete Subproject" = "Teilprojekt löschen";
+"Edit Subproject" = "Teilprojekt editieren";
+"Delete Project" = "Projekt löschen";
+"Add Subproject" = "Teilprojekt hinzufügen";
+"Do you wish to delete this project?" = "Willst du dieses Projekt löschen?";
+"Do you wish to delete this subproject?" = "Willst du dieses Teilprojekt löschen?";
+"projectDeletionForbidden" = "Dieses Projekt kann nicht gelöscht werden, weil du darauf bereits Zeiten gebucht hast.";
+
+"addSubprojectWarning" = "Es sind bereits Zeiten für dieses Projekt erfasst. Wenn Du ein Teilprojekt hinzufügst, werden alle Zeiten dorthin übertragen.";
+
+// app rater dialog
+"If you enjoy using %@, would you mind taking a moment to rate it? It won't take more than a minute. Thanks for your support!" = "Du nutzt %@ gerne? Dann nimm Dir bitte für eine Bewertung einen Moment Zeit! Es dauert nicht länger als eine Minute. Vielen Dank!";
+"Rate %@" = "Bewerte %@";
+"No, Thanks" = "Nein, danke";
+"Remind me later" = "Später erinnern";
+
+"Your opinion" = "Deine Meinung";
+"YouLikeProductQuestion" = "Benutzt do aXTimes Pro gerne?";
+"No" = "Nein";
+"Yes" = "Ja";
+"Pity" = "Schade";
+"TellUsAboutProblemQuestion" = "Willst du uns kontaktieren und uns dein Problem schildern?";
+"No, thanks" = "Nein, danke";
+"Contact" = "Kontaktieren";
+
+// IAP
+"notAvailable" = "Nicht verfügbar";
+"buy" = "Kaufen";
+"restore" = "Wiederherstellen";
+"premiumFeatures" = "Premium Features";
+"premiumFeatureInfo" = "Die kostenlose Version von aXTimes Pro unterstützt zwei Projekte. Wenn du weitere Projekte hinzufügen willst, ist das Premium Feature 'Projekte' notwendig.";

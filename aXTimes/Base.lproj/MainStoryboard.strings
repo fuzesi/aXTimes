@@ -1,0 +1,273 @@
+
+/* Class = "IBUIViewController"; title = "Settings"; ObjectID = "3"; */
+"3.title" = "Settings";
+
+/* Class = "IBUITabBarItem"; title = "Settings"; ObjectID = "6"; */
+"6.title" = "Settings";
+
+/* Class = "IBUITabBarItem"; title = "Main"; ObjectID = "7"; */
+"7.title" = "Main";
+
+/* Class = "IBUISegmentedControl"; 0Dz-m0-o3z.segmentTitles[0] = "Day"; ObjectID = "0Dz-m0-o3z"; */
+"0Dz-m0-o3z.segmentTitles[0]" = "Day";
+
+/* Class = "IBUISegmentedControl"; 0Dz-m0-o3z.segmentTitles[1] = "Month"; ObjectID = "0Dz-m0-o3z"; */
+"0Dz-m0-o3z.segmentTitles[1]" = "Month";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "0la-WQ-Em7"; */
+"0la-WQ-Em7.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "1gS-pd-8Sc"; */
+"1gS-pd-8Sc.text" = "Detail";
+
+/* Class = "IBUILabel"; text = "Salary"; ObjectID = "1sT-EU-Gtn"; */
+"1sT-EU-Gtn.text" = "Salary";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "28w-jG-1xA"; */
+"28w-jG-1xA.text" = "Detail";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "2rY-dE-kRq"; */
+"2rY-dE-kRq.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "4G6-h7-6zk"; */
+"4G6-h7-6zk.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "5EX-jY-ZwH"; */
+"5EX-jY-ZwH.text" = "Detail";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "6sI-8b-6vH"; */
+"6sI-8b-6vH.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "73E-V9-5zX"; */
+"73E-V9-5zX.text" = "Detail";
+
+/* Class = "IBUILabel"; text = "Standardkommentar"; ObjectID = "8ci-jW-r7W"; */
+"8ci-jW-r7W.text" = "Standardkommentar";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "9Ab-LE-5u6"; */
+"9Ab-LE-5u6.text" = "Label";
+
+/* Class = "IBUITabBarItem"; title = "Projects"; ObjectID = "9zD-4i-tmc"; */
+"9zD-4i-tmc.title" = "Projects";
+
+/* Class = "IBUIButton"; normalTitle = ">"; ObjectID = "AeW-eG-Esq"; */
+"AeW-eG-Esq.normalTitle" = ">";
+
+/* Class = "IBUITabBarItem"; title = "Summary"; ObjectID = "BIw-WL-tN9"; */
+"BIw-WL-tN9.title" = "Summary";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "Bwk-Ol-l2G"; */
+"Bwk-Ol-l2G.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "CBT-du-Lj0"; */
+"CBT-du-Lj0.text" = "Detail";
+
+/* Class = "IBUIViewController"; title = "Detail"; ObjectID = "Evu-vj-Lpb"; */
+"Evu-vj-Lpb.title" = "Detail";
+
+/* Class = "IBUIBarButtonItem"; title = "Options"; ObjectID = "FxA-dq-R3G"; */
+"FxA-dq-R3G.title" = "Options";
+
+/* Class = "IBUILabel"; text = "Hallo wie geht es dir"; ObjectID = "Gzq-pH-Vrf"; */
+"Gzq-pH-Vrf.text" = "Hallo wie geht es dir";
+
+/* Class = "IBUIButton"; normalTitle = "<"; ObjectID = "KR7-jc-u6o"; */
+"KR7-jc-u6o.normalTitle" = "<";
+
+/* Class = "IBUILabel"; text = "Gross"; ObjectID = "LOO-NQ-FEL"; */
+"LOO-NQ-FEL.text" = "Gross";
+
+/* Class = "IBUILabel"; text = "00:00 - 00:00"; ObjectID = "Lln-PL-Woy"; */
+"Lln-PL-Woy.text" = "00:00 - 00:00";
+
+/* Class = "IBUILabel"; text = "00:00 - 00:00 (2.Nov 2011)"; ObjectID = "Llw-U1-9QB"; */
+"Llw-U1-9QB.text" = "00:00 - 00:00 (2.Nov 2011)";
+
+/* Class = "IBUILabel"; text = "Start"; ObjectID = "Lpb-VA-mbC"; */
+"Lpb-VA-mbC.text" = "Start";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "MbB-4E-av2"; */
+"MbB-4E-av2.text" = "Detail";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "Mh4-Vx-Yht"; */
+"Mh4-Vx-Yht.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "NfF-BL-b9b"; */
+"NfF-BL-b9b.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "O2c-tV-VOg"; */
+"O2c-tV-VOg.text" = "Label";
+
+/* Class = "IBUILabel"; text = "00:00 - 00:00"; ObjectID = "OyB-h4-oTb"; */
+"OyB-h4-oTb.text" = "00:00 - 00:00";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "PXs-M8-8ka"; */
+"PXs-M8-8ka.text" = "Label";
+
+/* Class = "IBUILabel"; text = "88 WWW"; ObjectID = "RDb-OG-piF"; */
+"RDb-OG-piF.text" = "88 WWW";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "Rkr-vd-4oU"; */
+"Rkr-vd-4oU.text" = "Detail";
+
+/* Class = "IBUIButton"; normalTitle = "<"; ObjectID = "Spg-JN-MuB"; */
+"Spg-JN-MuB.normalTitle" = "<";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "UUt-Bo-Cr7"; */
+"UUt-Bo-Cr7.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "V3h-07-rjF"; */
+"V3h-07-rjF.text" = "Label";
+
+/* Class = "IBUIButton"; normalTitle = ">"; ObjectID = "VCl-kR-d8C"; */
+"VCl-kR-d8C.normalTitle" = ">";
+
+/* Class = "IBUILabel"; text = "Label label label"; ObjectID = "VGT-Ny-Wem"; */
+"VGT-Ny-Wem.text" = "Label label label";
+
+/* Class = "IBUILabel"; text = "Kommentar"; ObjectID = "a3r-Sr-40u"; */
+"a3r-Sr-40u.text" = "Kommentar";
+
+/* Class = "IBUILabel"; text = "0.0.0"; ObjectID = "a9e-IN-u8R"; */
+"a9e-IN-u8R.text" = "0.0.0";
+
+/* Class = "IBUITabBarItem"; title = "Detail"; ObjectID = "apP-1o-OTo"; */
+"apP-1o-OTo.title" = "Detail";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "bFj-rB-Daq"; */
+"bFj-rB-Daq.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "bbq-Lr-0Qa"; */
+"bbq-Lr-0Qa.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Kommentar"; ObjectID = "cPR-rJ-YBE"; */
+"cPR-rJ-YBE.text" = "Kommentar";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "ccd-Sr-QKf"; */
+"ccd-Sr-QKf.text" = "Title";
+
+/* Class = "IBUIBarButtonItem"; title = "Today"; ObjectID = "dKs-we-R0o"; */
+"dKs-we-R0o.title" = "Today";
+
+/* Class = "IBUIButton"; normalTitle = ">"; ObjectID = "dt8-HX-Opc"; */
+"dt8-HX-Opc.normalTitle" = ">";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "dtz-ee-1Bk"; */
+"dtz-ee-1Bk.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "ejD-I6-Epx"; */
+"ejD-I6-Epx.text" = "Detail";
+
+/* Class = "IBUILabel"; text = "Comment Comment Comment Comment Comment "; ObjectID = "exT-Au-Vio"; */
+"exT-Au-Vio.text" = "Comment Comment Comment Comment Comment ";
+
+/* Class = "IBUILabel"; text = "00:00 - 00:00 (2.Nov 2011)"; ObjectID = "fdj-oU-l6k"; */
+"fdj-oU-l6k.text" = "00:00 - 00:00 (2.Nov 2011)";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "fws-Rn-G4i"; */
+"fws-Rn-G4i.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "g6Q-po-BHV"; */
+"g6Q-po-BHV.text" = "Label";
+
+/* Class = "IBUIButton"; normalTitle = "<"; ObjectID = "gZ1-sr-7yT"; */
+"gZ1-sr-7yT.normalTitle" = "<";
+
+/* Class = "IBUIButton"; normalTitle = ">"; ObjectID = "gbD-Ms-trP"; */
+"gbD-Ms-trP.normalTitle" = ">";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "gf1-Oj-ijn"; */
+"gf1-Oj-ijn.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Comment Comment Comment Comment Comment "; ObjectID = "h3V-P2-lzO"; */
+"h3V-P2-lzO.text" = "Comment Comment Comment Comment Comment ";
+
+/* Class = "IBUILabel"; text = "00:00 - 00:00 (2.Nov 2011)"; ObjectID = "hDz-ux-WKO"; */
+"hDz-ux-WKO.text" = "00:00 - 00:00 (2.Nov 2011)";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "hfx-kg-mzV"; */
+"hfx-kg-mzV.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Copyright © xxxx aXimilate. All rights reserved."; ObjectID = "hrV-4p-JW9"; */
+"hrV-4p-JW9.text" = "Copyright © xxxx aXimilate. All rights reserved.";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "iZH-m6-uWn"; */
+"iZH-m6-uWn.text" = "Detail";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "idj-Cx-OYU"; */
+"idj-Cx-OYU.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "ioR-Fv-g4d"; */
+"ioR-Fv-g4d.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "l0t-ef-8tP"; */
+"l0t-ef-8tP.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Net"; ObjectID = "lIU-vW-FcD"; */
+"lIU-vW-FcD.text" = "Net";
+
+/* Class = "IBUISegmentedControl"; lcE-Dm-R5K.segmentTitles[0] = "Day"; ObjectID = "lcE-Dm-R5K"; */
+"lcE-Dm-R5K.segmentTitles[0]" = "Day";
+
+/* Class = "IBUISegmentedControl"; lcE-Dm-R5K.segmentTitles[1] = "Month"; ObjectID = "lcE-Dm-R5K"; */
+"lcE-Dm-R5K.segmentTitles[1]" = "Month";
+
+/* Class = "IBUILabel"; text = "Comment Comment Comment Comment Comment "; ObjectID = "len-qh-aG5"; */
+"len-qh-aG5.text" = "Comment Comment Comment Comment Comment ";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "lzQ-S4-TOD"; */
+"lzQ-S4-TOD.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "mz6-XM-DnL"; */
+"mz6-XM-DnL.text" = "Title";
+
+/* Class = "IBUITabBarItem"; title = "Settings"; ObjectID = "nae-Cn-vs0"; */
+"nae-Cn-vs0.title" = "Settings";
+
+/* Class = "IBUIButton"; normalTitle = "<"; ObjectID = "nrM-XG-czp"; */
+"nrM-XG-czp.normalTitle" = "<";
+
+/* Class = "IBUIViewController"; title = "Detail"; ObjectID = "nw7-7R-FWs"; */
+"nw7-7R-FWs.title" = "Detail";
+
+/* Class = "IBUILabel"; text = "00:00 - 00:00"; ObjectID = "oJ9-kH-hO9"; */
+"oJ9-kH-hO9.text" = "00:00 - 00:00";
+
+/* Class = "IBUILabel"; text = "00:00 - 00:00 (2.Nov 2011)"; ObjectID = "ot9-7A-VCQ"; */
+"ot9-7A-VCQ.text" = "00:00 - 00:00 (2.Nov 2011)";
+
+/* Class = "IBUISegmentedControl"; q1W-ul-gDg.segmentTitles[0] = "Week"; ObjectID = "q1W-ul-gDg"; */
+"q1W-ul-gDg.segmentTitles[0]" = "Week";
+
+/* Class = "IBUISegmentedControl"; q1W-ul-gDg.segmentTitles[1] = "Month"; ObjectID = "q1W-ul-gDg"; */
+"q1W-ul-gDg.segmentTitles[1]" = "Month";
+
+/* Class = "IBUISegmentedControl"; q1W-ul-gDg.segmentTitles[2] = "Year"; ObjectID = "q1W-ul-gDg"; */
+"q1W-ul-gDg.segmentTitles[2]" = "Year";
+
+/* Class = "IBUILabel"; text = "88 WWW"; ObjectID = "qsQ-qB-QGX"; */
+"qsQ-qB-QGX.text" = "88 WWW";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "rtE-Ju-WKN"; */
+"rtE-Ju-WKN.text" = "Detail";
+
+/* Class = "IBUILabel"; text = "00:00 - 00:00"; ObjectID = "tz5-NR-9XZ"; */
+"tz5-NR-9XZ.text" = "00:00 - 00:00";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "vbm-0f-7ye"; */
+"vbm-0f-7ye.text" = "Detail";
+
+/* Class = "IBUILabel"; text = "00:00 - 00:00"; ObjectID = "wVf-gi-lXP"; */
+"wVf-gi-lXP.text" = "00:00 - 00:00";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "xcB-lG-u0X"; */
+"xcB-lG-u0X.text" = "Label";
+
+/* Class = "IBUILabel"; text = "00:00 - 00:00"; ObjectID = "yHI-QS-riQ"; */
+"yHI-QS-riQ.text" = "00:00 - 00:00";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "z6e-yl-wF8"; */
+"z6e-yl-wF8.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "zJ3-7D-98t"; */
+"zJ3-7D-98t.text" = "Title";

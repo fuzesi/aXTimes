@@ -1,0 +1,441 @@
+/*
+ Localizable.strings
+ aXTimes
+ 
+ Created by fuesec on 6/1/13.
+ Copyright (c) 2013 aXimilate. All rights reserved.
+ */
+
+/* Table cell button: Add Pause */
+"Add Pause" = "Szünet hozzáadása";
+
+/* Translate the term 'Wage currency' which is diplayed as a label in the settings. */
+"All hourly wages" = "Órabér összesítés";
+
+/* Translate the term 'Average time per day' which will be displayed in a label e.g. in the summary view. */
+"Average time per day" = "Átlagos napi óraszám";
+
+/* Table cell label: Check-In */
+"Check-In" = "Bejelentkezés";
+
+/* Table cell label: Check-Out */
+"Check-Out" = "Kijelentkezés";
+
+/* Small label on main screen for displaying the check-in time. Translate the prefix: Checked in at */
+"Checked in at:" = "Bejelentkezve:";
+
+/* Label on main screen for displaying the check-out time. Translate the prefix: Checked out at */
+"Checked out at:" = "Kijelentkezve:";
+
+/* Clear button title in note view */
+"Clear" = "Töröl";
+
+/* Translate the word 'Comment' which is diplayed as header in the settings for the 'default comment view' */
+"Comment" = "Kommentár";
+
+/* Translate the word 'total' as in total result */
+"Date" = "Dátum";
+
+/* Segemented GUI Control segment title: Day */
+"Day" = "Nap";
+
+/* Translate the term 'Days worked' which will be displayed in a label e.g. in the summary view. */
+"Days worked" = "Dolgozott napok száma";
+
+/* Translate the tern 'Decimal separator' which is diplayed as a label in the settings. */
+"Decimal Separator" = "Tizedesjegy elválasztó";
+
+/* Just translate the word 'default' */
+"System" = "Alapértelmezett";
+
+/* Translate the term 'Default comment' which is diplayed as a label in the settings. */
+"Default Comment" = "Alapértelmezett kommentár";
+
+/* Translate the word 'Description'. E.g. project description */
+"Description" = "Leírás";
+
+/* Detail tab */
+"Detail" = "Részlet";
+
+/* Translate the term 'Details' as in project details. */
+"Details" = "Részletek";
+
+/* Translate the word 'E-mail' */
+"E-Mail" = "Email";
+
+/* Table cell label: End */
+"End" = "Vége";
+
+/* Translate the word 'Export' which is displayed e.g in the settings view as a section headder. */
+"Export" = "Export";
+
+/* 'General' section header in settings view */
+"General" = "Általános";
+
+/* Translate the term 'Live' as in live salary */
+//TODO
+"Live_entry_value" = "Élő";
+
+/* Translate the term 'Hourly wage' which is diplayed as a label e.g. in the settings. */
+"Hourly wage" = "Órabér";
+
+/* Translate the term 'Hours per day' which is diplayed as a label in the settings. */
+"Hours per day" = "Napi órák száma";
+
+/* Translate the term 'Hours to distribute' */
+"Hours to distribute" = "Elosztandó órák";
+
+/* Translate the term 'Hours worked' */
+"Hours worked" = "Dolgozott órák";
+
+/* The name of the rounding method mercantile aka: kaufmännisch */
+"Kaufmännisch" = "Kereskedelmi";
+
+/* Translate the word 'Language' */
+"Language" = "Nyelv";
+
+/* Main tab */
+"Live" = "Élő";
+
+/* Translate this term 'Money earned this month' */
+"Money earned this month" = "Havi kereset";
+
+/* Translate this term 'Money earned this year' */
+"Money earned this year" = "Éves kereset";
+
+/* Segemented GUI Control segment title: Month */
+"Month" = "Hónap";
+
+/* Translate the word 'Name'. E.g. project name */
+"Name" = "Név";
+
+/* Translate the term 'Report' as in report salary */
+//TODO
+"Report_entry_value" = "Riport";
+
+/* Translate the tern 'Report' which is diplayed e.g. as a label section header in the settings view for settings like 'Time unit' and 'Rounding'. */
+// TODO Report
+"Report_settings_section_title" = "Riport";
+
+/* Alert view deny answer: No. */
+"No" = "Nem";
+
+/* Small label on main screen which is displayed if the user has not worked on that particular day. Translate: Not yet worked today */
+"Not yet worked today" = "Ma még nem dolgoztál";
+
+/* Alert view button title confirmation: Ok. */
+"OK" = "Ok";
+
+/* Translate the term 'Overtime' which will be displayed in a label e.g. in the summary view. */
+"Overtime" = "Túlóra";
+
+/* Label: Pause */
+"Pause" = "Szünet";
+
+/* Translate the term 'Pause time' */
+"Pause time" = "Szünet ideje";
+
+/* Translate word 'Project' */
+"Project" = "Projekt";
+
+/* Translate the term 'Hours per day' which is diplayed as a label in the settings. */
+"Projects" = "Projektek";
+
+/* Alert view title: Question. The user will be asked whether he wants to take over the changes for an exiting dayentry or not. */
+"Question" = "Kérdés";
+
+/* Tranlate the term 'Report' which will be used for the file name in the export. */
+"Report" = "Riport";
+
+/* Translate abrunden/Round down */
+"Round down" = "Lefelé kerekít";
+
+/* Translate aufrunden/Round up */
+"Round up" = "Felfelé kerekít";
+
+/* Translate the word 'Rounding' which is diplayed as a label in the settings. */
+"Rounding" = "Kerekítés";
+
+/* Translate the term 'Income' which will be displayed in a label e.g. in the summary view. */
+"Salary" = "Kereset";
+
+/* Settings tab */
+"Settings" = "Beállítások";
+
+/* Table cell label: Start */
+"Start" = "Start";
+
+/* Report tab */
+//TODO
+"Report_tab_title" = "Riport";
+
+/* Translate the term 'Time unit' which is diplayed as a label in the settings. */
+"Time unit" = "Időegység";
+
+/* Translate the term 'Time worked net' which will be displayed in a label e.g. in the report view. */
+//TODO
+//(D) Nettoarbeitszeit --> Arbeitszeit
+//(E) Time worked net --> Working time
+"Working_time" = "Munkaidő";
+
+/* Small label on main screen for displaying the time which the user has already worked. Translate the prefix: Time worked today */
+"Time worked today" = "A mai napon dolgozott idő";
+
+/* Translate word 'Today' */
+"Today" = "Ma";
+
+/* Translate the word 'total' as in total result */
+"Total" = "Összesen";
+
+/* Translate the term 'Wage currency' which is diplayed as a label in the settings. */
+"Currency" = "Pénznem";
+
+/* 'Wage in' as in Wage in EUR */
+"Wage in" = "Bér";
+
+/* Alert view title 'Warning'. */
+"Warning" = "Figyelmeztetés";
+
+/* Segemented GUI Control segment title: Week */
+"Week" = "Hét";
+
+/* Translate the term 'With wage' which is diplayed as a label in the settings. */
+"With wage" = "Bért mutat";
+
+/* Small label on main screen for displaying the working time above money counter. Translate the prefix: Working time */
+"Working time" = "Munkaidő";
+
+/* Segemented GUI Control segment title: Year */
+"Year" = "Év";
+
+/* Alert view accept answer: Yes. */
+"Yes" = "Igen";
+
+"Message" = "Üzenet";
+"Open in ..." = "Kinyit ...";
+"Your %@ doesn't seem to have any other Apps installed that can open this document." = "A %@-on nincs más olyan telepített alkalmazás amely ki tudná nyitni ezt a dokumentumot.";
+"No suitable Apps installed" = "Nincs megfelelő alkalmazás telepítve";
+"Mail" = "Mail";
+
+
+/* FUESEC ab hier übersetzen */
+
+
+/* Small label on main screen for displaying the total money earned for last/current entry. Translate the prefix: Currently earned money */
+"Currently earned money" = "Jelenlegi kereset";
+
+/* 'Take over changes' alert view content: Do you wish to take over the changes for the current day? */
+"Do you wish to take over the changes for the currently active entry?" = "Át szeretnéd venni az aktuális bejegyzés változtatásait?";
+
+"Options" = "Opciók";
+"Entries" ="Bejegyzések";
+"Entry" = "Bejegyzés";
+"Copy entry" = "Bejegyzés másolása";
+"Delete entry" = "Bejegyzés törlése";
+"Cancel" = "Mégsem";
+"You cannot create a new entry since there is already an entry with a Check-In time before this date and a Check-Out time after this date." = "Nem hozhatod létre ezt a bejegyzést, mert már létezik egy bejegyzés e bejelentkezési dátum elött és egy kijelentkezés e dátum után.";
+"You cannot create a new entry since the current day is in the future." = "Nem hozhatod létre ezt a bejegyzést, mert a dátum a jövőben van.";
+"Do you wish to delete this entry?" = "Törölni szeretnéd ezt a bejegyzést?";
+"Do you wish to delete all entries of this day?" = "Törölni szeretnéd az összes e napi bejegyzéseket?";
+/* Translate the word 'of' as in '1 of 3 Entries' */
+"of" = "a"; /* 1 a 3-ból */
+"You cannot copy to the target date because there is already at least one entry occupying the targeted date." = "Nem másolhatsz erre a dátumra, mert legalább egy bejegyzés már létezik.";
+"You cannot copy an incomplete entry." = "Befejezetlen bejegyzések nem másolhatók.";
+"Check-In date"= "Bejelentkezési dátum";
+"Check-In time"= "Bejelentkezési idő";
+"Check-In timestamp"="Bejelentkezési időpont";
+"Check-In timezone"= "Bejelentkezési időzóna";
+"Check-Out date"= "Kijelentezési dátum";
+"Check-Out time"="Kijelentezési idő";
+"Check-Out timestamp"="Kijelentezési időpont";
+"Check-Out timezone"= "Kijelentezési időzóna";
+"Welcome to aXTimes! Please take a minute to configure aXTimes to your liking." = "Üdvözlünk az aXTimes-ban! Vegyél egy percet és állítsd be az alkalmazást tetszésed szerint.";
+"Welcome" = "Üdvözlünk";
+
+//TODO alles ab hier abwärts
+"Add entry" = "Bejegyzés hozzáadása";
+"You cannot add a new entry as long as there is another incomplete entry for the same day or because you checked out on another date." = "Nem adhatsz hozzá egy új bejegyzést ameddig egy befejezetlen bejegyzés ugyanarra a napra már létezik vagy egy másik napon jelentkeztél ki.";
+//icon info page
+"Sickness day" = "Beteg nap";
+//report tab
+"Vacation" = "Szabadság";
+"Planned working time" = "Tervezett munkaidő";
+"Incl. timezone" = "Időzónával együtt";
+"Working week" = "Munkahét";
+"Do you wish to take over the changes for the entire calendar or only starting from today?" = "Át szeretnéd venni a változtatásokat az egész naptárra (visszamenőleg is) vagy csak mától?";
+"From today" ="Mától";
+"Entire calendar" = "Teljes naptár";
+"days" = "nap";
+//report tab
+"Holiday" = "Ünnepnap";
+"Public holiday" = "Ünnepnap";
+//report tab
+"Days off" = "Szünnapok";
+
+
+/* Translate the term 'Current' as in 'Current comment' */
+"Current_segment" = "Aktuális";
+
+
+/* Translate the term 'Frequent' as in 'Frequent comments' */
+"Frequent_segment" = "Gyakori";
+
+
+/* Translate the term 'All' as in 'All comments' */
+"All_segment" = "Mind";
+
+"Hour_short" = "h";
+
+"Minute_short" = "min";
+
+"Open App" = "Alkalmazást nyit";
+
+"Default pause" = "Ebédszünet";
+
+"On" = "Be";
+
+"Off" = "Ki";
+
+/* Translate the term 'Undo Checkout’ …auf deutsch Checkout widerrufen*/
+"Undo Checkout" = "Kijelentkezés vissza";
+
+/* Translate the term 'Undo’ …auf deutsch Widerrufen*/
+"Undo" = "Vissza";
+
+
+
+
+"Day off" = "Szünnap, nem munkanap";
+
+// app rater dialog
+"If you enjoy using %@, would you mind taking a moment to rate it? It won't take more than a minute. Thanks for your support!" = "Ha tetszik az %@, ne felejtsd el értékelni az App Store-ban! Csak egy perc az egész. Köszönet a támogatásért!";
+"Rate %@" = "%@ értékelése";
+"No, Thanks" = "Köszönöm nem";
+"Remind me later" = "Emlékeztess később";
+
+"Active" = "Aktív";
+"Active_projects_description" = "Aktuális, futó projektek és jövőbeli projektek.";
+"Add Subproject" = "Alprojekt hozzáadása";
+"AddClientsHint" = "Ügyfeleket a jobb felső sarokban lévő plusz gombbal adhatsz hozzá.";
+"AddProjectsHint" = "Projekteket a jobb felső sarokban lévő plusz gombbal adhatsz hozzá.";
+"Budget in days" = "Büdzsé napokban";
+"Budget" = "Büdzsé";
+"Change day type for currently selected date" = "Változtasd a nap típusát a megjelölt dátumon";
+"Client Details" = "Ügyfél részletek";
+"Client" = "Ügyfél";
+"Clients" = "Ügyfelek";
+"Code" = "Kód";
+"Colour" = "Szín";
+"Contact support" = "Ügyfélszolgálattal kapcsolatot felvenni";
+"Continue" = "Tovább";
+"Data management" = "Adatmenedzsment";
+"Day off" = "Szünnap";
+"Day type" = "Nap típusa";
+"Delete Client" = "Ügyfelet törölni";
+"Delete Pause" = "Szünetet törölni";
+"Delete Project" = "Projektet törölni";
+"Delete Subproject" = "Alprojektet törölni";
+"Delete" = "Törölni";
+"Do you wish to delete this customer?" = "Szeretnéd ezt az ügyfelet törölni?";
+"Do you wish to delete this project?" = "Szeretnéd ezt a projektet törölni?";
+"Do you wish to delete this subproject?" = "Szeretnéd ezt az alprojektet törölni?";
+"Duration" = "Időtartam";
+"Edit Client" = "Ügyfél módosítás";
+"Edit Entry" = "Bejegyzést módosítás";
+"Edit Pause" = "Szünet módosítás";
+"Edit Project" = "Projekt módosítás";
+"Edit Subproject" = "Alprojekt módosítás";
+"Error" = "Hiba";
+"Exceptions" = "Kivételek";
+"Filter" = "Filter";
+"Inactive" = "Inaktív";
+"Inactive_projects_description" = "Inaktív projekt.";
+"Last project" = "Utolsó projekt";
+"New Client" = "Új ügyfél";
+"New Project" = "Új projekt";
+"No Client" = "Nincs ügyfél";
+"No Project assigned" = "Nincs projekt hozzárendelve";
+"No project" = "Nincs projekt";
+"None" = "Egyik sem";
+"Phone" = "Telefonszám";
+"Project Details" = "Projekt részletek";
+"Remaining Budget" = "Maradék budzsé";
+"Required" = "Szükséges";
+"Reset" = "Visszaállít";
+"Shake to undo" = "Rázás általi visszaállítás";
+"Subproject Details" = "Alprojekt részletek";
+"Subproject" = "Alprojekt";
+"Subprojects" = "Alprojektel";
+"Success" = "Siker";
+"System" = "Rendszer";
+"TellAFriendCell" = "Barátokat értesíteni";
+"TellAFriendText%@%@" = "Próbáld ki a %@ a mobilodon. Töltsd itt le %@";
+"Time Format" = "Időformátum";
+"Work day" = "Munkanap";
+"createBackupActionDescription" = "Az adataid egy backup fájlban lesznek lementve. Ezt például az iCloud Drive-ra vagy a Dropbox-odra mentheted le.";
+"createBackupGenericError" = "Hiba történt a mentés közben.";
+"createBackupSuccess" = "A mentés sikeres volt. Válaszd ki, hova akarod menteni a backup fájlt.";
+"createBackupTitle" = "Mentést létrehozni";
+"left" = "maradék";
+"oldDataImportActionDescription" = "Az adataid az aXTimes 1.5-ből importálva lesznek. Kiválaszthatsz egy időintervallumot vagy átveheted az összes adatot. Eldöntheted melyik létező aXTimes Pro projekt legyen hozzárendelve. Az aXTimes Pro-ban adott időszakban létező adatok fölül lesznek írva. Az import többször is megismételhető.";
+"oldDataImportGenericError" = "Hiba történt az aXTimes 1.5-ből való import alatt.";
+"oldDataImportOverwriteQuestion" = "%@-tól aXTimes Pro tartalmaz adatokat. Ezek az adatok fölül lesznek írva.";
+"oldDataImportProjectDurationMismatch" = "A bejegyzések nem hozzárendelhetőek ehhez a projekthez, mert legalább egy bejegyzés a projekt időtartamán kívülre esik.";
+"oldDataImportProjectHoulyWageMismatch" = "A bejegyzések nem hozzárendelhetőek ehhez a projekthez, mert legalább egy bejegyzés órabére nem egyezik a projekt órabérével.";
+"oldDataImportProjectQuestion" = "Melyik projektet szeretnéd az adatokhoz hozzárendelni?";
+"oldDataImportProjectSelectionTitle" = "Projekt kiválasztása";
+"oldDataImportStartMessage" = "Az adatok importálásához indítom az aXTimes 1.5-öt. Várj a következő utasításra.";
+"oldDataImportSuccess" = "Adatok sikeresen importálva.";
+"oldDataImportTitle" = "Adat import az aXTimes 1.5-ből";
+"projectDeletionForbidden" = "Ez a projekt nem törölhető, mert épp bejelentkeztél rá.";
+"restoreBackupActionDescription" = "Az adataid vissza lesznek állítva az előző mentésből. Az összes létező adat fölül lesz írva. A visszaállítást a felső gombbal indíthatod vagy kinyitod a backup fájlt egy másik alkalmazásból.";
+"restoreBackupGenericError" = "Az adataid visszaállítása közben hiba történt.";
+"restoreBackupPickertitle" = "Válassz ki egy backup fájlt.";
+"restoreBackupStartMessage" = "Vissza akarod állítani adataidat a mentett fájlból? Figyelem! Az összes adat törölve lesz.";
+"restoreBackupSuccess" = "Mentés sikeresen visszaállítva.";
+"restoreBackupTitle" = "Mentésből visszaállítani";
+"settingsDefaultPauseFooter" = "Ha aktiválva van, kijelentkezéskor abban az esetben ha nincs konfliktus, a beállított szünet be lesz illesztve.";
+"settingsDefaultProject" = "Alap projekt";
+"settingsDefaultProjectFooter" = "Ezek a beállítások aktívak bejelentkezéskor ha nincs projekt kiválasztva.";
+"settingsGeneralSectionFourFooter" = "Megengedi az utolsó kijelentkezésed rázás által való visszavonását.";
+"settingsGeneralSectionFourHeader" = "Különféle";
+"settingsGeneralSectionOneFooter" = "Minden számítás alapja. Az órabér a projektek által fölülírható.";
+"settingsGeneralSectionOneHeader" = "Munka";
+"settingsGeneralSectionThreeFooter" = "Nincs kihatása a számításokra, csupán kijelző.";
+"settingsGeneralSectionThreeHeader" = "Kijelző";
+"settingsGeneralSectionTwoFooter" = "Egy új Check-In és Check-Out bejegyzésnél lesz használva.";
+"settingsGeneralSectionTwoHeader" = "Alapértékek";
+"settingsWorkingWeekFooter" = "A kiválasztott napok beleszámítanak a tervezett munkaidő számításánál.";
+
+
+"Your opinion" = "A te véleményed";
+"YouLikeProductQuestion" = "Szívesen használod az aXtimes-ot?";
+"No" = "Nem";
+"Yes" = "Igen";
+"Pity" = "Kár";
+"TellUsAboutProblemQuestion" = "Szeretnél kapcsolatot felvenni velünk, hogy körülírd a problémád?";
+"No, thanks" = "Köszönöm, nem";
+"Contact" = "Kapcsolatfelvétel";
+
+"addSubprojectWarning" = "There are already entries existing entries for this project. If you add your first subproject those entries will be moved to the subproject.";
+
+// standardpause beschreibung
+"exceptions_description" = "Itt egyes munkanapokra az általánostól eltérő szünetet állíthatsz be";
+// keine ausnahmen für die pause
+"none_pauses" = "Nincs";
+"Projects" = "Projektek";
+
+"Options" = "Opció";
+"All" = "Minden projekt";
+"Active" = "Aktív projektek";
+"Inactive" = "Inaktív projektek";
+"None" = "Semmi";
+"No Project assigned" = "Projekt nélkül";
+"Budget based on" = "A büdzsé alapja";
+"projectDeletionForbidden" = "Ez a projekt nem törölhető, mert már vannak bejegyzések.";
+
+"notAvailable" = "nem elérhető";
+"buy" = "vásárol";
+"restore" = "visszaállítani";
+"premiumFeatures" = "prémium szolgáltatások";
+"premiumFeatureInfo" = "A díjmentes aXTimes Pro verzióban két projekt elérhető. További projektek konfigurálásához a prémium szolgáltatás 'Projektek' szükséges";

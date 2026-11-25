@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16D32" minimumToolsVersion="Xcode 4.3" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Comment" representedClassName="Comment" syncable="YES">
+        <attribute name="commentText" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="commentText"/>
+            </userInfo>
+        </attribute>
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="creationDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="lastModifiedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="lastModifiedDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="lastUsedDate" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="lastUsedDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="usage" attributeType="Integer 64" defaultValueString="1" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="usage"/>
+            </userInfo>
+        </attribute>
+    </entity>
+    <entity name="Customer" representedClassName="Customer" syncable="YES">
+        <attribute name="active" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="active"/>
+            </userInfo>
+        </attribute>
+        <attribute name="addressAddition" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="addressAddition"/>
+            </userInfo>
+        </attribute>
+        <attribute name="addressCity" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="addressCity"/>
+            </userInfo>
+        </attribute>
+        <attribute name="addressCountry" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="addressCountry"/>
+            </userInfo>
+        </attribute>
+        <attribute name="addressPostalCode" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="addressPostalCode"/>
+            </userInfo>
+        </attribute>
+        <attribute name="addressState" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="addressState"/>
+            </userInfo>
+        </attribute>
+        <attribute name="addressStreet" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="addressStreet"/>
+            </userInfo>
+        </attribute>
+        <attribute name="addressStreetNumber" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="addressStreetNumber"/>
+            </userInfo>
+        </attribute>
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="code"/>
+            </userInfo>
+        </attribute>
+        <attribute name="colourAsHex" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="colourAsHex"/>
+            </userInfo>
+        </attribute>
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="creationDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="displayName" attributeType="String" minValueString="1" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="displayName"/>
+            </userInfo>
+        </attribute>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="email"/>
+            </userInfo>
+        </attribute>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="lastModifiedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="lastModifiedDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="notes"/>
+            </userInfo>
+        </attribute>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="phone"/>
+            </userInfo>
+        </attribute>
+        <relationship name="projects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Project" inverseName="customer" inverseEntity="Project" syncable="YES"/>
+    </entity>
+    <entity name="DayEntry" representedClassName="DayEntry" syncable="YES">
+        <attribute name="checkInTime" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="checkInTime"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="checkInTimeZone" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="checkInTimeZone"/>
+            </userInfo>
+        </attribute>
+        <attribute name="checkOutTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="checkOutTime"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="checkOutTimeZone" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="checkOutTimeZone"/>
+            </userInfo>
+        </attribute>
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="comment"/>
+            </userInfo>
+        </attribute>
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="creationDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="hourlyWage" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="hourlyWage"/>
+                <entry key="JSONTransformerName" value="DecimalNumber"/>
+            </userInfo>
+        </attribute>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="lastModifiedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="lastModifiedDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <relationship name="pauses" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Pause" inverseName="dayentry" inverseEntity="Pause" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="pauses"/>
+            </userInfo>
+        </relationship>
+        <relationship name="project" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="dayEntries" inverseEntity="Project" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="project"/>
+            </userInfo>
+        </relationship>
+        <userInfo>
+            <entry key="identityAttributes" value="identifier"/>
+        </userInfo>
+    </entity>
+    <entity name="DayType" representedClassName="DayType" syncable="YES">
+        <attribute name="calendarDate" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="calendarDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="calendarDateTimeZone" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="calendarDateTimeZone"/>
+            </userInfo>
+        </attribute>
+        <attribute name="calendarDay" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="calendarDay"/>
+            </userInfo>
+        </attribute>
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="creationDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="day" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="day"/>
+            </userInfo>
+        </attribute>
+        <attribute name="holiday" attributeType="Boolean" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="holiday"/>
+            </userInfo>
+        </attribute>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="lastModifiedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="lastModifiedDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="month" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="month"/>
+            </userInfo>
+        </attribute>
+        <attribute name="sickness" attributeType="Boolean" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="sickness"/>
+            </userInfo>
+        </attribute>
+        <attribute name="vacation" attributeType="Boolean" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="vacation"/>
+            </userInfo>
+        </attribute>
+        <attribute name="work" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="work"/>
+            </userInfo>
+        </attribute>
+        <attribute name="year" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="year"/>
+            </userInfo>
+        </attribute>
+    </entity>
+    <entity name="DefaultPauseSetting" representedClassName="DefaultPauseSetting" syncable="YES">
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="creationDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="dayOfWeek" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="dayOfWeek"/>
+            </userInfo>
+        </attribute>
+        <attribute name="end" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="end"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="lastModifiedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="lastModifiedDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="start" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="start"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+    </entity>
+    <entity name="Pause" representedClassName="Pause" syncable="YES">
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="creationDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="endTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="endTime"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="endTimeZone" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="endTimeZone"/>
+            </userInfo>
+        </attribute>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="lastModifiedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="lastModifiedDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="startTime" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="startTime"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="startTimeZone" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="startTimeZone"/>
+            </userInfo>
+        </attribute>
+        <relationship name="dayentry" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="DayEntry" inverseName="pauses" inverseEntity="DayEntry" syncable="YES"/>
+        <userInfo>
+            <entry key="identityAttributes" value="identifier"/>
+        </userInfo>
+    </entity>
+    <entity name="Project" representedClassName="Project" syncable="YES">
+        <attribute name="active" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="active"/>
+            </userInfo>
+        </attribute>
+        <attribute name="basicProject" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="basicProject"/>
+            </userInfo>
+        </attribute>
+        <attribute name="budget" optional="YES" attributeType="Decimal" minValueString="0" defaultValueString="0.0" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="budget"/>
+                <entry key="JSONTransformerName" value="DecimalNumber"/>
+            </userInfo>
+        </attribute>
+        <attribute name="code" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="code"/>
+            </userInfo>
+        </attribute>
+        <attribute name="colourAsHex" attributeType="String" defaultValueString="#000000" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="colourAsHex"/>
+            </userInfo>
+        </attribute>
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="creationDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="defaultComment" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="defaultComment"/>
+            </userInfo>
+        </attribute>
+        <attribute name="defaultProject" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="defaultProject"/>
+            </userInfo>
+        </attribute>
+        <attribute name="filterActive" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="filterActive"/>
+            </userInfo>
+        </attribute>
+        <attribute name="fromDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="fromDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="fromDateTimeZone" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="fromDateTimeZone"/>
+            </userInfo>
+        </attribute>
+        <attribute name="hourlyWage" optional="YES" attributeType="Decimal" minValueString="0" defaultValueString="0.0" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="hourlyWage"/>
+                <entry key="JSONTransformerName" value="DecimalNumber"/>
+            </userInfo>
+        </attribute>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="lastModifiedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="lastModifiedDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="name" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="partialFilterActive" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="partialFilterActive"/>
+            </userInfo>
+        </attribute>
+        <attribute name="position" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="position"/>
+            </userInfo>
+        </attribute>
+        <attribute name="projectDescription" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="projectDescription"/>
+            </userInfo>
+        </attribute>
+        <attribute name="roundingBehaviour" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="roundingBehaviour"/>
+            </userInfo>
+        </attribute>
+        <attribute name="timeUnit" attributeType="Integer 64" defaultValueString="1" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="timeUnit"/>
+            </userInfo>
+        </attribute>
+        <attribute name="toDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="toDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="toDateTimeZone" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="toDateTimeZone"/>
+            </userInfo>
+        </attribute>
+        <attribute name="useSubProjectsBudget" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="useSubProjectsBudget"/>
+            </userInfo>
+        </attribute>
+        <relationship name="customer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Customer" inverseName="projects" inverseEntity="Customer" syncable="YES"/>
+        <relationship name="dayEntries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DayEntry" inverseName="project" inverseEntity="DayEntry" syncable="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="subProjects" inverseEntity="Project" syncable="YES"/>
+        <relationship name="subProjects" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Project" inverseName="parent" inverseEntity="Project" syncable="YES"/>
+        <userInfo>
+            <entry key="identityAttributes" value="identifier"/>
+        </userInfo>
+    </entity>
+    <entity name="WorkingWeekSetting" representedClassName="WorkingWeekSetting" syncable="YES">
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="creationDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="day" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="day"/>
+            </userInfo>
+        </attribute>
+        <attribute name="friday" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="friday"/>
+            </userInfo>
+        </attribute>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="lastModifiedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="lastModifiedDate"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="monday" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="monday"/>
+            </userInfo>
+        </attribute>
+        <attribute name="month" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="saturday" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="saturday"/>
+            </userInfo>
+        </attribute>
+        <attribute name="sunday" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="sunday"/>
+            </userInfo>
+        </attribute>
+        <attribute name="thursday" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="thursday"/>
+            </userInfo>
+        </attribute>
+        <attribute name="tuesday" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="tuesday"/>
+            </userInfo>
+        </attribute>
+        <attribute name="validUntil" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="validUntil"/>
+                <entry key="JSONTransformerName" value="Date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="validUntilString" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="validUntilString"/>
+            </userInfo>
+        </attribute>
+        <attribute name="validUntilTimeZone" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="validUntilTimeZone"/>
+            </userInfo>
+        </attribute>
+        <attribute name="wednesday" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="wednesday"/>
+            </userInfo>
+        </attribute>
+        <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="year"/>
+            </userInfo>
+        </attribute>
+    </entity>
+    <fetchRequest name="BasicProject_Request" entity="Project" predicateString="name == &quot;__basic__global__axtimes__project__&quot; AND basicProject == 1"/>
+    <elements>
+        <element name="Comment" positionX="0" positionY="0" width="128" height="135"/>
+        <element name="Customer" positionX="9" positionY="126" width="128" height="315"/>
+        <element name="DayEntry" positionX="0" positionY="0" width="128" height="210"/>
+        <element name="DayType" positionX="0" positionY="0" width="128" height="240"/>
+        <element name="DefaultPauseSetting" positionX="9" positionY="153" width="128" height="135"/>
+        <element name="Pause" positionX="0" positionY="0" width="128" height="165"/>
+        <element name="Project" positionX="0" positionY="0" width="128" height="450"/>
+        <element name="WorkingWeekSetting" positionX="0" positionY="0" width="128" height="285"/>
+    </elements>
+</model>

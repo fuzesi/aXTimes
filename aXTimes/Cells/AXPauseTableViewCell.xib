@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AXPauseTableViewCell" rowHeight="43" id="lkt-Is-L58" customClass="AXPauseTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lkt-Is-L58" id="yHl-5E-zay">
+                <frame key="frameInset" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXq-ZS-pKe">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="QLp-ek-hrL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ocI-se-UGD">
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00 - 00:00 (2.Nov 2011)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39E-YH-fa4">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KiU-3c-3Zg">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KiU-3c-3Zg" firstAttribute="leading" secondItem="ocI-se-UGD" secondAttribute="leading" id="Dau-aZ-JJM"/>
+                            <constraint firstItem="39E-YH-fa4" firstAttribute="top" secondItem="ocI-se-UGD" secondAttribute="top" id="Idt-Aj-tHO"/>
+                            <constraint firstAttribute="trailing" secondItem="KiU-3c-3Zg" secondAttribute="trailing" id="PQD-7H-lSE"/>
+                            <constraint firstAttribute="bottom" secondItem="KiU-3c-3Zg" secondAttribute="bottom" id="Xzv-T7-uQa"/>
+                            <constraint firstItem="KiU-3c-3Zg" firstAttribute="top" secondItem="39E-YH-fa4" secondAttribute="bottom" id="Z5o-7a-daJ"/>
+                            <constraint firstItem="39E-YH-fa4" firstAttribute="leading" secondItem="ocI-se-UGD" secondAttribute="leading" id="c2c-Ls-r1P"/>
+                            <constraint firstAttribute="trailing" secondItem="39E-YH-fa4" secondAttribute="trailing" id="xdl-Jn-3ac"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mXq-ZS-pKe" firstAttribute="centerY" secondItem="yHl-5E-zay" secondAttribute="centerY" id="7Bf-dG-Ohm"/>
+                    <constraint firstItem="ocI-se-UGD" firstAttribute="leading" secondItem="mXq-ZS-pKe" secondAttribute="trailing" constant="5" id="G9z-in-Jbs"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ocI-se-UGD" secondAttribute="trailing" id="V8B-h8-CRA"/>
+                    <constraint firstItem="mXq-ZS-pKe" firstAttribute="leading" secondItem="yHl-5E-zay" secondAttribute="leadingMargin" id="jAO-Nu-mpQ"/>
+                    <constraint firstItem="ocI-se-UGD" firstAttribute="centerY" secondItem="yHl-5E-zay" secondAttribute="centerY" id="wJZ-X7-ysX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="customTextLabel" destination="mXq-ZS-pKe" id="00F-7h-vxQ"/>
+                <outlet property="timeRangeLabel" destination="39E-YH-fa4" id="c55-ss-ae2"/>
+                <outlet property="totalTimeLabel" destination="KiU-3c-3Zg" id="74S-kE-WCC"/>
+            </connections>
+            <point key="canvasLocation" x="38" y="46"/>
+        </tableViewCell>
+    </objects>
+</document>

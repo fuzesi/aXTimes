@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ColorLeftSideTableViewCell" customModule="aXTimes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BoN-m5-LUW">
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="9qo-hb-O9q"/>
+                            <constraint firstAttribute="width" constant="24" id="y6G-Ro-2EO"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hc-zV-PCv">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="de5-wr-G5p">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="EbP-NE-oz0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="de5-wr-G5p" firstAttribute="leading" secondItem="BoN-m5-LUW" secondAttribute="trailing" constant="5" id="3Np-ZW-pho"/>
+                    <constraint firstItem="7hc-zV-PCv" firstAttribute="leading" secondItem="de5-wr-G5p" secondAttribute="trailing" constant="5" id="6aj-8L-a5X"/>
+                    <constraint firstItem="BoN-m5-LUW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="9Yu-w0-R7S"/>
+                    <constraint firstItem="de5-wr-G5p" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="OKG-00-ef0"/>
+                    <constraint firstItem="7hc-zV-PCv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ePp-MO-cos"/>
+                    <constraint firstItem="7hc-zV-PCv" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="kXh-lP-QfA"/>
+                    <constraint firstItem="BoN-m5-LUW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="oME-Pa-WXw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="colorView" destination="BoN-m5-LUW" id="3EH-WI-Nek"/>
+                <outlet property="customDetailTextLabel" destination="7hc-zV-PCv" id="Evo-QD-5T2"/>
+                <outlet property="customTextLabel" destination="de5-wr-G5p" id="229-PE-xt2"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

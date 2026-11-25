@@ -1,0 +1,290 @@
+/*
+ Localizable.strings
+ aXTimes
+ 
+ Created by fuesec on 6/1/13.
+ Copyright (c) 2013 aXimilate. All rights reserved.
+ */
+
+"System" = "Standard";
+"Check-Out" = "Utcheckning";
+"Checked in at:" = "Checkade in kl.";
+"Checked out at:" = "Checkade ut kl.";
+"Check-In" = "Incheckning";
+"Finish break" = "Arbeta";
+"Begin break" = "Paus";
+"Hourly wage" = "Timlön";
+"Pause" = "Paus";
+"Days worked" = "Antal arbetade dagar";
+"Average time per day" = "Genomsnittlig tid per dag";
+"Overtime" = "Övertid";
+"Salary"= "Inkomst";
+"Report" = "Rapport";
+"Hours per day" = "Timmar per dag";
+"Currency" = "Valuta";
+"E-Mail" = "E-post";
+"Language" = "Språk";
+"Export" = "Export";
+"Month" = "Månad";
+"Day" = "Dag";
+"Week" = "Vecka";
+"Year" = "År";
+"Default Comment" = "Standardkommentar";
+/* Translate the tern 'Report' which is diplayed e.g. as a label section header in the settings view for settings like 'Time unit' and 'Rounding'. */
+// TODO Report
+"Report_settings_section_title" = "Rapport";
+"Time unit" = "Tidsenhet";
+"Rounding" = "Avrundning";
+"Round up" = "Avrunda upp";
+"Round down" = "Avrunda ner";
+"Date" = "Datum";
+/* Translate the term 'Time worked net' which will be displayed in a label e.g. in the report view. */
+//TODO
+//(D) Nettoarbeitszeit --> Arbeitszeit
+//(E) Time worked net --> Working time
+"Working_time" = "Arbetstid";
+"Pause time" = "Paus tid";
+"Note" = "Anteckning";
+"Wage in" = "Inkomst i";
+"Total" = "Total";
+"Warning" = "Varning";
+"OK" = "Ok";
+"With wage" = "Inkl. inkomst";
+"Decimal Separator" = "Decimalseparator";
+"Time worked today" = "Arbetad tid idag";
+"Currently earned money" = "Aktuellt tjänade pengar";
+"Kaufmännisch" = "Merkantil";
+"Add Pause" = "Lägg till paus";
+"Not yet worked today" = "Inte än inte arbetat idag";
+"No" = "Nej";
+"Yes" = "Ja";
+"Clear" = "Rensa";
+"Start" = "Start";
+"End" = "Slut";
+"Working time" = "Arbetstid";
+"General" = "Allmänt";
+"Question" = "Fråga";
+"Do you wish to take over the changes for the currently active entry?" = "Vill du överta ändringarna för den aktuella posten?";
+"Project" = "Projekt";
+"Projects" = "Projekt";
+"Name" = "Namn";
+"Description" = "Beskrivning";
+"All hourly wages" = "Alla timlöner";
+"Details" = "Detaljer";
+"Comment" = "Kommentar";
+"Hours to distribute" = "Timmar att distribuera";
+"Hours worked" = "Arbetade timmar";
+"Money earned this month" = "Tjänade pengar den här månaden";
+"Money earned this year" = "Tjänade pengar det här året";
+"Live" = "Live";
+"Detail" = "Detalj";
+/* Report tab */
+//TODO
+"Report_tab_title" = "Rapport";
+"Settings" = "Inställningar";
+"Today" = "Idag";
+/* Translate the term 'Report' as in report salary */
+//TODO
+"Report_entry_value" = "Rapport";
+/* Translate the term 'Live' as in live salary */
+//TODO
+"Live_entry_value" = "Live";
+"Message" = "Meddelande";
+"Open in ..." = "Öppna i ...";
+"Your %@ doesn't seem to have any other Apps installed that can open this document." = "Din %@ verkar inte ha någon App installerad som kan öppna det här dokumentet.";
+"No suitable Apps installed" = "Ingen passande App är installerad.";
+"Mail" = "Mejl";
+"Options" = "Alternativ";
+"Entries" ="Poster";
+"Entry" = "Post";
+"Copy entry" = "Kopiera post";
+"Delete entry" = "Ta bort post";
+"Cancel" = "Avbryt";
+"You cannot create a new entry since there is already an entry with a Check-In time before this date and a Check-Out time after this date." = "Du kan inte skapa en ny post eftersom det redan finns en post med incheckningstid innan detta datum och en utcheckningstid efter detta datum.";
+"You cannot create a new entry since the current day is in the future." ="Du kan inte skapa en ny post eftersom den aktuella dagen ligger i framtiden.";
+"Do you wish to delete this entry?" = "Vill du ta bort den här posten?";
+"Do you wish to delete all entries of this day?" = "Vill du ta bort alla poster från den här dagen?";
+"of" = "av";
+"You cannot copy to the target date because there is already at least one entry occupying the targeted date." = "Du kan inte kopiera till det datumet eftersom det redan finns en eller flera poster som ockuperar det datumet.";
+"You cannot copy an incomplete entry." = "Du kan inte kopiera en ofullständig post.";
+"Check-In date"= "Incheckningsdatum";
+"Check-In time"= "Incheckningstid";
+"Check-In timestamp"="Incheckningstidsstämpel";
+"Check-In timezone"= "Incheckningstidszon";
+"Check-Out date"= "Utcheckningsdatum";
+"Check-Out time"="Utcheckningstid";
+"Check-Out timestamp"="Utcheckningstidsstämpel";
+"Check-Out timezone"= "Utcheckningstidszon";
+"You cannot copy to the target date because the entry would be in the future." = "Du kan inte kopiera till det datumet eftersom det ligger i framtiden.";
+"Welcome to aXTimes! Please take a minute to configure aXTimes to your liking." = "Välkommen till aXTimes! Ta en minut för att konfigurera aXTimes så att det passar dig och dina behov.";
+"Welcome" = "Välkommen";
+
+//TODO alles ab hier abwärts
+"Add entry" = "Lägg till post";
+"You cannot add a new entry as long as there is another incomplete entry for the same day or because you checked out on another date." = "Du kan inte lägga till en ny post så länge som det finns en ofullständig post för samma dag eller för att du checkade ut med ett annat datum.";
+//icon info page
+"Sickness day" = "Sjukdag";
+//report tab
+"Vacation" = "Semester";
+"Planned working time" = "Ordinarie arbetstid";
+"Incl. timezone" = "Inkl. tidszon";
+"Working week" = "Arbetsvecka";
+"Do you wish to take over the changes for the entire calendar or only starting from today?" = "Ska ändringarna övertas för hela kalendern eller gälla från och med idag?";
+"From today" ="Från och med idag";
+"Entire calendar" = "Hela kalendern";
+"days" = "dagar";
+//report tab
+"Holiday" = "Helgdagar";
+"Public holiday" = "Helgdag";
+//report tab
+"Days off" = "Ledighet";
+
+/* Translate the term 'Current' as in 'Current comment' */
+"Current_segment" = "Aktuell";
+
+/* Translate the term 'Frequent' as in 'Frequent comments' */
+"Frequent_segment" = "Ofta förekommande";
+
+/* Translate the term 'All' as in 'All comments' */
+"All_segment" = "Alla";
+
+"Hour_short" = "h";
+
+"Minute_short" = "min";
+
+"Open App" = "Öppna appen";
+
+/* Translate the term 'Default pause' which is displayed as a label in the settings. */
+"Default pause" = "Standard rast";
+
+/* Translate the term 'On' as in something is turned on. */
+"On" = "På";
+
+/* Translate the term 'Off' as in something is turned off. */
+"Off" = "Av";
+
+/* Translate the term 'Undo Checkout’ …auf deutsch Checkout widerrufen*/
+"Undo Checkout" = "Ångra utcheckning";
+
+
+/* Translate the term 'Undo’ …auf deutsch Widerrufen*/
+"Undo" = "Ångra";
+
+"Day off" = "Ledighet, ingen reguljär arbetsdag";
+
+// app rater dialog
+"If you enjoy using %@, would you mind taking a moment to rate it? It won't take more than a minute. Thanks for your support!" = "Om du gillar att använda %@, kan du tänka dig att betygsätta det åt oss? Det tar bara en minut. Tack för hjälpen!";
+"Rate %@" = "Betygsätt %@";
+"No, Thanks" = "Nej tack";
+"Remind me later" = "Påminn mig senare";
+
+"Options" = "Snabbval";
+"Projects" = "Projekt";
+"none_pauses" = "Inga";
+"exceptions_description" = "Här kan avvikande tider för pauser för enstaka arbetsdagar anges.";
+"Budget based on" = "Budget baserad på";
+"projectDeletionForbidden" = "Detta projekt kan inte tas bort eftersom du har bokat tider på det.";
+"All_projects" = "Alla projekt";
+"Active" = "Aktiva projekt";
+"Active_projects_description" = "Aktuella och framtida projekt.";
+"Add Subproject" = "Lägg till delprojekt";
+"AddClientsHint" = "Här kan du lägga till kunder. Använd plustecknet längst upp till höger.";
+"AddProjectsHint" = "Här kan du lägga till projekt. Använd plustecknet längst upp till höger.";
+"Budget in days" = "Budget i dagar";
+"Budget" = "Budget";
+"Change day type for currently selected date" = "Ändra dagstyp för det aktuella datumet";
+"Client Details" = "Kunddetaljer";
+"Client" = "Kund";
+"Clients" = "Kunder";
+"Code" = "Kod";
+"Colour" = "Färg";
+"Contact support" = "Kontakta support";
+"Continue" = "Fortsätt";
+"Data management" = "Datamanagement";
+"Day off" = "Ledig dag";
+"Day type" = "Dagstyp";
+"Delete Client" = "Ta bort kund";
+"Delete Pause" = "Ta bort paus";
+"Delete Project" = "Ta bort projekt";
+"Delete Subproject" = "Ta bort delprojekt";
+"Delete" = "Ta bort";
+"Do you wish to delete this customer?" = "Vill du ta bort den här kunden?";
+"Do you wish to delete this project?" = "Vill du ta bort det här projektet?";
+"Do you wish to delete this subproject?" = "Vill du ta bort det här delprojektet?";
+"Duration" = "Varaktigket";
+"Edit Client" = "Editera kund";
+"Edit Entry" = "Editera post";
+"Edit Pause" = "Editera paus";
+"Edit Project" = "Editera projekt";
+"Edit Subproject" = "Editera delprojekt";
+"Error" = "Fel";
+"Exceptions" = "Undantag";
+"Filter" = "Filter";
+"Inactive" = "Inaktiva projekt";
+"Inactive_projects_description" = "Tidigare projekt";
+"Last project" = "Sista projektet";
+"New Client" = "Ny kund";
+"New Project" = "Nytt projekt";
+"No Client" = "Ingen kund";
+"No Project assigned" = "Utan projekt";
+"No project" = "Inget projekt";
+"None" = "Inget";
+"Phone" = "Telefon";
+"Project Details" = "Projektdetaljer";
+"Remaining Budget" = "Restbudget";
+"Required" = "Nödvändig";
+"Reset" = "Återställ";
+"Shake to undo" = "Återställ genom att skaka";
+"Subproject Details" = "Delprojektdetaljer";
+"Subproject" = "Delprojekt";
+"Subprojects" = "Delprojekt";
+"Success" = "Framgång";
+"System" = "System";
+"TellAFriendCell" = "Informera vänner";
+"TellAFriendText%@%@" = "Prova %@ för din smartphone. Ladda ned det härifrån %@";
+"Time Format" = "Tidsformat";
+"Work day" = "Arbetsdag";
+"createBackupActionDescription" = "Din data kommer att sparas i en backup-fil. Denna kan du spara exempelvis i ICloud Drive eller Dropbox.";
+"createBackupGenericError" = "Det uppstod ett fel under backupen.";
+"createBackupSuccess" = "Backup skapad. Välj en plats för att spara filen.";
+"createBackupTitle" = "Skapa backup";
+"left" = "kvar";
+"oldDataImportActionDescription" = "Din data kommer att importeras från aXTimes 1.5. Du kan välja en tidsperiod eller importera all data. Du kan också välja vilket existerande projekt datan ska tilldelas. Existerade data i aXTimes Pro kommer att skrivas över. Importen kan genomföras många gånger.";
+"oldDataImportGenericError" = "Det uppstod ett fel under importen av din data från aXTimes 1.5.";
+"oldDataImportOverwriteQuestion" = "Från %@ finns det redan tider i aXTimes Pro. Dessa kommer att skrivas över.";
+"oldDataImportProjectDurationMismatch" = "Poster kan inte tilldelas det här projektet eftersom en eller flera poster inte passar in i denna tidsperiod.";
+"oldDataImportProjectHoulyWageMismatch" = "Poster kan inte tilldelas det här projektet, eftersom timlönen på en eller flera av posterna inte passar med det valda projektet.";
+"oldDataImportProjectQuestion" = "Vilket projekt vill du tilldela dessa poster?";
+"oldDataImportProjectSelectionTitle" = "Projekturval";
+"oldDataImportStartMessage" = "aXTimes 1.5 startas för att importera data. Vänta på nästa meddelande.";
+"oldDataImportSuccess" = "Dataimport genomförd.";
+"oldDataImportTitle" = "Dataimport från aXTimes 1.5";
+"restoreBackupActionDescription" = "Din data blir återställd från din tidigare backup. All existerande data skrivs över. Du kan starta återställningen genom att trycka på knappen ovan eller genom att öppna denna app från en annan app med backupfilen.";
+"restoreBackupGenericError" = "Det uppstod ett fel under återställningen av din data.";
+"restoreBackupPickertitle" = "Välj en backupfil";
+"restoreBackupStartMessage" = "Vill du återställa din backup? Varning! Alla bestående data tas bort.";
+"restoreBackupSuccess" = "Återställning av backup genomförd.";
+"restoreBackupTitle" = "Återställ backup";
+"settingsDefaultPauseFooter" = "Om aktiv, blir den inställda pausen tillförd om möjligt.";
+"settingsDefaultProject" = "Standard projekt";
+"settingsDefaultProjectFooter" = "Om inget projekt är valt vid check-in, används dessa inställningar.";
+"settingsGeneralSectionFourFooter" = "Tillåter återställning av din sista check-out genom skakning i live view.";
+"settingsGeneralSectionFourHeader" = "Diverse";
+"settingsGeneralSectionOneFooter" = "Grunder för alla beräkningar. Timlönen kan skrivas över av projekt.";
+"settingsGeneralSectionOneHeader" = "Arbete";
+"settingsGeneralSectionThreeFooter" = "Ingen inverkan på beräkningarna, bara ren display.";
+"settingsGeneralSectionThreeHeader" = "Display";
+"settingsGeneralSectionTwoFooter" = "Används när du skapar en ny post när du checkar in och ut.";
+"settingsGeneralSectionTwoHeader" = "Standardvärden";
+"settingsWorkingWeekFooter" = "De valda dagarna tas med i beräkningen av den vanliga arbetstiden.";
+
+"addSubprojectWarning" = "There are already entries existing entries for this project. If you add your first subproject those entries will be moved to the subproject.";
+
+"Your opinion" = "Din åsikt";
+"YouLikeProductQuestion" = "Använder du gärna aXTimes?";
+"No" = "Nej";
+"Yes" = "Ja";
+"Pity" = "Synd";
+"TellUsAboutProblemQuestion" = "Vill du kontaktera oss och berätta om problemet?";
+"No, thanks" = "Nej tack";
+"Contact" = "Kontakta";

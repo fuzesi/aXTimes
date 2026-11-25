@@ -1,0 +1,391 @@
+/* You cannot create a new entry since the current day is in the future.' The previous sentence will shown in a popup. */
+"You cannot create a new entry since the current day is in the future." = "日にちが将来であるため、新しいエントリーを作成できません。";
+
+/* Translate the term 'Add entry'. It will be shown as a label on a button in the options menu. */
+"Add entry" = "エントリーを作成する";
+
+/* Table cell button: Add Pause */
+"Add Pause" = "休憩を追加する";
+
+/* Translate the term 'Average time per day' which will be displayed in a label e.g. in the summary view. */
+"Average time per day" = "一日の平均時間";
+
+/* Translate the word 'Cancel'. E.g. shown as a label on a button. */
+"Cancel" = "キャンセル";
+
+/* Table cell label: Check-In */
+"Check-In" = "チェックイン";
+
+/* Translate 'Check-In date' */
+"Check-In date" = "チェックイン時日";
+
+/* Translate 'Check-In time' */
+"Check-In time" = "チェックイン時間";
+
+/* Translate 'Check-In timestamp' */
+"Check-In timestamp" = "チェックインタイムスタンプ";
+
+/* Translate 'Check-In timezone' */
+"Check-In timezone" = "チェックイン時間帯";
+
+/* Table cell label: Check-Out */
+"Check-Out" = "チェックアウト";
+
+/* Translate 'Check-Out date' */
+"Check-Out date" = "チェックアウト時日";
+
+/* Translate 'Check-Out time' */
+"Check-Out time" = "チェックアウト時間";
+
+/* Translate 'Check-Out timestamp' */
+"Check-Out timestamp" = "チェックアウトタイムスタンプ";
+
+/* Translate 'Check-Out timezone' */
+"Check-Out timezone" = "チェックアウト時間帯";
+
+/* Small label on main screen for displaying the check-in time. Translate the prefix: Checked in at */
+"Checked in at:" = "チェックイン時間:";
+
+/* Label on main screen for displaying the check-out time. Translate the prefix: Checked out at */
+"Checked out at:" = "チェックアウト時間:";
+
+/* Clear button title in note view */
+"Clear" = "削除";
+
+/* Translate the word 'Comment' which is diplayed as header in the settings for the 'default comment view' */
+"Comment" = "コメント";
+
+/* Translate the term 'Copy entry'. It will be shown as a label on a button in the options menu. */
+"Copy entry" = "エントリーをコピーする";
+
+/* Small label on main screen for displaying the total money earned for last/current entry. Translate the prefix: Currently earned money */
+"Currently earned money" = "現在稼いだ金額";
+
+/* Translate the word 'date' as in calendar date. In german: 'Datum' */
+"Date" = "日付";
+
+/* Segemented GUI Control segment title: Day */
+"Day" = "日";
+
+/* Translate the term 'Day off/weekend' displayed in the info page which shows information about certain icons. E.g. Day off/weekend  ....  Arbeitsfrei/Wochenende */
+"Day off/weekend" = "休憩日、週末等";
+
+/* Translate the term 'days' used e.g. in the report tab. E.g. 3 days */
+"days" = "日";
+
+/* Translate the term 'Days off' displayed in the report tab. E.g. days off/Arbeitsfreie Tage as label in the report tab */
+"Days off" = "休憩日";
+
+/* Translate the tern 'Decimal separator' which is diplayed as a label in the settings. */
+"Decimal Separator" = "小数点";
+
+/* Just translate the word 'default' */
+"Default" = "ディフォルト";
+
+/* Translate the term 'Default comment' which is diplayed as a label in the settings. */
+"Default Comment" = "ディフォルトコメント";
+
+/* Translate the term 'Delete day'. It will be shown as a label on a button in the options menu. */
+"Delete day" = "日を削除";
+
+/* Translate the term 'Delete entry'. It will be shown as a label on a button in the options menu. */
+"Delete entry" = "エントリーを削除";
+
+/* Translate the word 'Description'. E.g. project description */
+"Description" = "記述";
+
+/* Detail tab at the bottom of the screen. Translate the word 'Detail' */
+"Detail" = "詳細";
+
+/* Translate the term 'Details' as in project details. */
+"Details" = "詳細";
+
+/* Translate 'Do you know our website?' */
+"Do you know our website?" = "私達のホームページをご存知ですか？";
+
+/* Clear dayentry alert view content: Do you wish to clear the whole day? */
+"Do you wish to clear the whole day?" = "この日の全てを削除してもよろしいですか？";
+
+/* 'Do you wish to delete all entries of this day?' This question will be displayed in a popup. */
+"Do you wish to delete all entries of this day?" = "この日の全てのエントリーを削除してもよろしいですか？";
+
+/* 'Do you wish to delete this entry?'. This question will be displayed in a popup. */
+"Do you wish to delete this entry?" = "このエントリーを削除してもよろしいですか？";
+
+/* Overwrite dayentry alert view content: Do you wish to overwrite an existing day entry? */
+"Do you wish to overwrite an existing day entry?" = "この日のエントリーを上書きしてもよろしいですか？";
+
+/* 'Take over changes' alert view content: Do you wish to take over the changes for the current day? */
+"Do you wish to take over the changes for the current day?" = "変更をこの日に適用してもよろしいですか？";
+
+/* 'Take over changes' alert view content: Do you wish to take over the changes for the currently active entry? */
+"Do you wish to take over the changes for the currently active entry?" = "変更を選択しているエントリーに適用してもよろしいですか？";
+
+/* 'Take over changes' alert view content. Translate 'Do you wish to take over the changes for the entire calendar or only starting from today?' */
+"Do you wish to take over the changes for the entire calendar or only starting from today?" = "変更を「全カレンダーに」それとも「今日から」適用しますか？";
+
+/* Translate the word 'E-mail' */
+"E-Mail" = "E-Mail";
+
+/* Table cell label: End */
+"End" = "終了";
+
+/* Alert view option answer. Translate 'Entire calendar' */
+"Entire calendar" = "全カレンダーに";
+
+/* Translate 'Entries' as in DayEntries (TagesEinträge) */
+"Entries" = "エントリー";
+
+/* Translate 'Entry' as in 'Entry 3 of 4' or in german: 'Eintrag 3 von 4' */
+"Entry" = "エントリー";
+
+/* Translate the word 'Export' which is displayed e.g in the settings view as a section headder. */
+"Export" = "読み出し";
+
+/* Translate 'For possible bugs, issues or suggestions go to' */
+"For possible bugs, issues or suggestions go to" = "バグレポート、質問やフィードバックがある際こちらへお問い合わせください";
+
+/* Alert view option answer. Translate 'From today' */
+"From today" = "今日から";
+
+/* 'General' section header in settings view */
+"General" = "一般";
+
+/* Translate the term 'Public holidays' displayed in the report tab. E.g. holiday wie in Public holidays/Feiertage */
+"Holiday" = "祝日";
+
+/* Translate the term 'Holiday day'  displayed in the info page which shows information about certain icons. E.g. holiday wie in Feiertag/Public holiday */
+"Holiday day" = "祝日";
+
+/* Translate the term 'Hourly wage' which is diplayed as a label e.g. in the settings. */
+"Hourly wage" = "時給";
+
+/* Translate the term 'Hours per day' which is diplayed as a label in the settings. */
+"Hours per day" = "一日の時間";
+
+/* Translate the term 'Hours to distribute' */
+"Hours to distribute" = "配布する時間";
+
+/* Translate the term 'Hours worked' */
+"Hours worked" = "働いた時間";
+
+/* Nothing to do here ;-) http://axtimes.com/ */
+"http://axtimes.com/" = "http://axtimes.com/";
+
+/* Translate the term 'Icons'. E.g. Icons */
+"Icons" = "アイコン";
+
+/* Translate the term 'Incl. timezone' which is diplayed as a label in the settings. */
+"Incl. timezone" = "時間帯を含む";
+
+/* Translate word 'Information' */
+"Information" = "情報";
+
+/* The name of the rounding method mercantile aka: kaufmännisch */
+"Kaufmännisch" = "最近接丸め四捨五入";
+
+/* Translate the word 'Language' */
+"Language" = "言語";
+
+/* Live tab at the bottom of the screen. Translate the word 'Live' */
+"Live" = "ライブ表示";
+
+/* Translate the term 'Live' as in live salary */
+"Live_entry_value" = "ライブ";
+
+/* Translate the word 'Mail'. It should be the same name as in the Apple sharing functionality. */
+"Mail" = "メール";
+
+/* Translate the word 'Message'. It should be the same name as in the Apple sharing functionality. */
+"Message" = "メッセージ";
+
+/* Translate this term 'Money earned this month' */
+"Money earned this month" = "今月の合計";
+
+/* Translate this term 'Money earned this year' */
+"Money earned this year" = "今年の合計";
+
+/* Segmented GUI Control segment title: Month */
+"Month" = "月";
+
+/* Translate the word 'Name'. E.g. project name */
+"Name" = "名";
+
+/* Alert view deny answer: No. */
+"No" = "いいえ";
+
+/* Small label on main screen which is displayed if the user has not worked on that particular day. Translate: Not yet worked today */
+"Not yet worked today" = "まだ働いていない";
+
+/* Translate the word 'of' as in '1 of 3 Entries' or in german: 'Eintrag 3 von 4' */
+"of" = "/";
+
+/* Alert view button title confirmation: Ok. Translate 'Ok' in german e.g. 'Ok' */
+"OK" = "OK";
+
+/* Translate the word 'Options'. */
+"Options" = "オプション";
+
+/* Translate the term 'Overtime' which will be displayed in a label e.g. in the report view. */
+"Overtime" = "残業";
+
+/* Label: Pause */
+"Pause" = "休憩";
+
+/* Translate the term 'Pause time'. In german: 'Pausenzeit' */
+"Pause time" = "休憩時間";
+
+/* Label on the main screen under the ticker. Translate 'Working on' */
+"Planned working time" = "予定労働時間";
+
+/* Translate word 'Project' */
+"Project" = "プロジェクト";
+
+/* Translate the term 'Hours per day' which is diplayed as a label in the settings. */
+"Projects" = "プロジェクト一覧";
+
+/* Alert view title: Question. The user will be asked whether he wants to take over the changes for an exiting dayentry or not. */
+"Question" = "質問";
+
+/* Tranlate the term 'Report' which will be used for the file name in the export. */
+"Report" = "レポート";
+
+/* Translate the term 'Report' as in report salary */
+"Report_entry_value" = "レポート";
+
+/* Translate the tern 'Report' which is diplayed e.g. as a label section header in the settings view for settings like 'Time unit' and 'Rounding'. */
+"Report_settings_section_title" = "レポート";
+
+/* Report tab at the bottom of the screen. Translate the word 'Report' */
+"Report_tab_title" = "レポート";
+
+/* Translate abrunden/Round down */
+"Round down" = "切り捨てる";
+
+/* Translate aufrunden/Round up */
+"Round up" = "切り上げる";
+
+/* Translate the word 'Rounding' which is diplayed as a label in the settings. */
+"Rounding" = "端数処理";
+
+/* Translate the term 'Salary' which will be displayed in a label e.g. in the summary view. In german: 'Einkommen' */
+"Salary" = "給料";
+
+/* Settings tab at the bottom of the screen. Translate the word 'Settings' */
+"Settings" = "設定";
+
+/* Translate the term 'Sickness' displayed in the report tab. E.g. sickness wie in Krankheitstage */
+"Sickness" = "病気の日";
+
+/* Translate the term 'Sicknes day' displayed in the info page which shows information about certain icons. E.g. Sickness/Krankheitstag */
+"Sickness day" = "病気の日";
+
+/* Table cell label: Start */
+"Start" = "開始";
+
+/* Translate the term 'Time unit' which is diplayed as a label in the settings. */
+"Time unit" = "単位時間";
+
+/* Small label on main screen for displaying the time which the user has already worked. Translate the prefix: Time worked today */
+"Time worked today" = "今日働いた時間";
+
+/* Translate word 'Today' */
+"Today" = "今日";
+
+/* Translate the word 'total' as in 'total result'. In german: 'Insgesamt' */
+"Total" = "合計";
+
+/* Translate the term 'Vacation' displayed in the report tab. E.g. vacation wie in Urlaubstage */
+"Vacation" = "休暇";
+
+/* Translate the term 'Vacation day'displayed in the info page which shows information about certain icons. E.g. Vacation/Urlaubstag */
+"Vacation day" = "休暇";
+
+/* Translate the term 'Wage currency' which is diplayed as a label in the settings. */
+"Wage currency" = "賃金通貨";
+
+/* 'Wage in' as in 'Wage in EUR' */
+"Wage in" = "賃金の通貨：";
+
+/* Alert view title 'Warning'. Tranlate 'Warning' */
+"Warning" = "注意";
+
+/* Segemented GUI Control segment title: Week */
+"Week" = "週";
+
+/* Translate 'Welcome' */
+"Welcome" = "ようこそ";
+
+/* Translate 'Welcome to aXTimes! Please take a minute to configure aXTimes to your liking.' */
+"Welcome to aXTimes! Please take a minute to configure aXTimes to your liking." = "aXTimesへようこそ!　あなたのお好みに合わせてaXTimesを設定して下さい。";
+
+/* Translate the term 'With wage' which is diplayed as a label in the settings. */
+"With wage" = "賃金を含む";
+
+/* Small label on main screen for displaying the working time above money counter. Translate the prefix: Working time */
+"Working time" = "労働時間";
+
+/* Translate the term 'Working week' which is diplayed as a label in the settings. */
+"Working week" = "就業日";
+
+/* Translate the term 'Working time' (Arbeitszeit) which will be displayed in a label e.g. in the summary view. */
+"Working_time" = "労働時間";
+
+/* Segemented GUI Control segment title: Year */
+"Year" = "年";
+
+/* Alert view accept answer: Yes. */
+"Yes" = "はい";
+
+/* 'You cannot add a new entry as long as there is another incomplete entry for the same day or because you checked out on another date.' The previous sentence will shown in a popup. */
+"You cannot add a new entry as long as there is another incomplete entry for the same day or because you checked out on another date." = "同じ日に不完全なエントリーがあるか別の日にチェックアウトをした限り新しいエントリーを作成することができません。";
+
+/* 'You cannot copy an incomplete entry.' The previous sentence will shown in a popup. */
+"You cannot copy an incomplete entry." = "不完全なエントリーはコピーできません。";
+
+/* 'You cannot copy to the target date because the entry would be in the future.' The previous sentence will shown in a popup. */
+"You cannot copy to the target date because the entry would be in the future." = "エントリーを将来にコピーできません。";
+
+/* You cannot copy to the target date because there is already at least one entry occupying the targeted date. */
+"You cannot copy to the target date because there is already at least one entry occupying the targeted date." = "すでにエントリーが存在しているためこの日にはコピーできません。";
+
+/* 'You cannot create a new entry since there is already an entry with a Check-In time before this date and a Check-Out time after this date.' The previous sentence will shown in a popup. */
+"You cannot create a new entry since there is already an entry with a Check-In time before this date and a Check-Out time after this date." = "すでにこの日時以前のチェックインと日時以降のチェックアウトが存在しているため新しいエントリーを作成することができません。";
+
+/* Translate the term "Open in ..." */
+"Open in ..." = "...で開く";
+
+/* Translate the following sentence "Your %@ doesn't seem to have any other Apps installed that can open this document." Leave the %@ placeholder in their. It will later be substituted with iPhone */
+"Your %@ doesn't seem to have any other Apps installed that can open this document." = "あなたの%@にはこのドキュメントを開くアプリがインストールされていません。";
+
+/* Please translate the sentence "No suitable Apps installed" */
+"No suitable Apps installed" = "適当するアプリがインストールされていません。";
+
+/* Translate the term 'Current' as in 'Current comment' */
+"Current_segment" = "現在の";
+
+/* Translate the term 'Frequent' as in 'Frequent comments' */
+"Frequent_segment" = "よく使う";
+
+/* Translate the term 'All' as in 'All comments' */
+"All_segment" = "全ての";
+
+"Hour_short" = "h";
+
+"Minute_short" = "min";
+
+"Open App" = "アプリを開く";
+
+/* Translate the term 'Default pause' which is displayed as a label in the settings. */
+"Default pause" = "スタンダードブ レーク";
+/* Translate the term 'On' as in something is turned on. */
+"On" = "オン";
+/* Translate the term 'Off' as in something is turned off. */
+"Off" = "オフ";
+
+/* Translate the term 'Undo Checkout’ …auf deutsch Checkout widerrufen*/
+"Undo Checkout" = "チェックアウトを取り消す";
+/* Translate the term 'Undo’ …auf deutsch Widerrufen*/
+"Undo" = "取消";
+
+"CW" = "週";
