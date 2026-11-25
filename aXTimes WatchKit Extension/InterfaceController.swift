@@ -53,8 +53,9 @@ class InterfaceController: WKInterfaceController, WatchCommunicationWatchDelegat
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         print("willActivate")
+        WatchCommunication.shared.watchDelegate = self
         if WatchCommunication.shared.isActive {
-            setupTickerUI()
+            sendActionToAppAndClearMenu(.load)
         }
     }
 
@@ -235,7 +236,17 @@ class InterfaceController: WKInterfaceController, WatchCommunicationWatchDelegat
                         self.saveDataFromDictionary(replyDictionary)
                         self.setupTickerUI()
                     }
-                }) { print($0) }
+                }) { [weak self] error in
+                    print("Watch message failed: \(error)")
+                    DispatchQueue.main.async {
+                        guard let self = self else { return }
+                        self.setupTickerUI()
+                        let title = NSLocalizedString("watch_connection_unconfirmed", value: "Connection not confirmed", comment: "Watch communication failure title")
+                        let message = NSLocalizedString("watch_connection_unconfirmed_message", value: "The iPhone did not confirm the request. Check the connection and reopen the watch app to refresh the status before trying again.", comment: "Watch communication failure explanation")
+                        let ok = WKAlertAction(title: NSLocalizedString("OK", comment: "Dismiss"), style: .default) {}
+                        self.presentAlert(withTitle: title, message: message, preferredStyle: .alert, actions: [ok])
+                    }
+                }
     }
 
     @objc func updateClock() {

@@ -289,3 +289,6 @@
 "restore" = "Wiederherstellen";
 "premiumFeatures" = "Premium Features";
 "premiumFeatureInfo" = "Die kostenlose Version von aXTimes Pro unterstützt zwei Projekte. Wenn du weitere Projekte hinzufügen willst, ist das Premium Feature 'Projekte' notwendig.";
+
+"watch_connection_unconfirmed" = "Verbindung nicht bestätigt";
+"watch_connection_unconfirmed_message" = "Das iPhone hat die Anfrage nicht bestätigt. Prüfe die Verbindung und öffne die Watch-App erneut, um den Status zu aktualisieren.";

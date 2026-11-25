@@ -104,6 +104,8 @@ protocol WatchCommunicationProtocol {
 
         func sessionDidDeactivate(_ session: WCSession) {
             print("sessionDidDeactivate")
+            // A different watch may now be paired; activate the session for it.
+            session.activate()
         }
     #endif
 }
