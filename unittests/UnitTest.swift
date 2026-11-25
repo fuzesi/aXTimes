@@ -288,4 +288,90 @@ final class UnitTest: XCTestCase {
         XCTAssertEqual(components.queryItems?.first(where: { $0.name == "action" })?.value, "write-review")
     }
 
+    func testDaylightSavingEntryPauseAndReportTotals() throws {
+        let context = try makeContext()
+        let codec = BackupCodec(context: context)
+        let day = try XCTUnwrap(codec.decode(entry(), entity: "DayEntry") as? DayEntry)
+        let project = try XCTUnwrap(day.project)
+        project.hourlyWage = NSDecimalNumber(string: "125.75")
+        project.timeUnit = 1
+        project.roundingBehaviour = 0
+        try context.save()
+
+        // The wall clock jumps forward: 00:30–04:30 is three actual hours,
+        // and 01:30–03:30 is a one-hour pause.
+        XCTAssertEqual(day.minutesWorked.doubleValue, 120, accuracy: 0.001)
+        XCTAssertEqual(day.hoursPaused.doubleValue, 1, accuracy: 0.001)
+        XCTAssertEqual(day.netHours.doubleValue, 2, accuracy: 0.001)
+        XCTAssertEqual(day.income.doubleValue, 251.50, accuracy: 0.001)
+        XCTAssertEqual(DayEntry.netTime(forArray: [day]).doubleValue, 2, accuracy: 0.001)
+        XCTAssertEqual(DayEntry.pauseTime(forArray: [day]).doubleValue, 1, accuracy: 0.001)
+        XCTAssertEqual(DayEntry.income(forArray: [day]).doubleValue, 251.50, accuracy: 0.001)
+
+        var secondData = entry()
+        secondData["id"] = "entry-2"
+        secondData["checkInTime"] = "2025-03-31T08:00:00+02:00"
+        secondData["checkOutTime"] = "2025-03-31T09:00:00+02:00"
+        secondData["pauses"] = [[String: Any]]()
+        let secondDay = try XCTUnwrap(codec.decode(secondData, entity: "DayEntry") as? DayEntry)
+        XCTAssertEqual(secondDay.netHours.doubleValue, 1, accuracy: 0.001)
+
+        let settings = SettingsManager()
+        let previousHours = settings.hoursPerDay
+        defer { settings.hoursPerDay = previousHours }
+        settings.hoursPerDay = 8
+        let target = AXDayTypesCalculationResult()
+        target.wholeRangeTargetDays = 1
+        target.limitedRangeTargetDays = 1
+        let report = AXCalculation().calculationResult(forFetchedEntries: [day, secondDay],
+            for: target, andProject: project)
+        XCTAssertEqual(report?.targetTimeInHours?.doubleValue ?? -1, 8, accuracy: 0.001)
+        XCTAssertEqual(report?.netWorkingTimeHours?.doubleValue ?? -1, 3, accuracy: 0.001)
+        XCTAssertEqual(report?.pauseTimeHours?.doubleValue ?? -1, 1, accuracy: 0.001)
+        XCTAssertEqual(report?.overtimeHours?.doubleValue ?? 0, -5, accuracy: 0.001)
+        XCTAssertEqual(report?.income?.doubleValue ?? -1, 377.25, accuracy: 0.001)
+    }
+
+    func testProjectTimeRoundingModes() throws {
+        let context = try makeContext()
+        let codec = BackupCodec(context: context)
+        let day = try XCTUnwrap(codec.decode(entry(), entity: "DayEntry") as? DayEntry)
+        let project = try XCTUnwrap(day.project)
+        project.timeUnit = 15
+        project.roundingBehaviour = 0
+        XCTAssertEqual(day.netMinutes(fromGrossMinutes: 67).doubleValue, 60, accuracy: 0.001)
+        XCTAssertEqual(day.netMinutes(fromGrossMinutes: 68).doubleValue, 75, accuracy: 0.001)
+        project.roundingBehaviour = 1
+        XCTAssertEqual(day.netMinutes(fromGrossMinutes: 68).doubleValue, 60, accuracy: 0.001)
+        project.roundingBehaviour = 2
+        XCTAssertEqual(day.netMinutes(fromGrossMinutes: 61).doubleValue, 75, accuracy: 0.001)
+    }
+
+    func testCheckInAndCheckOutPersist() throws {
+        let context = try makeContext()
+        let codec = BackupCodec(context: context)
+        var data = entry()
+        data["pauses"] = [[String: Any]]()
+        let day = try XCTUnwrap(codec.decode(data, entity: "DayEntry") as? DayEntry)
+        let project = try XCTUnwrap(day.project)
+        let start = Date(timeIntervalSince1970: 1_700_000_000)
+        let end = start.addingTimeInterval(2 * 60 * 60)
+        let settings = SettingsManager()
+        let previousDefaultPause = settings.isDefaultPause
+        defer { settings.isDefaultPause = previousDefaultPause }
+        settings.isDefaultPause = false
+        AXAttendanceRecorder.performCheckIn(for: day, withTime: start, with: project)
+        AXAttendanceRecorder.performCheckOut(for: day, withTime: end)
+        XCTAssertEqual(day.netHours.doubleValue, 2, accuracy: 0.001)
+        XCTAssertEqual(day.project?.objectID, project.objectID)
+        try context.save()
+        context.reset()
+        let request = NSFetchRequest<DayEntry>(entityName: "DayEntry")
+        let restored = try XCTUnwrap(context.fetch(request).first)
+        XCTAssertEqual(restored.netHours.doubleValue, 2, accuracy: 0.001)
+        XCTAssertEqual(restored.project?.identifier, "project-1")
+        XCTAssertNotNil(restored.checkInTime)
+        XCTAssertNotNil(restored.checkOutTime)
+    }
+
 }

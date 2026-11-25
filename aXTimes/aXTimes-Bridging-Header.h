@@ -27,3 +27,5 @@
 #import "AXOverviewViewController.h"
 
 #import "AXOverviewSettingsTableViewController.h"
+
+#import "AXAttendanceRecorder.h"

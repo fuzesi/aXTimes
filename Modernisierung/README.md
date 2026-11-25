@@ -1,6 +1,6 @@
 # Tests für die Modernisierung
 
-Die automatisierten Tests verwenden künstliche Daten und einen isolierten Core-Data-Speicher. Sie prüfen den Backup-Codec, Beziehungen, den Umgang mit fehlerhaften Eingaben, einen Rundlauf zwischen zwei Datenbanken, eine Sommerzeitgrenze und gespeicherte Hex-Farben.
+Die automatisierten Tests verwenden künstliche Daten und einen isolierten Core-Data-Speicher. Sie prüfen unter anderem Backup-Codec und Beziehungen, Ein- und Ausstempeln, Pausen, Rundung, Auswertungen, Einnahmen, eine Sommerzeitgrenze und gespeicherte Hex-Farben. Die Tests decken nicht alle Bildschirmabläufe und Randfälle ab.
 
 ```bash
 xcrun simctl list devices available
@@ -21,4 +21,4 @@ Der aktuelle Core-Data-Modellstand ist `DataModel_2.0.0`. `ModelMappingCheck.swi
 
 Unterstützt werden muss nach Vorgabe des Eigentümers das Update der aktuell genutzten aXTimes-Pro-Version 1.0.6 (Build 135) einschließlich ihrer vorhandenen Daten. Eine allgemeine Migration weiterer sehr alter App- und Datenmodellversionen ist nicht erforderlich.
 
-Die Core-Data-Modellversion der tatsächlich auf dem iPhone installierten App ist noch nicht festgestellt; ein JSON-Backup weist sie nicht zuverlässig aus. Vor einem Update muss deshalb der konkrete Upgrade-Pfad dieser Installation auf einer isolierten Kopie geprüft werden. Falls gerade diese Installation eine der älteren Modellversionen verwendet, muss ihr Upgrade dennoch verlustfrei funktionieren. Projektbeziehungen dürfen nicht ohne Prüfung pauschal ersetzt werden. Bis zur Prüfung ist die Update-Kompatibilität nicht bestätigt.
+Die Datenbank im lokalen iPhone-Backup wurde anhand ihrer Core-Data-Metadaten geprüft und ist mit `DataModel_2.0.0` kompatibel. In einem separaten Simulator öffnete die modernisierte App eine Kopie der Datenbank zusammen mit den App-Einstellungen; der Vergleich vor und nach einem Neustart zeigte keine Änderungen an den geprüften Nutzdaten. Der Testsimulator und die temporären Kopien wurden anschließend entfernt. Ein tatsächlich signiertes Update der installierten App wurde damit noch nicht geprüft; App-Identität, Signierung, Berechtigungen und der vollständige Update-Ablauf bleiben vor einer Veröffentlichung zu verifizieren.
