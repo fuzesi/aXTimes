@@ -1,6 +1,6 @@
 # Tests für die Modernisierung
 
-Die automatisierten Tests verwenden künstliche Daten und einen isolierten Core-Data-Speicher. Sie prüfen unter anderem Backup-Codec und Beziehungen, Ein- und Ausstempeln, Pausen, Rundung, Auswertungen, Einnahmen, eine Sommerzeitgrenze und gespeicherte Hex-Farben. Ein weiterer Test verwirft künstliche Backups mit ungültigem Datum oder fehlender Projektbeziehung und prüft, dass bestehende Datensatz-IDs, der Änderungszustand des Kontexts und eine Einstellung unverändert bleiben. Dieser Test läuft nur im Simulator und deckt nicht alle möglichen Wiederherstellungsfehler ab. Die Tests decken nicht alle Bildschirmabläufe und Randfälle ab.
+Die automatisierten Tests verwenden künstliche Daten und einen isolierten Core-Data-Speicher. Sie prüfen unter anderem Backup-Codec und Beziehungen, Ein- und Ausstempeln, Pausen, Rundung, Auswertungen, Einnahmen, eine Sommerzeitgrenze und gespeicherte Hex-Farben. Ein weiterer Test verwirft künstliche Backups mit ungültigem Datum oder fehlender Projektbeziehung und prüft, dass bestehende Datensatz-IDs, der Änderungszustand des Kontexts und eine Einstellung unverändert bleiben. Dieser Test läuft nur im Simulator und deckt nicht alle möglichen Wiederherstellungsfehler ab. Das feste Backup-Datumsformat wird unabhängig von der Spracheinstellung mit gregorianischem Kalender und POSIX-Locale verarbeitet; ein Rundlauf prüft den erhaltenen Zeitpunkt. Die Tests decken nicht alle Bildschirmabläufe und Randfälle ab.
 
 ```bash
 xcrun simctl list devices available

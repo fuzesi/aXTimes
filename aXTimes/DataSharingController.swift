@@ -14,6 +14,9 @@ final class BackupCodec {
     private var objects: [String: NSManagedObject] = [:]
     private let formatter: DateFormatter = {
         let result = DateFormatter()
+        // Backup dates use a fixed Gregorian format, independent of device locale.
+        result.locale = Locale(identifier: "en_US_POSIX")
+        result.calendar = Calendar(identifier: .gregorian)
         result.dateFormat = "yyyy-MM-dd'T'HH:mm:ssxxxxx"
         return result
     }()

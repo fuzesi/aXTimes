@@ -62,6 +62,8 @@ final class UnitTest: XCTestCase {
         XCTAssertEqual(end.timeIntervalSince(start), 3 * 60 * 60)
         XCTAssertEqual(day.value(forKey: "checkInTime") as? Date, start)
         XCTAssertEqual(day.value(forKey: "checkOutTime") as? Date, end)
+        let encodedStart = try XCTUnwrap(encoded["checkInTime"] as? String)
+        XCTAssertEqual(formatter.date(from: encodedStart), start)
     }
 
     func testBackupCodecRejectsInvalidDate() throws {
