@@ -131,25 +131,37 @@ final class UnitTest: XCTestCase {
         var basic = project()
         basic["basicProject"] = true
         basic["name"] = GlobalConstants.basicGlobalProjectName
-        var badEntry = entry()
-        badEntry["checkInTime"] = "not-a-date"
         let info = try XCTUnwrap(Bundle.main.infoDictionary)
-        let payload: [String: Any] = ["settings": ["settings_hoursperday": 1],
-            "dayEntries": [badEntry], "projects": [basic], "pauses": [], "customers": [],
-            "defaultPauseSettings": [], "workingWeekSettings": [], "dayTypes": []]
-        let document: [String: Any] = [
-            "kAXSourceApplicationNameKey": try XCTUnwrap(info["CFBundleDisplayName"] as? String),
-            "kAXSourceApplicationIdentifierKey": try XCTUnwrap(info["CFBundleIdentifier"] as? String),
-            "kAXPayloadKey": payload]
         let url = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString + ".json")
-        try JSONSerialization.data(withJSONObject: document).write(to: url)
         defer { try? FileManager.default.removeItem(at: url) }
-        XCTAssertThrowsError(try DataSharingController(settingsManager: settings).restoreFromBackup(withBackupFileURL: url)) { error in
-            XCTAssertTrue(error is CodecError, "The invalid date must be rejected during import")
+        var invalidDate = entry()
+        invalidDate["checkInTime"] = "not-a-date"
+        var missingProject = entry()
+        missingProject["project"] = NSNull()
+        missingProject["pauses"] = [[String: Any]]()
+        for (index, badEntry) in [invalidDate, missingProject].enumerated() {
+            let payload: [String: Any] = ["settings": ["settings_hoursperday": 1],
+                "dayEntries": [badEntry], "projects": [basic], "pauses": [], "customers": [],
+                "defaultPauseSettings": [], "workingWeekSettings": [], "dayTypes": []]
+            let document: [String: Any] = [
+                "kAXSourceApplicationNameKey": try XCTUnwrap(info["CFBundleDisplayName"] as? String),
+                "kAXSourceApplicationIdentifierKey": try XCTUnwrap(info["CFBundleIdentifier"] as? String),
+                "kAXPayloadKey": payload]
+            try JSONSerialization.data(withJSONObject: document).write(to: url)
+            XCTAssertThrowsError(try DataSharingController(settingsManager: settings).restoreFromBackup(withBackupFileURL: url)) { error in
+                if index == 0 {
+                    XCTAssertTrue(error is CodecError, "The invalid date must be rejected during import")
+                } else {
+                    let validationError = error as NSError
+                    XCTAssertEqual(validationError.domain, NSCocoaErrorDomain)
+                    XCTAssertTrue([NSValidationMissingMandatoryPropertyError, NSValidationMultipleErrorsError].contains(validationError.code),
+                                  "A missing project must fail Core Data validation")
+                }
+            }
+            XCTAssertEqual(try identifiers(), before)
+            XCTAssertEqual(context.hasChanges, hadChanges)
+            XCTAssertEqual(settings.hoursPerDay, previousHours)
         }
-        XCTAssertEqual(try identifiers(), before)
-        XCTAssertEqual(context.hasChanges, hadChanges)
-        XCTAssertEqual(settings.hoursPerDay, previousHours)
         #endif
     }
 
