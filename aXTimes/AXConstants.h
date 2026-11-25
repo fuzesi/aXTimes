@@ -19,7 +19,7 @@
 #define SUPPORTSITE                      @"http://support.axtimes.com/"
 #define SUPPORTMAIL                      @"support@aximilate.com"
 
-// app id as seen in itunes connect. used for UAAppReviewManager //FIXME
+// App Store identifier used for sharing and reviews.
 #define APPID                            @ "1341474620"
 
 #define NULLSTRING                       @ "-"

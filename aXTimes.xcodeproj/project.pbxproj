@@ -176,7 +176,6 @@
 		DA70E54C1752ACB7006AD2E5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3B961F174FCBCD00A1CAD9 /* MainStoryboard.storyboard */; };
 		DA70E54F1752BDAD006AD2E5 /* AXCalculation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA70E54E1752BDAC006AD2E5 /* AXCalculation.m */; };
 		DA7971B118B10C9E007645AD /* AXWorkingWeekTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7971B018B10C9E007645AD /* AXWorkingWeekTableViewController.m */; };
-		DA7D8C9D2016988A00B38616 /* UAAppReviewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7D8C9C2016988A00B38616 /* UAAppReviewManager.m */; };
 		DA7E04791D5DC8A300AA2ADE /* AXDisplaySubProjectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7E04781D5DC8A300AA2ADE /* AXDisplaySubProjectTableViewController.m */; };
 		DA7FE1C31A7E644D00171110 /* AXDefaultPauseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7FE1C21A7E644D00171110 /* AXDefaultPauseTableViewController.m */; };
 		DA7FFF691D4E91E900D40501 /* SKSIndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7FFF681D4E91E900D40501 /* SKSIndexPath.m */; };
@@ -524,7 +523,6 @@
 		DA435B081D004F3B00A016B1 /* EventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventView.h; sourceTree = "<group>"; };
 		DA435B091D004F3B00A016B1 /* EventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventView.m; sourceTree = "<group>"; };
 		DA46229F1DBE5FB900D71CCD /* CSV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CSV.framework; path = "../../../../Library/Developer/Xcode/DerivedData/aXTimes-batxmihskvtrjsfwngnyjjttmmoj/Build/Products/Debug-iphonesimulator/CSV/CSV.framework"; sourceTree = "<group>"; };
-		DA4622A31DBE5FB900D71CCD /* UAAppReviewManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UAAppReviewManager.framework; path = "../../../../Library/Developer/Xcode/DerivedData/aXTimes-batxmihskvtrjsfwngnyjjttmmoj/Build/Products/Debug-iphonesimulator/UAAppReviewManager/UAAppReviewManager.framework"; sourceTree = "<group>"; };
 		DA4C8A28174BD528006F6A11 /* AXUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXUtility.h; sourceTree = "<group>"; };
 		DA4C8A29174BD528006F6A11 /* AXUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXUtility.m; sourceTree = "<group>"; };
 		DA4D7EE51D797C0300D687EE /* DayTypesSummaryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayTypesSummaryTableViewCell.swift; sourceTree = "<group>"; };
@@ -690,8 +688,6 @@
 		DA7971AF18B10C9E007645AD /* AXWorkingWeekTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXWorkingWeekTableViewController.h; path = ../ViewControllers/AXWorkingWeekTableViewController.h; sourceTree = "<group>"; };
 		DA7971B018B10C9E007645AD /* AXWorkingWeekTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AXWorkingWeekTableViewController.m; path = ../ViewControllers/AXWorkingWeekTableViewController.m; sourceTree = "<group>"; };
 		DA7B5B7A1809839D003B4CC7 /* AXLocalizedStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXLocalizedStrings.h; sourceTree = "<group>"; };
-		DA7D8C9A2016987000B38616 /* UAAppReviewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UAAppReviewManager.h; sourceTree = "<group>"; };
-		DA7D8C9C2016988A00B38616 /* UAAppReviewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UAAppReviewManager.m; sourceTree = "<group>"; };
 		DA7E04771D5DC8A300AA2ADE /* AXDisplaySubProjectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXDisplaySubProjectTableViewController.h; sourceTree = "<group>"; };
 		DA7E04781D5DC8A300AA2ADE /* AXDisplaySubProjectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXDisplaySubProjectTableViewController.m; sourceTree = "<group>"; };
 		DA7FE1C11A7E644D00171110 /* AXDefaultPauseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXDefaultPauseTableViewController.h; path = ../ViewControllers/AXDefaultPauseTableViewController.h; sourceTree = "<group>"; };
@@ -1130,7 +1126,6 @@
 			children = (
 				DA86517620449F1600453D95 /* StoreKit.framework */,
 				DA46229F1DBE5FB900D71CCD /* CSV.framework */,
-				DA4622A31DBE5FB900D71CCD /* UAAppReviewManager.framework */,
 				DA674BE8177F914E00705F8E /* QuartzCore.framework */,
 				DA05418F173F35680090CE5A /* MessageUI.framework */,
 				DA3EF602172C48A90063861E /* CoreData.framework */,
@@ -1158,8 +1153,6 @@
 				DAD2CC071F361D5B00C4A3BC /* AXAppDelegate+Extension.swift */,
 				DAF7E8D01E5B70C20025DB6C /* DataSharingController.swift */,
 				DA9A60931F89F8FA00B10EE8 /* DataSharingProcess.swift */,
-				DA7D8C9A2016987000B38616 /* UAAppReviewManager.h */,
-				DA7D8C9C2016988A00B38616 /* UAAppReviewManager.m */,
 				DA86517A2044A2BD00453D95 /* IAP */,
 				DACAD4331F960051002F0E50 /* ViewModels */,
 				DAE9D3CD176756D100CA6173 /* ViewControllers */,
@@ -2331,7 +2324,6 @@
 				DA9A4D931E5BBA660062CEF3 /* WorkingWeekSetting+Sharing.swift in Sources */,
 				DA4D7EE71D797C0300D687EE /* DayTypesSummaryTableViewCell.swift in Sources */,
 				DA6F83021CD8BD23005CC2C7 /* AXGeneralSettingsTableViewController.m in Sources */,
-				DA7D8C9D2016988A00B38616 /* UAAppReviewManager.m in Sources */,
 				DA4FE5741BB194E40048FEB9 /* Customer.m in Sources */,
 				DAD962661EA173C200DA89E0 /* DayEntry+Income.swift in Sources */,
 				DA802C011E3912F3007FC5A7 /* NumberFormatter+Helper.swift in Sources */,

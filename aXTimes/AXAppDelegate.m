@@ -15,7 +15,6 @@
 #import "AXAttendanceRecorder.h"
 #import "NSCalendar+AXNSCalendarCategory.h"
 
-#import "UAAppReviewManager.h"
 
 #import <os/log.h>
 
@@ -46,7 +45,6 @@ static NSString *kReadPasteboardDataQuery = @"readPasteboardData";
         [self setupBasicProject];
     }
 
-    [self setupRating];
     [self.settingsManager setupInitialWithForce:NO];
     [self setupApperance];
     
@@ -104,26 +102,6 @@ static NSString *kReadPasteboardDataQuery = @"readPasteboardData";
 - (void)applicationWillTerminate:(UIApplication *)application {
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	// Saves changes in the application's managed object context before the application terminates.
-}
-
-#pragma mark - setup UAAppReviewManager
-
-- (void)setupRating {
-    [UAAppReviewManager setAppID:APPID];
-    [UAAppReviewManager setDaysUntilPrompt:10];
-    [UAAppReviewManager setUsesUntilPrompt:10];
-    [UAAppReviewManager setDaysBeforeReminding:10];
-    // German localization was using Sie, also improved Hungarian one
-    [UAAppReviewManager setUseMainAppBundleForLocalizations:YES];
-    
-    [UAAppReviewManager setSupportEmail:SUPPORTMAIL];
-    [UAAppReviewManager setSupportSubject:[NSString stringWithFormat:@"%@ %@ Feedback",
-                                           APPLICATIONNAME,
-                                           APPLICATIONFULLVERSION]];
-    
-    #if DEBUG
-    	[UAAppReviewManager setDebug:YES];
-    #endif
 }
 
 #pragma mark - appearance methods

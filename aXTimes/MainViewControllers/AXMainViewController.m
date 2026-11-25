@@ -13,7 +13,6 @@
 #import "UIImage+AXUIImageCategory.h"
 #import "AXRoundButton.h"
 #import "NSDate+AXNSDateCategory.h"
-#import "UAAppReviewManager.h"
 #import "NSString+AXNSStringCategory.h"
 #import "AXAttendanceRecorder.h"
 #import "NSCalendar+AXNSCalendarCategory.h"

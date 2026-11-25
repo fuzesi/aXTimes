@@ -10,4 +10,6 @@
 
 @interface AXOverviewSettingsTableViewController : UITableViewController
 
++ (NSURL *)appReviewURL;
+
 @end

@@ -271,4 +271,21 @@ final class UnitTest: XCTestCase {
         XCTAssertNotNil(cell.customTextLabel.font)
     }
 
+    func testSettingsRetainSupportAndOfferAppStoreReview() throws {
+        let controller = AXOverviewSettingsTableViewController(style: .grouped)
+        controller.loadViewIfNeeded()
+        XCTAssertEqual(controller.numberOfSections(in: controller.tableView), 5)
+        XCTAssertEqual(controller.tableView(controller.tableView, numberOfRowsInSection: 4), 3)
+        let support = controller.tableView(controller.tableView, cellForRowAt: IndexPath(row: 0, section: 4))
+        let review = controller.tableView(controller.tableView, cellForRowAt: IndexPath(row: 2, section: 4))
+        XCTAssertFalse((support.textLabel?.text ?? "").isEmpty)
+        XCTAssertFalse((review.textLabel?.text ?? "").isEmpty)
+        let url = try XCTUnwrap(AXOverviewSettingsTableViewController.appReviewURL())
+        let components = try XCTUnwrap(URLComponents(url: url, resolvingAgainstBaseURL: false))
+        XCTAssertEqual(components.scheme, "https")
+        XCTAssertEqual(components.host, "apps.apple.com")
+        XCTAssertEqual(components.path, "/app/id1341474620")
+        XCTAssertEqual(components.queryItems?.first(where: { $0.name == "action" })?.value, "write-review")
+    }
+
 }

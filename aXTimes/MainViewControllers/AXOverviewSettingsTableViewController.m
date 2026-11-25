@@ -73,8 +73,8 @@
     } else if (section == 3) {
         return 1;
     } else {
-        // support section: support page + referal link
-        return 2;
+        // Support, sharing, and a direct App Store review link.
+        return 3;
     }
 }
 
@@ -113,6 +113,9 @@
             cell.accessoryType = UITableViewCellAccessoryNone;
         } else if (indexPath.row == 1) {
             cell.textLabel.text = NSLS_TELLAFRIEND_CELL;
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        } else {
+            cell.textLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Rate %@", nil), APPLICATIONNAME];
             cell.accessoryType = UITableViewCellAccessoryNone;
         }
     }
@@ -172,8 +175,16 @@
             [self presentViewController:controller
                                animated:YES
                              completion:nil];
+        } else if (indexPath.row == 2) {
+            [[UIApplication sharedApplication] openURL:[AXOverviewSettingsTableViewController appReviewURL]
+                                               options:@{}
+                                     completionHandler:nil];
         }
     }
+}
+
++ (NSURL *)appReviewURL {
+    return [NSURL URLWithString:[NSString stringWithFormat:@"https://apps.apple.com/app/id%@?action=write-review", APPID]];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {

@@ -25,3 +25,5 @@
 #import "UITableView+Helper.h"
 #import "AXDayEntriesListViewController.h"
 #import "AXOverviewViewController.h"
+
+#import "AXOverviewSettingsTableViewController.h"
