@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UniformTypeIdentifiers
 
 private enum SectionIndex: Int {
     case createBackup = 0
@@ -130,12 +131,10 @@ class DataManagementTableViewController: UITableViewController {
     private func startRestoreBackup() {
         // Import an external document. The user selects an external document. The document picker copies the document, leaving the original unchanged.
         let controller = UIDocumentPickerViewController(
-            documentTypes: ["public.text"],
-            in: .import)
+            forOpeningContentTypes: [.text],
+            asCopy: true)
         controller.delegate = self
-        if #available(iOS 11.0, *) {
-            controller.allowsMultipleSelection = false
-        }
+        controller.allowsMultipleSelection = false
         let navigationController = UINavigationController(rootViewController: controller)
 
         let cancelButton = UIBarButtonItem(
