@@ -22,3 +22,9 @@ Betroffen sind unter anderem UI-Isolation, gemeinsam genutzte Zustände in Daten
 ## Daten und Freigabe
 
 Die Bestandsaufnahme und die technische Umstellung können unabhängig vom laufenden iPhone-Backup erfolgen. Bevor die bestehende Installation ersetzt oder eine Version ausgeliefert wird, sind der konkrete Update-Pfad von aXTimes Pro 1.0.6 Build 135, seine Daten und die App-Identität separat zu prüfen. Siehe [README.md](README.md).
+
+## StoreKit-Teststand
+
+Ein temporäres Testprodukt mit eigener, nicht produktiver Kennung wurde für StoreKit Testing erstellt. In einem isolierten Versuch mit der neueren StoreKit-Schnittstelle ließen sich eine verifizierte Testtransaktion und die Berechtigung nach `AppStore.sync()` prüfen. Dieser Versuch testete nicht die bestehende Kaufoberfläche.
+
+Der bisherige Wiederherstellungsweg meldete bei weiteren lokalen Versuchen den Abschluss, aber keine `.restored`-Transaktion. Ein erneuter Lauf auf einem frisch eingerichteten Simulator blieb außerdem bei einer Apple-Account-Anmeldung hängen; die Ursache der Testkonfiguration beziehungsweise Simulatorumgebung ist nicht geklärt. Deshalb beweist der bisherige Versuch weder eine funktionierende noch eine fehlerhafte Wiederherstellung echter Käufe. Vor einer Umstellung ist ein reproduzierbarer, isolierter Test von Kauf und Wiederherstellung nötig. Die experimentelle Testkonfiguration wurde nicht in das reguläre App-Scheme übernommen.
