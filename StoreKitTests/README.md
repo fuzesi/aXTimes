@@ -8,6 +8,8 @@ Der Test belegt weder die Wiederherstellung eines echten App-Store-Kaufs noch di
 
 `testModernEntitlementRestoresEmptyLocalState` simuliert einen neuen lokalen Kaufstatus: Nach einem lokalen Testkauf wird eine neue, leere Einstellungsdomäne verwendet. Der Test prüft, ob die verifizierte StoreKit-2-Berechtigung vor und nach einer ausdrücklichen Synchronisierung verfügbar ist und der bisherige Freischaltungsstatus damit gesetzt werden kann. Er simuliert weder eine echte Neuinstallation noch den produktiven Wiederherstellungsablauf; die App verwendet weiterhin StoreKit 1.
 
+`testNoPurchaseHasNoModernEntitlement` prüft bei leerer lokaler Testumgebung, dass auch nach der Synchronisierung keine Berechtigung für das Testprodukt vorhanden ist und der bisherige Freischaltungsstatus leer bleibt.
+
 ## Offene Prüfung mit Apples Sandbox
 
 Ein experimenteller StoreKit-1-Wiederherstellungstest meldete im lokalen Simulator den Abschluss, lieferte aber trotz Testkaufs keine Transaktion im Zustand `restored`. Die Ursache ist ungeklärt. Ein ähnliches Verhalten wurde bereits für ältere Xcode-Versionen im [Apple Developer Forum](https://developer.apple.com/forums/thread/657081) gemeldet; daraus folgt nicht, dass das Problem dieselbe Ursache hat oder bei echten Käufen auftritt.

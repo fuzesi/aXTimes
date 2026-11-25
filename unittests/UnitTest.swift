@@ -417,6 +417,32 @@ import StoreKitTest
 import StoreKit
 
 final class StoreKitIntegrationTest: XCTestCase {
+    func testNoPurchaseHasNoModernEntitlement() async throws {
+        guard ProcessInfo.processInfo.environment["AXTIMES_STOREKIT_TESTS"] == "1" else {
+            throw XCTSkip("Use the dedicated StoreKit test scheme and an isolated simulator")
+        }
+        let source = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
+        let session = try SKTestSession(contentsOf: source.appendingPathComponent("StoreKitTests/PremiumTest.storekit"))
+        session.disableDialogs = true
+        session.clearTransactions()
+        defer { session.clearTransactions() }
+        let id = "com.aximilate.axtimespro.test.projects"
+        let suite = "axtimes.tests.no-purchase." + UUID().uuidString
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suite))
+        defer { defaults.removePersistentDomain(forName: suite) }
+        let helper = IAPHelper(productIds: [id], defaults: defaults, observePaymentQueue: false)
+        try await AppStore.sync()
+        var found = false
+        for await result in Transaction.currentEntitlements {
+            if case .verified(let transaction) = result, transaction.productID == id {
+                found = true
+            }
+        }
+        XCTAssertFalse(found, "A fresh test account must not have a purchase entitlement")
+        XCTAssertFalse(helper.isProductPurchased(id))
+        XCTAssertFalse(defaults.bool(forKey: id))
+    }
+
     func testModernEntitlementRestoresEmptyLocalState() async throws {
         guard ProcessInfo.processInfo.environment["AXTIMES_STOREKIT_TESTS"] == "1" else {
             throw XCTSkip("Use the dedicated StoreKit test scheme and an isolated simulator")
