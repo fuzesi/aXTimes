@@ -259,4 +259,16 @@ final class UnitTest: XCTestCase {
         }
     }
 
+    func testSegmentedControlCellLoadsItsSettings() throws {
+        XCTAssertTrue(Thread.isMainThread)
+        let cell = try XCTUnwrap(UINib(nibName: "SegmentedControlCell", bundle: .main)
+            .instantiate(withOwner: nil).first as? SegmentedControlCell)
+        XCTAssertEqual(cell.selectionStyle, .none)
+        XCTAssertTrue(cell.customTextLabel.adjustsFontForContentSizeCategory)
+        XCTAssertNotNil(cell.customTextLabel.font)
+        XCTAssertNotNil(cell.segmentedControl)
+        NotificationCenter.default.post(name: UIContentSizeCategory.didChangeNotification, object: nil)
+        XCTAssertNotNil(cell.customTextLabel.font)
+    }
+
 }

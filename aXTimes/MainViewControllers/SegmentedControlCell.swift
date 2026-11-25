@@ -15,18 +15,21 @@ class SegmentedControlCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.selectionStyle = .none
+        // UIKit loads table-view cells on the main thread.
+        MainActor.assumeIsolated {
+            self.selectionStyle = .none
 
-        self.contentView.preservesSuperviewLayoutMargins = true
-        self.preservesSuperviewLayoutMargins = true
-        self.setupTextUI()
-        if #available(iOS 10.0, *) {
-            self.customTextLabel.adjustsFontForContentSizeCategory = true
+            self.contentView.preservesSuperviewLayoutMargins = true
+            self.preservesSuperviewLayoutMargins = true
+            self.setupTextUI()
+            if #available(iOS 10.0, *) {
+                self.customTextLabel.adjustsFontForContentSizeCategory = true
+            }
+            NotificationCenter.default.addObserver(self,
+                                                   selector:#selector(preferredContentSizeChanged(notification:)),
+                                                   name: UIContentSizeCategory.didChangeNotification,
+                                                   object: nil)
         }
-        NotificationCenter.default.addObserver(self,
-                                               selector:#selector(preferredContentSizeChanged(notification:)),
-                                               name: UIContentSizeCategory.didChangeNotification,
-                                               object: nil)
     }
 
     deinit {
