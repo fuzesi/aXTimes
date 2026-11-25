@@ -374,6 +374,36 @@ final class UnitTest: XCTestCase {
         XCTAssertNotNil(restored.checkOutTime)
     }
 
+    func testFinishingPausePreservesCompletedPauseAndDiscardsShortPause() throws {
+        let context = try makeContext()
+        let codec = BackupCodec(context: context)
+        _ = try codec.decode(entry(), entity: "DayEntry")
+        let request = NSFetchRequest<Pause>(entityName: "Pause")
+        let completed = try XCTUnwrap(context.fetch(request).first)
+        let start = Date(timeIntervalSince1970: 1_700_000_000)
+        completed.configure(withStart: start, andTimeZone: TimeZone.current.identifier)
+        completed.endTime = nil
+        let end = start.addingTimeInterval(120)
+        AXAttendanceRecorder.finish(completed, atTime: end)
+        XCTAssertEqual(completed.endTime as Date?, end)
+        XCTAssertEqual(completed.endTimeZone, TimeZone.current.identifier)
+        XCTAssertEqual(completed.minutesPaused(), 2, accuracy: 0.001)
+        try context.save()
+        context.reset()
+        let saved = try XCTUnwrap(context.fetch(request).first)
+        XCTAssertEqual(saved.endTime as Date?, end)
+
+        var shortData = pause()
+        shortData["id"] = "short-pause"
+        let short = try XCTUnwrap(codec.decode(shortData, entity: "Pause") as? Pause)
+        short.dayentry = saved.dayentry
+        short.configure(withStart: start, andTimeZone: TimeZone.current.identifier)
+        short.endTime = nil
+        AXAttendanceRecorder.finish(short, atTime: start.addingTimeInterval(30))
+        try context.save()
+        XCTAssertEqual(try context.count(for: request), 1)
+    }
+
     func testExistingPremiumUnlockRemainsAvailable() throws {
         let suite = "axtimes.tests.purchases." + UUID().uuidString
         let defaults = try XCTUnwrap(UserDefaults(suiteName: suite))

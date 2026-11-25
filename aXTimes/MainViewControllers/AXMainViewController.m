@@ -910,11 +910,7 @@ typedef void (^animationFinishBlock_t)(BOOL finished);
 }
 
 - (void)pauseOut {
-    [self.currentPause configureWithEnd:[NSDate date]
-                            andTimeZone:[[NSTimeZone systemTimeZone] name]];
-	if ([self.currentPause minutesPaused] < 1) {
-		[[AXDataStore sharedInstance] deleteObject:self.currentPause];
-    } 
+    [AXAttendanceRecorder finishPause:self.currentPause atTime:[NSDate date]];
 	[self setPauseOutUI:YES];
 }
 

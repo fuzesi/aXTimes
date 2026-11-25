@@ -26,3 +26,11 @@ Quelle: https://developer.apple.com/documentation/ios-ipados-release-notes/ios-i
 2. Watch-Funktionen und Kommunikation auf aktueller Architektur nachbilden und im Watch-Simulator prüfen. Anschließend Einbettung, Kennungen und Signierung für ein App-Update prüfen.
 3. Ein WidgetKit-Konzept für die vorhandenen Statusinformationen erarbeiten und auf Datenkonsistenz, Aktualisierung und Datenschutz prüfen.
 4. Erst nach diesen Prüfungen den signierten TestFlight-Build und die Übernahme auf einem Gerät testen.
+
+## Kommunikationsvertrag und Pausenfehler
+
+Die Watch sendet über `WCSession.sendMessage` Nachrichten mit dem Schlüssel `action`. Unterstützte Werte sind `load`, `checkIn`, `checkOut`, `pauseIn` und `pauseOut`. Das iPhone prüft den Zustand des letzten Eintrags, führt zulässige Aktionen aus und antwortet mit dem aktuellen Zustand. Zeiten, Zeitzonen, Pausenstatus, Verdienst und Währung werden in einem Dictionary übertragen. Zusätzlich übermittelt das iPhone einen Anwendungskontext. Direkte Nachrichten setzen Erreichbarkeit voraus; der bisherige Watch-Code protokolliert Übertragungsfehler lediglich. Eine erfolgreiche Befehlsausführung bei fehlender Verbindung ist damit nicht gewährleistet.
+
+Bei der Prüfung wurde festgestellt, dass `pauseOut` zuvor das Pausenende nicht gesetzt hat. Dadurch wurde eine laufende Pause als kürzer als eine Minute behandelt und gelöscht. Der korrigierte Ablauf verwendet denselben Pausenabschluss wie das iPhone. Ein Test prüft das gespeicherte Ende einschließlich Zeitzone sowie das bisherige Löschen von Pausen unter einer Minute. Ein vollständiger Test der Watch-Nachrichtenübertragung und Bedienung steht noch aus.
+
+Für die Modernisierung sind insbesondere die explizite Rückmeldung bei fehlgeschlagenen oder abgelehnten Aktionen, die Prüfung der Verbindungs- und Aktivierungszustände sowie die zuverlässige Aktualisierung des Watch-Zustands erforderlich. Offline-Aktionen dürfen nicht als erfolgreich dargestellt werden, solange sie vom iPhone nicht bestätigt wurden. Die bisherige Watch-Oberfläche setzt zudem an mehreren Stellen optionale Werte voraus und verwendet veraltete Menü-APIs.

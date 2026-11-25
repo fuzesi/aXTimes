@@ -404,9 +404,7 @@ static NSString *kReadPasteboardDataQuery = @"readPasteboardData";
                     pause.startTime != nil &&
                     pause.endTime == nil) {
                     // sanity guaranteed
-                    if ([pause minutesPaused] < 1) {
-                        [[AXDataStore sharedInstance] deleteObject:pause];
-                    }
+                    [AXAttendanceRecorder finishPause:pause atTime:nowDate];
                     changedData = YES;
                 }
             }

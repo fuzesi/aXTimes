@@ -48,6 +48,13 @@
     }
 }
 
++ (void)finishPause:(Pause *)pause atTime:(NSDate *)date {
+    [pause configureWithEnd:date andTimeZone:[[NSTimeZone systemTimeZone] name]];
+    if ([pause minutesPaused] < 1) {
+        [pause.managedObjectContext deleteObject:pause];
+    }
+}
+
 + (void)applyDefaultPauseSettingsToEntry:(DayEntry *)entry {
     NSDate *start;
     NSDate *end;

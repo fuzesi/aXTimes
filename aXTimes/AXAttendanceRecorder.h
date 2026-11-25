@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
                    withProject:(nullable Project *)project;
 + (void)performCheckOutForEntry:(DayEntry *)entry
                        withTime:(NSDate *)checkOutTime;
++ (void)finishPause:(Pause *)pause atTime:(NSDate *)date;
 + (void)applyDefaultPauseSettingsToEntry:(DayEntry *)entry;
 NS_ASSUME_NONNULL_END
 
