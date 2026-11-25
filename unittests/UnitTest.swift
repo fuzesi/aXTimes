@@ -1,5 +1,6 @@
 import XCTest
 import CoreData
+import UniformTypeIdentifiers
 @testable import aXTimes
 
 private final class EmptyColorPickerModel: NSObject, ColorPickerViewModelProtocol {
@@ -250,6 +251,35 @@ final class UnitTest: XCTestCase {
         XCTAssertEqual(store.getDayType(forCalendarDay: dates[1])?.isHoliday, true)
         XCTAssertEqual(store.getDayType(forCalendarDay: dates[2])?.isHoliday, true)
         XCTAssertNil(store.getDayType(forCalendarDay: dates[3]))
+    }
+
+    func testBackupRestoreOpensSingleDocumentPicker() throws {
+        #if !targetEnvironment(simulator)
+        throw XCTSkip("Document picker test runs only in the simulator")
+        #else
+        let scene = try XCTUnwrap(UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }.first)
+        let previousKeyWindow = scene.windows.first { $0.isKeyWindow }
+        let window = UIWindow(windowScene: scene)
+        let controller = DataManagementTableViewController(style: .grouped)
+        window.rootViewController = controller
+        window.makeKeyAndVisible()
+        defer {
+            controller.dismiss(animated: false)
+            window.isHidden = true
+            previousKeyWindow?.makeKeyAndVisible()
+        }
+        controller.loadViewIfNeeded()
+        controller.tableView(controller.tableView, didSelectRowAt: IndexPath(row: 0, section: 1))
+        let presented = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+            controller.presentedViewController is UINavigationController
+        }, object: nil)
+        wait(for: [presented], timeout: 5)
+        let navigation = try XCTUnwrap(controller.presentedViewController as? UINavigationController)
+        let picker = try XCTUnwrap(navigation.viewControllers.first as? UIDocumentPickerViewController)
+        XCTAssertFalse(picker.allowsMultipleSelection)
+        XCTAssertTrue(picker.delegate === controller)
+        XCTAssertTrue(UTType.json.conforms(to: .text), "JSON backups must remain selectable as text")
+        #endif
     }
 
     func testColorAndProductsViewsFillTheirContainer() throws {
