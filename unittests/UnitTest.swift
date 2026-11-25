@@ -108,4 +108,82 @@ final class UnitTest: XCTestCase {
         XCTAssertTrue("#12345680".color.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
         XCTAssertEqual(alpha, 128.0 / 255.0, accuracy: 0.0001)
     }
+
+    func testDayTypeChooserOffersAllTypesAndCancel() {
+        let options = DayTypeChooser.options
+        XCTAssertEqual(options.map { $0.type.rawValue }, [
+            DayTypus.noSelectionIsWork.rawValue,
+            DayTypus.vacationDay.rawValue,
+            DayTypus.sickDay.rawValue,
+            DayTypus.holiday.rawValue,
+            DayTypus.notAWorkingDay.rawValue
+        ])
+        var selected: [Int] = []
+        let chooser = DayTypeChooserViewController { selected.append(Int($0.rawValue)) }
+        chooser.loadViewIfNeeded()
+        XCTAssertEqual(chooser.optionButtons.count, options.count)
+        for (button, option) in zip(chooser.optionButtons, options) {
+            XCTAssertEqual(button.configuration?.title, option.title)
+            XCTAssertNotNil(button.configuration?.image)
+            XCTAssertEqual(button.configuration?.baseForegroundColor, option.color)
+            button.sendActions(for: .touchUpInside)
+        }
+        XCTAssertEqual(selected, options.map { Int($0.type.rawValue) })
+        chooser.cancelButton.sendActions(for: .touchUpInside)
+        XCTAssertEqual(selected.count, options.count)
+    }
+    // Runs only against the dedicated simulator's app container, never the user's backup.
+    func testDayTypeSelectionPersistsForOneAndMultipleDays() throws {
+        let store = AXDataStore.sharedInstance()!
+        let context = store.managedObjectContext!
+        let calendar = Calendar.current
+        let dates = try (1...4).map { day in
+            try XCTUnwrap(calendar.date(from: DateComponents(year: 2157, month: 3, day: day, hour: 12)))
+        }
+        for date in dates {
+            guard store.getDayType(forCalendarDay: date) == nil else {
+                throw XCTSkip("Test dates are already in use; existing data must remain untouched")
+            }
+        }
+        defer {
+            for date in dates {
+                if let created = store.getDayType(forCalendarDay: date) { context.delete(created) }
+            }
+            try? context.save()
+        }
+
+        let single = DayTypeChooserViewController { type in
+            AXUtility.dayTypeChanged(with: type.rawValue, with: dates[0])
+        }
+        single.loadViewIfNeeded()
+        single.optionButtons[1].sendActions(for: .touchUpInside)
+        context.processPendingChanges()
+        XCTAssertEqual(store.getDayType(forCalendarDay: dates[0])?.isVacation, true)
+
+        let multiple = DayTypeChooserViewController { type in
+            AXUtility.dayTypeArrayChanged(type.rawValue, withDateArray: NSMutableArray(array: [dates[1], dates[2]]))
+        }
+        multiple.loadViewIfNeeded()
+        multiple.optionButtons[3].sendActions(for: .touchUpInside)
+        context.processPendingChanges()
+        XCTAssertEqual(store.getDayType(forCalendarDay: dates[1])?.isHoliday, true)
+        XCTAssertEqual(store.getDayType(forCalendarDay: dates[2])?.isHoliday, true)
+
+        let cancelled = DayTypeChooserViewController { type in
+            AXUtility.dayTypeChanged(with: type.rawValue, with: dates[3])
+        }
+        cancelled.loadViewIfNeeded()
+        cancelled.cancelButton.sendActions(for: .touchUpInside)
+        context.processPendingChanges()
+        XCTAssertNil(store.getDayType(forCalendarDay: dates[3]))
+
+        // Reload from SQLite rather than reading the existing managed objects.
+        if context.hasChanges { try context.save() }
+        context.reset()
+        XCTAssertEqual(store.getDayType(forCalendarDay: dates[0])?.isVacation, true)
+        XCTAssertEqual(store.getDayType(forCalendarDay: dates[1])?.isHoliday, true)
+        XCTAssertEqual(store.getDayType(forCalendarDay: dates[2])?.isHoliday, true)
+        XCTAssertNil(store.getDayType(forCalendarDay: dates[3]))
+    }
+
 }

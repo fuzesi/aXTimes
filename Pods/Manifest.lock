@@ -1,24 +1,12 @@
 PODS:
-  - AlertsPickers (1.0)
   - PureLayout (3.0.2)
 
 DEPENDENCIES:
-  - AlertsPickers (from `https://github.com/ltblueberry0/Alerts-Pickers.git`)
   - PureLayout
 
-EXTERNAL SOURCES:
-  AlertsPickers:
-    :git: https://github.com/ltblueberry0/Alerts-Pickers.git
-
-CHECKOUT OPTIONS:
-  AlertsPickers:
-    :commit: fbb101747e2ee84d77d5a154a0c3df36f94fcd02
-    :git: https://github.com/ltblueberry0/Alerts-Pickers.git
-
 SPEC CHECKSUMS:
-  AlertsPickers: c2bd8643a424d5e9b83369de20bc750cfd1833c5
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
 
-PODFILE CHECKSUM: e47c0d9ee4b2df91f74dff04829af359510da6ff
+PODFILE CHECKSUM: 7dbaf6025fc5489f0da3116a3cc0ad3eac9640e6
 
 COCOAPODS: 1.4.0

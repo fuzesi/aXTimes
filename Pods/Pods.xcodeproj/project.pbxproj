@@ -982,7 +982,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7A708CA4B037E36B4BA2BB11EAE105BA /* PBXTargetDependency */,
 				5D801417492BB110E4BC12C10FBE45AF /* PBXTargetDependency */,
 			);
 			name = "Pods-aXTimes";
