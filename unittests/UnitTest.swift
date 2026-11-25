@@ -417,6 +417,54 @@ import StoreKitTest
 import StoreKit
 
 final class StoreKitIntegrationTest: XCTestCase {
+    func testModernEntitlementRestoresEmptyLocalState() async throws {
+        guard ProcessInfo.processInfo.environment["AXTIMES_STOREKIT_TESTS"] == "1" else {
+            throw XCTSkip("Use the dedicated StoreKit test scheme and an isolated simulator")
+        }
+        let source = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
+        let session = try SKTestSession(contentsOf: source.appendingPathComponent("StoreKitTests/PremiumTest.storekit"))
+        session.disableDialogs = true
+        session.clearTransactions()
+        defer { session.clearTransactions() }
+        let id = "com.aximilate.axtimespro.test.projects"
+        let products = try await Product.products(for: [id])
+        let product = try XCTUnwrap(products.first)
+        guard case .success(.verified(let transaction)) = try await product.purchase() else {
+            XCTFail("The local test purchase must be verified")
+            return
+        }
+        await transaction.finish()
+
+        // Model a reinstall: the local unlock is empty but the App Store entitlement remains.
+        let suite = "axtimes.tests.restore." + UUID().uuidString
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suite))
+        defer { defaults.removePersistentDomain(forName: suite) }
+        let helper = IAPHelper(productIds: [id], defaults: defaults, observePaymentQueue: false)
+        XCTAssertFalse(helper.isProductPurchased(id))
+        var entitlement: Transaction?
+        for await result in Transaction.currentEntitlements {
+            if case .verified(let candidate) = result, candidate.productID == id {
+                entitlement = candidate
+            }
+        }
+        XCTAssertNotNil(entitlement, "A verified purchase must be available without a manual sync")
+        if let entitlement = entitlement {
+            helper.deliverPurchaseNotificationFor(identifier: entitlement.productID)
+        }
+        XCTAssertTrue(helper.isProductPurchased(id))
+        XCTAssertTrue(defaults.bool(forKey: id))
+
+        // This models a user explicitly requesting synchronization from the restore button.
+        try await AppStore.sync()
+        var foundAfterSync = false
+        for await result in Transaction.currentEntitlements {
+            if case .verified(let candidate) = result, candidate.productID == id {
+                foundAfterSync = true
+            }
+        }
+        XCTAssertTrue(foundAfterSync, "A verified purchase must remain available after sync")
+    }
+
     func testLegacyPurchaseIsVisibleToModernStoreKit() async throws {
         guard ProcessInfo.processInfo.environment["AXTIMES_STOREKIT_TESTS"] == "1" else {
             throw XCTSkip("Use the dedicated StoreKit test scheme and an isolated simulator")
