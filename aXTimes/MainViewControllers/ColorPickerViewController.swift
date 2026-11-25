@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PureLayout
 
 class ColorPickerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -29,7 +28,13 @@ class ColorPickerViewController: UIViewController, UITableViewDataSource, UITabl
     @objc func setupTableView() {
         tableView = UITableView(frame: CGRect.zero, style: .grouped)
         view.addSubview(tableView)
-        tableView.autoPinEdgesToSuperviewEdges()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44.0
         let nib = UINib(nibName: cellIdentifier, bundle: nil)

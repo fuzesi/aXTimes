@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PureLayout
 import StoreKit
 
 class ProductsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -39,8 +38,15 @@ class ProductsViewController: UIViewController, UITableViewDelegate, UITableView
 
         view.addSubview(tableView)
         view.addSubview(activityIndicator)
-        activityIndicator.autoPinEdgesToSuperviewEdges()
-        tableView.autoPinEdgesToSuperviewEdges()
+        for subview in [tableView, activityIndicator] as [UIView] {
+            subview.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                subview.topAnchor.constraint(equalTo: view.topAnchor),
+                subview.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                subview.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                subview.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ])
+        }
 
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(ProductsViewController.reload), for: .valueChanged)

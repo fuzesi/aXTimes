@@ -2,6 +2,14 @@ import XCTest
 import CoreData
 @testable import aXTimes
 
+private final class EmptyColorPickerModel: NSObject, ColorPickerViewModelProtocol {
+    let numberOfSections = 1
+    let numberOfRowsInSection = 0
+    func isSelected(indexPath: IndexPath) -> Bool { false }
+    func color(indexPath: IndexPath) -> UIColor? { nil }
+    func selectedIndexPath(indexPath: IndexPath) {}
+}
+
 final class UnitTest: XCTestCase {
     private func makeContext() throws -> NSManagedObjectContext {
         let modelURL = try XCTUnwrap(Bundle.main.url(forResource: "DataModel", withExtension: "momd"))
@@ -184,6 +192,29 @@ final class UnitTest: XCTestCase {
         XCTAssertEqual(store.getDayType(forCalendarDay: dates[1])?.isHoliday, true)
         XCTAssertEqual(store.getDayType(forCalendarDay: dates[2])?.isHoliday, true)
         XCTAssertNil(store.getDayType(forCalendarDay: dates[3]))
+    }
+
+    func testColorAndProductsViewsFillTheirContainer() throws {
+        let color = ColorPickerViewController()
+        color.viewModel = EmptyColorPickerModel()
+        color.loadViewIfNeeded()
+        let colorTable = try XCTUnwrap(color.view.subviews.first { $0 is UITableView })
+        let products = ProductsViewController()
+        products.loadViewIfNeeded()
+
+        for size in [CGSize(width: 390, height: 700), CGSize(width: 700, height: 390)] {
+            for (controller, subviews) in [
+                (color as UIViewController, [colorTable]),
+                (products as UIViewController, [products.tableView, products.activityIndicator] as [UIView])
+            ] {
+                controller.view.frame = CGRect(origin: .zero, size: size)
+                controller.view.setNeedsLayout()
+                controller.view.layoutIfNeeded()
+                for subview in subviews {
+                    XCTAssertEqual(subview.frame, controller.view.bounds)
+                }
+            }
+        }
     }
 
 }
