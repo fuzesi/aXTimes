@@ -15,7 +15,6 @@
 		1F9B9909201771F90063EAC4 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B9908201771F90063EAC4 /* ColorPickerViewController.swift */; };
 		1FD42C5F201B2D9C00D9FEE8 /* AXDayEntriesListViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD42C5E201B2D9C00D9FEE8 /* AXDayEntriesListViewController+Extension.swift */; };
 		1FF64FD22019E1220058DC71 /* Customer+CurrentColorProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF64FD12019E1220058DC71 /* Customer+CurrentColorProviderProtocol.swift */; };
-		5A391B07C0D39154865A6BE4 /* Pods_aXTimes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B2E25E0E1DCADEA86AAC731 /* Pods_aXTimes.framework */; };
 		DA00FA9B1DD0CAFC001208B4 /* AXDataStore+DayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00FA9A1DD0CAFC001208B4 /* AXDataStore+DayEntry.swift */; };
 		DA04704A1E80804A00CAF74E /* Comment+Sharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0470491E80804A00CAF74E /* Comment+Sharing.swift */; };
 		DA04704D1E81D4DD00CAF74E /* WorkingWeekSetting+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA04704B1E81D4DD00CAF74E /* WorkingWeekSetting+CoreDataClass.swift */; };
@@ -403,7 +402,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1B2E25E0E1DCADEA86AAC731 /* Pods_aXTimes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aXTimes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6EFD102019E33D007AE51D /* Project+CurrentColorProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+CurrentColorProviderProtocol.swift"; sourceTree = "<group>"; };
 		1F7ECF2E20190BE7006AC445 /* ColorPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewModel.swift; sourceTree = "<group>"; };
 		1F7ECF302019121E006AC445 /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
@@ -886,7 +884,6 @@
 				DA3EF5AA172C291E0063861E /* UIKit.framework in Frameworks */,
 				DA3EF5AC172C291E0063861E /* Foundation.framework in Frameworks */,
 				DA3EF5AE172C291E0063861E /* CoreGraphics.framework in Frameworks */,
-				5A391B07C0D39154865A6BE4 /* Pods_aXTimes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -908,13 +905,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A5931CF55D2DB863881BA835 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		DA0643B91842DD0700AA476B /* Activities */ = {
 			isa = PBXGroup;
 			children = (
@@ -1119,7 +1109,6 @@
 				DA3EF5A8172C291E0063861E /* Frameworks */,
 				DAC0B4331B864BC200AEC565 /* Config */,
 				DA3EF5A7172C291E0063861E /* Products */,
-				A5931CF55D2DB863881BA835 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1150,7 +1139,6 @@
 				DA3EF5AD172C291E0063861E /* CoreGraphics.framework */,
 				DA3EF5D8172C291E0063861E /* SenTestingKit.framework */,
 				DAAF8D7A19D22E6E00A9BB6F /* NotificationCenter.framework */,
-				1B2E25E0E1DCADEA86AAC731 /* Pods_aXTimes.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1892,13 +1880,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA3EF5E9172C291E0063861E /* Build configuration list for PBXNativeTarget "aXTimes" */;
 			buildPhases = (
-				28C2D589004AFDDA35D8EAE2 /* [CP] Check Pods Manifest.lock */,
 				DA3EF5A2172C291E0063861E /* Sources */,
 				DA3EF5A3172C291E0063861E /* Frameworks */,
 				DA3EF5A4172C291E0063861E /* Resources */,
 				DADFC2F4174A637B00242F90 /* Display TODO and FIXME as warnings */,
-				E3575B19466D01D09AEF63EF /* [CP] Embed Pods Frameworks */,
-				5E8CCFE8DE0DE6F570F6362E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2127,39 +2112,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		28C2D589004AFDDA35D8EAE2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-aXTimes-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5E8CCFE8DE0DE6F570F6362E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aXTimes/Pods-aXTimes-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DA83159E1DD3CA6F002DBE9A /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2201,24 +2153,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "KEYWORDS=\"TODO|FIXME|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" \\) -print0 | \\\nxargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | \\\nperl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"";
-		};
-		E3575B19466D01D09AEF63EF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-aXTimes/Pods-aXTimes-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aXTimes/Pods-aXTimes-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2930,7 +2864,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
+				OTHER_SWIFT_FLAGS = "$(inherited) -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = aXTimes;
 				PROVISIONING_PROFILE = "";
@@ -2959,7 +2893,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = aXTimes;
 				PROVISIONING_PROFILE = "";
@@ -2973,7 +2907,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = ("$(inherited)", "$(BUILT_PRODUCTS_DIR)/PureLayout", );
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -3117,7 +3051,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = aXTimes;
 				PROVISIONING_PROFILE = "";
